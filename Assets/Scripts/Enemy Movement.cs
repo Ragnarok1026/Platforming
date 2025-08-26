@@ -1,10 +1,11 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
     public GameObject leftStop;
     public GameObject rightStop;
-    public int speed = 2;
+    public int speed = 4;
     void Start()
     {
         
