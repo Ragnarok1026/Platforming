@@ -289,6 +289,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &264814870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 264814871}
+  m_Layer: 0
+  m_Name: FlyPointB
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &264814871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264814870}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -35.39, y: 18.77, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 467725798}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &352456674
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,7 +499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 359455192}
   m_Layer: 0
-  m_Name: FlyPoint
+  m_Name: FlyPointA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -482,7 +514,7 @@ Transform:
   m_GameObject: {fileID: 359455191}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -41.881256, y: 12.966929, z: -0.06562178}
+  m_LocalPosition: {x: -50.08, y: 18.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -582,6 +614,37 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.0131993, y: 0.06681228}
   m_EdgeRadius: 0
+--- !u!1 &467725797
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 467725798}
+  m_Layer: 0
+  m_Name: PointA
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &467725798
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467725797}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.13, y: 5.48, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 264814871}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &485937334
 GameObject:
   m_ObjectHideFlags: 0
@@ -1930,7 +1993,7 @@ GameObject:
   - component: {fileID: 1724822288}
   - component: {fileID: 1724822292}
   - component: {fileID: 1724822294}
-  - component: {fileID: 1724822296}
+  - component: {fileID: 1724822295}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -2048,7 +2111,7 @@ Transform:
   m_GameObject: {fileID: 1724822285}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -49.54, y: 14.55, z: 0}
+  m_LocalPosition: {x: -49.54, y: 14.276, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2131,7 +2194,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!50 &1724822296
+--- !u!50 &1724822295
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -2146,7 +2209,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -2424,7 +2487,8 @@ MonoBehaviour:
   Text1: {fileID: 1223636830}
   Text2: {fileID: 485937334}
   cutsceneActive: 0
-  FightStarted: 0
+  speed: 6
+  boss: {fileID: 1724822285}
 --- !u!1 &1843413161
 GameObject:
   m_ObjectHideFlags: 0
@@ -3054,3 +3118,4 @@ SceneRoots:
   - {fileID: 1724822290}
   - {fileID: 73981457}
   - {fileID: 359455192}
+  - {fileID: 264814871}

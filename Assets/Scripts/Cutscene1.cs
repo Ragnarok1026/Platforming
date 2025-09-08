@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Cutscene1 : MonoBehaviour
@@ -32,12 +33,17 @@ public class Cutscene1 : MonoBehaviour
     {
         Text2.SetActive(false);
         player.GetComponent<PlayerMovement>().enabled = true;
-        Invoke("BossFight", 1f);
-
+        StartCoroutine(BossFight());
     }
 
-    void BossFight()
+    IEnumerator BossFight()
     {
+        while (boss.transform.position.y < 18.64f)
+        {
         boss.transform.Translate(Vector2.up * speed * Time.deltaTime);
+            yield return null;
+
+        }
+
     }
 }
