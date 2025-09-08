@@ -152,6 +152,37 @@ Transform:
   - {fileID: 485937335}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &25674905
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 25674906}
+  m_Layer: 0
+  m_Name: PointA
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &25674906
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25674905}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.13, y: 5.48, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 359455192}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &73981456
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,6 +457,38 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.024316072, y: 0.29676247}
   m_EdgeRadius: 0
+--- !u!1 &359455191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 359455192}
+  m_Layer: 0
+  m_Name: FlyPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &359455192
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359455191}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -41.881256, y: 12.966929, z: -0.06562178}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 25674906}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &389622188
 GameObject:
   m_ObjectHideFlags: 0
@@ -2355,12 +2418,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5174d8250739e11488cb6f212d5dfdbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1765841385}
   player: {fileID: 1765841383}
   cutsceneStart: {fileID: 73981456}
-  animator: {fileID: 1765841385}
   Text1: {fileID: 1223636830}
   Text2: {fileID: 485937334}
   cutsceneActive: 0
+  FightStarted: 0
 --- !u!1 &1843413161
 GameObject:
   m_ObjectHideFlags: 0
@@ -2989,3 +3053,4 @@ SceneRoots:
   - {fileID: 2031928}
   - {fileID: 1724822290}
   - {fileID: 73981457}
+  - {fileID: 359455192}

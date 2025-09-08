@@ -8,7 +8,8 @@ public class Cutscene1 : MonoBehaviour
     public GameObject Text1;
     public GameObject Text2;
     public bool cutsceneActive = false;
-    public bool FightStarted = false;
+    public float speed = 6f;
+    public GameObject boss;
     void Update()
     {
         if (player.transform.position.x <= cutsceneStart.transform.position.x && cutsceneActive == false)
@@ -31,15 +32,12 @@ public class Cutscene1 : MonoBehaviour
     {
         Text2.SetActive(false);
         player.GetComponent<PlayerMovement>().enabled = true;
-        Invoke("Fight", 0.5f);
+        Invoke("BossFight", 1f);
+
     }
 
-    void Fight()
+    void BossFight()
     {
-        FightStarted = true;
-        if (FightStarted == true)
-        {
-            
-        }
+        boss.transform.Translate(Vector2.up * speed * Time.deltaTime);
     }
 }
