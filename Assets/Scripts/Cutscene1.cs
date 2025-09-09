@@ -6,8 +6,8 @@ public class Cutscene1 : MonoBehaviour
     public Animator animator;
     public GameObject player;
     public GameObject cutsceneStart;
-    public GameObject Text1;
-    public GameObject Text2;
+    public GameObject text1;
+    public GameObject text2;
     public bool cutsceneActive = false;
     public float speed = 6f;
     public GameObject boss;
@@ -19,19 +19,19 @@ public class Cutscene1 : MonoBehaviour
             player.GetComponent<PlayerMovement>().enabled = false;
             player.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, 0);
             animator.SetFloat("Speed", 0);
-            Text1.SetActive(true);
-            Invoke("cutScene", 1.5f);
+            text1.SetActive(true);
+            Invoke("CutScene", 1.5f);
         }
     }
-    void cutScene()
+    void CutScene()
     {
-        Text1.SetActive(false);
-        Text2.SetActive(true);
-        Invoke("endCutscene", 1.5f);
+        text1.SetActive(false);
+        text2.SetActive(true);
+        Invoke("EndCutscene", 1.5f);
     }
-    void endCutscene()
+    void EndCutscene()
     {
-        Text2.SetActive(false);
+        text2.SetActive(false);
         player.GetComponent<PlayerMovement>().enabled = true;
         StartCoroutine(BossFight());
     }
