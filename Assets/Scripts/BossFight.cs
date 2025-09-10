@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class BossFight : MonoBehaviour
 {
@@ -6,7 +7,13 @@ public class BossFight : MonoBehaviour
     public GameObject killTrigger;
     public GameObject leftStop;
     public GameObject rightStop;
+    public Rigidbody2D rigidbody;
     public int speed = 4;
+
+    public void Start()
+    {
+        rigidbody = GetComponent<Rigidbody2D>();
+    }
     void Update()
     {
         if (transform.position.y >= leftStop.transform.position.y)
@@ -29,12 +36,20 @@ public class BossFight : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
            speed = 0;
-           Invoke("Stomp", 0.7f);
+            StartCoroutine(Stomp());
         }
     }
 
-    void Stomp()
+   IEnumerator Stomp()
     {
-        transform.Translate(Vector2.down * speed * Time.deltaTime);
+        rigidbody.gravityScale = 1;
+        yield return new WaitForSeconds(1f);
+        while (transform.position.y < 18.64f)
+        {
+            transform.Translate(Vector2.up * speed * Time.deltaTime);
+            yield return null;
+
+        }
+
     }
 }

@@ -33,10 +33,10 @@ public class Cutscene1 : MonoBehaviour
     {
         text2.SetActive(false);
         player.GetComponent<PlayerMovement>().enabled = true;
-        StartCoroutine(BossFight());
+        StartCoroutine(Fight());
     }
 
-    IEnumerator BossFight()
+    IEnumerator Fight()
     {
         while (boss.transform.position.y < 18.64f)
         {
