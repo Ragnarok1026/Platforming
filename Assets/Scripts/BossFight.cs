@@ -45,16 +45,22 @@ public class BossFight : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         rigidbody.gravityScale = 10;
         yield return new WaitForSeconds(1f);
-        rigidbody.gravityScale = -1;
-        yield return new WaitForSeconds(0.5f);
-        while(transform.position.y < leftStop.transform.position.y)
+        rigidbody.gravityScale = 0;
+        speed = 8;
+        while (transform.position.y < 18.64f)
         {
+            transform.Translate(Vector2.up * speed * Time.deltaTime);
             yield return null;
-        }
-        if (rigidbody.gravityScale != 0)
-        {
-           rigidbody.gravityScale = 0;
-        }
 
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Player"))
+        {
+            Debug.Log("Player hit");
+            speed = 0;
+        }
     }
 }
