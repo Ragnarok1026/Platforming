@@ -42,13 +42,18 @@ public class BossFight : MonoBehaviour
 
    IEnumerator Stomp()
     {
-        rigidbody.gravityScale = 1;
+        yield return new WaitForSeconds(0.5f);
+        rigidbody.gravityScale = 10;
         yield return new WaitForSeconds(1f);
-        while (transform.position.y < 18.64f)
+        rigidbody.gravityScale = -1;
+        yield return new WaitForSeconds(0.5f);
+        while(transform.position.y < leftStop.transform.position.y)
         {
-            transform.Translate(Vector2.up * speed * Time.deltaTime);
             yield return null;
-
+        }
+        if (rigidbody.gravityScale != 0)
+        {
+           rigidbody.gravityScale = 0;
         }
 
     }
