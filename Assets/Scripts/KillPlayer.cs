@@ -30,7 +30,7 @@ public class KillPlayer : MonoBehaviour
 
     public void GameOverScreen()
     {
-        SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene("GameOver 1");
     }
 
 }

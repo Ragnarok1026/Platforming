@@ -16,11 +16,11 @@ public class EnemyMovement : MonoBehaviour
 
         if (transform.position.x <= leftStop.transform.position.x)
         {
-            speed = -4;
+            speed = -2;
         }
         else if (transform.position.x >= rightStop.transform.position.x)
         {
-            speed = 4;
+            speed = 2;
         }
     }
 }

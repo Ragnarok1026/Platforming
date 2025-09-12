@@ -44,7 +44,7 @@ public class BossFight : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         rigidbody.gravityScale = 10;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.4f);
         rigidbody.gravityScale = 0;
         speed = 8;
         while (transform.position.y < 18.64f)

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class BossHealth : MonoBehaviour
 {
@@ -6,6 +7,8 @@ public class BossHealth : MonoBehaviour
     int currentHealth;
     public Animator animator;
     public GameObject arrow;
+    public GameObject Wall;
+
 
     void Start()
     {
@@ -26,11 +29,14 @@ public class BossHealth : MonoBehaviour
     {
         Debug.Log("Boss defeated!");
         Destroy(gameObject);
-        Invoke("LoadWinScene", 0.5f);
+        StartCoroutine(NextLevel());
     }
 
-    void LoadWinScene()
+    IEnumerator NextLevel()
     {
         arrow.SetActive(true);
+        Wall.SetActive(false);
+        yield return null;
     }
+    
 }
