@@ -6,7 +6,6 @@ public class Cutscene2 : MonoBehaviour
     public GameObject player;
     public GameObject cutsceneStart;
     public GameObject floor;
-    public GameObject floorEnd;
     public Animator animator;
     public bool cutsceneActive = false;
     void Update()
