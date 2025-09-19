@@ -49,7 +49,7 @@ public class YouDidThis : MonoBehaviour
         text4.SetActive(true);
         enemy3.SetActive(false);
         enemy4.SetActive(true);
-        Invoke("Reload", 2f);
+        Invoke("Reload", 1f);
     }
 
     void Reload()
