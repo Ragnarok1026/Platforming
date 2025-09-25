@@ -9,10 +9,6 @@ public class YouDidThis : MonoBehaviour
     public GameObject text2;
     public GameObject text3;
     public GameObject text4;
-    public GameObject enemy1;
-    public GameObject enemy2;
-    public GameObject enemy3;
-    public GameObject enemy4;
     void Update()
     {
         if (player.transform.position.x >= transform.position.x && cutsceneActive == false)
@@ -21,35 +17,44 @@ public class YouDidThis : MonoBehaviour
             player.GetComponent<PlayerMovement>().enabled = false;
             player.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, 0);
             text1.SetActive(true);
-            Invoke("ThisIsYourFault", 3f);
+            if (Input.GetButtonDown("Enter"))
+            {
+              Dialouge1();
+            }
         }
     }
 
-    void ThisIsYourFault()
+    void Dialouge1()
     {
         text1.SetActive(false);
         text2.SetActive(true);
-        enemy1.SetActive(false);
-        enemy2.SetActive(true);
-        Invoke("WhatYouDeserve", 3f);
+        if (Input.GetButtonDown("Enter"))
+        {
+            Dialouge2();
+
+        }
     }
 
-    void WhatYouDeserve()
+    void Dialouge2()
     {
         text2.SetActive(false);
         text3.SetActive(true);
-        enemy2.SetActive(false);
-        enemy3.SetActive(true);
-        Invoke("Begone", 3f);
+        if (Input.GetButtonDown("Enter"))
+        {
+            Dialouge3();
+
+        }
     }
 
-    void Begone()
+    void Dialouge3()
     {
         text3.SetActive(false);
         text4.SetActive(true);
-        enemy3.SetActive(false);
-        enemy4.SetActive(true);
-        Invoke("Reload", 1f);
+        if (Input.GetButtonDown("Enter"))
+        {
+             Reload();
+
+        }
     }
 
     void Reload()

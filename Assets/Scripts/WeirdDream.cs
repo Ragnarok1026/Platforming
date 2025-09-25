@@ -1,28 +1,37 @@
 using System.Collections;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements.Experimental;
 
 public class WeirdDream : MonoBehaviour
 {
+    public Animator transition;
     public GameObject player;
-    public Animator animator;
     void Update()
     {
-    }
 
-    private void OnTriggerExit2D(Collider2D other)
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.GetType() == typeof(BoxCollider2D) && other.gameObject.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
-            StartCoroutine(Dream());
+            LoadNextLevel();
         }
     }
-    IEnumerator Dream()
+    public void LoadNextLevel()
     {
-        animator.SetTrigger("Start");
-        yield return new WaitForSeconds(1.0f);
-        SceneManager.LoadScene("WeirdDream");
-        animator.SetTrigger("End");
+        player.GetComponent<PlayerMovement>().enabled = false;
+        player.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, 0);
+        StartCoroutine(LoadLevel());
+
+    }
+
+    IEnumerator LoadLevel()
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(6);
+
     }
 }
