@@ -10,6 +10,6 @@ public class GameOverScreen2 : MonoBehaviour
 
     void LoadNextLevel()
     {
-        SceneManager.LoadScene("GameOver2");
+        SceneManager.LoadScene("Level 2");
     }
 }

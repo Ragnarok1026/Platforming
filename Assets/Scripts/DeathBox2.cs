@@ -24,6 +24,6 @@ public class DeathBox2 : MonoBehaviour
 
     public void GameOverScreen()
     {
-        SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene("GameOver2");
     }
 }

@@ -16,7 +16,7 @@ EditorBuildSettings:
     guid: 11f45f0a948608a4bbd8c66713cdca03
   - enabled: 1
     path: Assets/Scenes/GameOver 1.unity
-    guid: 628970f734af03b43ac9019c22635e6a
+    guid: 9200fd372bb844b4a9210d37a4a014ec
   - enabled: 1
     path: Assets/Scenes/Overworld.unity
     guid: b85722128a198304d8aaabf11e1fccc7
@@ -24,8 +24,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 2.unity
     guid: 5a7b0a1a7c381434cad65c9248b9669e
   - enabled: 1
-    path: Assets/Scenes/WeirdDream.unity
-    guid: 2e3ea17a8d838af4786bda47af76ef2c
+    path: Assets/Scenes/GameOver2.unity
+    guid: 76492b8f1e5be7848ae40a0c1ef758fc
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
