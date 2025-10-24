@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: ca30f8b786148814eac44f4c7c1f0d7b
+guid: 5ab8d90e2aee6ba469d6f1102ea68151
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2942568455489332413
-    second: Flying Cubit  Sprite Sheet (1)_0
+      213: 412676414346026468
+    second: Flying Cubit  Sprite Sheet (2)_0
   - first:
-      213: -953589693220603553
-    second: Flying Cubit  Sprite Sheet (1)_1
+      213: 6248596085054471962
+    second: Flying Cubit  Sprite Sheet (2)_1
   - first:
-      213: 3765025368163713168
-    second: Flying Cubit  Sprite Sheet (1)_2
+      213: 2594271091136924734
+    second: Flying Cubit  Sprite Sheet (2)_2
   - first:
-      213: 4030460437908268963
-    second: Flying Cubit  Sprite Sheet (1)_3
+      213: -8447342375547175491
+    second: Flying Cubit  Sprite Sheet (2)_3
   - first:
-      213: 3067633124845285263
-    second: Flying Cubit  Sprite Sheet (1)_4
+      213: 4146740024824857175
+    second: Flying Cubit  Sprite Sheet (2)_4
   - first:
-      213: 8165529202866891071
-    second: Flying Cubit  Sprite Sheet (1)_5
+      213: 3904466640087315823
+    second: Flying Cubit  Sprite Sheet (2)_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -154,7 +154,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Flying Cubit  Sprite Sheet (1)_0
+      name: Flying Cubit  Sprite Sheet (2)_0
       rect:
         serializedVersion: 2
         x: 5
@@ -169,18 +169,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 34bd9438495e927d0800000000000000
-      internalID: -2942568455489332413
+      spriteID: 4edd64c230f1ab500800000000000000
+      internalID: 412676414346026468
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flying Cubit  Sprite Sheet (1)_1
+      name: Flying Cubit  Sprite Sheet (2)_1
       rect:
         serializedVersion: 2
         x: 48
-        y: 69
+        y: 70
         width: 39
         height: 17
       alignment: 0
@@ -191,18 +191,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f59bc12f93b24c2f0800000000000000
-      internalID: -953589693220603553
+      spriteID: a1f719a680977b650800000000000000
+      internalID: 6248596085054471962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flying Cubit  Sprite Sheet (1)_2
+      name: Flying Cubit  Sprite Sheet (2)_2
       rect:
         serializedVersion: 2
         x: 87
-        y: 70
+        y: 72
         width: 33
         height: 17
       alignment: 0
@@ -213,18 +213,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0908bb7df9e004430800000000000000
-      internalID: 3765025368163713168
+      spriteID: e3c0846ffc3b00420800000000000000
+      internalID: 2594271091136924734
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flying Cubit  Sprite Sheet (1)_3
+      name: Flying Cubit  Sprite Sheet (2)_3
       rect:
         serializedVersion: 2
         x: 13
-        y: 46
+        y: 49
         width: 27
         height: 17
       alignment: 0
@@ -235,18 +235,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3a7a9caf9621fe730800000000000000
-      internalID: 4030460437908268963
+      spriteID: dbdf7698dd205ca80800000000000000
+      internalID: -8447342375547175491
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flying Cubit  Sprite Sheet (1)_4
+      name: Flying Cubit  Sprite Sheet (2)_4
       rect:
         serializedVersion: 2
         x: 51
-        y: 45
+        y: 47
         width: 33
         height: 17
       alignment: 0
@@ -257,18 +257,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f8fef93f21c629a20800000000000000
-      internalID: 3067633124845285263
+      spriteID: 752849b051e2c8930800000000000000
+      internalID: 4146740024824857175
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flying Cubit  Sprite Sheet (1)_5
+      name: Flying Cubit  Sprite Sheet (2)_5
       rect:
         serializedVersion: 2
         x: 84
-        y: 44
+        y: 45
         width: 39
         height: 17
       alignment: 0
@@ -279,8 +279,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f39a5f31c89c15170800000000000000
-      internalID: 8165529202866891071
+      spriteID: f6574cfe8b37f2630800000000000000
+      internalID: 3904466640087315823
       vertices: []
       indices: 
       edges: []
@@ -299,12 +299,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Flying Cubit  Sprite Sheet (1)_0: -2942568455489332413
-      Flying Cubit  Sprite Sheet (1)_1: -953589693220603553
-      Flying Cubit  Sprite Sheet (1)_2: 3765025368163713168
-      Flying Cubit  Sprite Sheet (1)_3: 4030460437908268963
-      Flying Cubit  Sprite Sheet (1)_4: 3067633124845285263
-      Flying Cubit  Sprite Sheet (1)_5: 8165529202866891071
+      Flying Cubit  Sprite Sheet (2)_0: 412676414346026468
+      Flying Cubit  Sprite Sheet (2)_1: 6248596085054471962
+      Flying Cubit  Sprite Sheet (2)_2: 2594271091136924734
+      Flying Cubit  Sprite Sheet (2)_3: -8447342375547175491
+      Flying Cubit  Sprite Sheet (2)_4: 4146740024824857175
+      Flying Cubit  Sprite Sheet (2)_5: 3904466640087315823
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
