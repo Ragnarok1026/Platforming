@@ -4,6 +4,7 @@ using System.Collections;
 public class CutsceneBoss2 : MonoBehaviour
 {
     public GameObject player;
+    public GameObject Wall;
     public GameObject cutsceneStart;
     public Animator animator;
     public GameObject text1;
@@ -13,7 +14,7 @@ public class CutsceneBoss2 : MonoBehaviour
     public bool cutsceneActive2 = false;
     void Update()
     {
-        
+
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -24,6 +25,7 @@ public class CutsceneBoss2 : MonoBehaviour
             player.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, 0);
             animator.SetFloat("Speed", 0);
             text1.SetActive(true);
+            StartCoroutine(Cutscene());
         }
     }
 
@@ -33,7 +35,6 @@ public class CutsceneBoss2 : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Debug.Log("Space Pressed");
                 Invoke("CutScene1", 0f);
                 cutsceneActive1 = true;
             }
@@ -75,6 +76,7 @@ public class CutsceneBoss2 : MonoBehaviour
     {
         text3.SetActive(false);
         cutsceneStart.SetActive(false);
+        Wall.SetActive(true);
         player.GetComponent<PlayerMovement>().enabled = true;
     }
 }
