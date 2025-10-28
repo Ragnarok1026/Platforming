@@ -3294,7 +3294,7 @@ MonoBehaviour:
   attackPointA: {fileID: 524867057}
   attackPointB: {fileID: 1633575344}
   attackPointStart: {fileID: 1212308178}
-  speed: 5
+  speed: 0.01
   attackPhase1: 0
 --- !u!50 &588111724
 Rigidbody2D:
@@ -6251,7 +6251,7 @@ Transform:
   m_GameObject: {fileID: 1212308178}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -41.81, y: 44.71, z: -4.5718927}
+  m_LocalPosition: {x: -41.81, y: 43, z: -4.5718927}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
