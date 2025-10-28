@@ -75,7 +75,7 @@ public class CutsceneBoss2 : MonoBehaviour
     void EndCutscene()
     {
         text3.SetActive(false);
-        cutsceneStart.SetActive(false);
+        Destroy(cutsceneStart);
         Wall.SetActive(true);
         player.GetComponent<PlayerMovement>().enabled = true;
     }

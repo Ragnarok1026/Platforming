@@ -17,7 +17,7 @@ public class BossFight2 : MonoBehaviour
     }
     void Update()
     {
-        if(endCutscene.activeInHierarchy == false)
+        if(attackPhase1 == false && endCutscene == null)
         {
             attackPhase1 = true;
             StartCoroutine(Attack());
@@ -30,6 +30,7 @@ public class BossFight2 : MonoBehaviour
         {
             while (Vector2.Distance(transform.position, attackPointA.transform.position) > 1f)
             {
+                speed = 1f;
                 transform.Translate((attackPointA.transform.position - transform.position) * speed * Time.deltaTime);
                 yield return new WaitForEndOfFrame();
             }
@@ -37,6 +38,7 @@ public class BossFight2 : MonoBehaviour
 
             while(Vector2.Distance(transform.position, attackPointB.transform.position) > 1f)
             {
+                speed = 3f;
                 transform.Translate((attackPointB.transform.position - transform.position) * speed * Time.deltaTime);
                 yield return new WaitForEndOfFrame();
             }
@@ -44,6 +46,7 @@ public class BossFight2 : MonoBehaviour
 
             while(Vector2.Distance(transform.position, attackPointStart.transform.position) > 1f)
             {
+                speed = 2f;
                 transform.Translate((attackPointStart.transform.position - transform.position) * speed * Time.deltaTime);   
                 yield return new WaitForEndOfFrame();
             }
