@@ -6,7 +6,11 @@ public class BossFight2 : MonoBehaviour
     public GameObject endCutscene;
     public GameObject player;
     public GameObject boss;
+    public GameObject attackPointA;
+    public GameObject attackPointB;
+    public GameObject attackPointStart;
     public float speed;
+    public bool attackPhase1 = false;
     void Start()
     {
         player = GameObject.FindWithTag("Player");
@@ -15,28 +19,17 @@ public class BossFight2 : MonoBehaviour
     {
         if(endCutscene.activeInHierarchy == false)
         {
-            Invoke("BossFight", 0f);
-        }
-    }
-    void BossFight()
-    {
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            speed = 0;
+            attackPhase1 = true;
+            StartCoroutine(Attack());
         }
     }
 
-    public IEnumerator Attack()
+    IEnumerator Attack()
     {
-        while(speed == 0)
+        while(attackPhase1 == true)
         {
-            
-            yield return null;
+            transform.position = Vector2.MoveTowards(transform.position, attackPointA.transform.position, speed * Time.deltaTime);
+            yield return null;     
         }
     }
 }
