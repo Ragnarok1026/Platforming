@@ -4,11 +4,13 @@ using System.Collections;
 public class BossFight2 : MonoBehaviour
 {
     public GameObject endCutscene;
+    public Animator animator;
     public GameObject player;
     public GameObject boss;
     public GameObject attackPointA;
     public GameObject attackPointB;
     public GameObject attackPointStart;
+    public GameObject attack;
     public float speed;
     public bool attackPhase1 = false;
     void Start()
@@ -21,6 +23,14 @@ public class BossFight2 : MonoBehaviour
         {
             attackPhase1 = true;
             StartCoroutine(Attack());
+        }
+        if (speed == 0 && transform.position.x >= attack.transform.position.x)
+        {
+            animator.SetBool("IsCharging", true);
+        }
+        else
+        {
+            animator.SetBool("IsCharging", false);
         }
     }
 
@@ -38,7 +48,7 @@ public class BossFight2 : MonoBehaviour
 
             while(Vector2.Distance(transform.position, attackPointB.transform.position) > 1f)
             {
-                speed = 3f;
+                speed = 2f;
                 transform.Translate((attackPointB.transform.position - transform.position) * speed * Time.deltaTime);
                 yield return new WaitForEndOfFrame();
             }
