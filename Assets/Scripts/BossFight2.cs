@@ -13,6 +13,7 @@ public class BossFight2 : MonoBehaviour
     public GameObject attack;
     public float speed;
     public bool attackPhase1 = false;
+    public bool charging = false;
     void Start()
     {
         player = GameObject.FindWithTag("Player");
@@ -23,14 +24,6 @@ public class BossFight2 : MonoBehaviour
         {
             attackPhase1 = true;
             StartCoroutine(Attack());
-        }
-        if (speed == 0 && transform.position.x >= attack.transform.position.x)
-        {
-            animator.SetBool("IsCharging", true);
-        }
-        else
-        {
-            animator.SetBool("IsCharging", false);
         }
     }
 
@@ -44,15 +37,15 @@ public class BossFight2 : MonoBehaviour
                 transform.Translate((attackPointA.transform.position - transform.position) * speed * Time.deltaTime);
                 yield return new WaitForEndOfFrame();
             }
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(1.5f);
 
             while(Vector2.Distance(transform.position, attackPointB.transform.position) > 1f)
             {
-                speed = 2f;
+                speed = 1f;
                 transform.Translate((attackPointB.transform.position - transform.position) * speed * Time.deltaTime);
                 yield return new WaitForEndOfFrame();
             }
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(1.5f);
 
             while(Vector2.Distance(transform.position, attackPointStart.transform.position) > 1f)
             {

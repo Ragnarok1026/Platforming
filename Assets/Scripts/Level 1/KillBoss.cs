@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class KillBoss : MonoBehaviour
@@ -18,7 +19,7 @@ public class KillBoss : MonoBehaviour
     {
         if (other.CompareTag("Boss"))
         {
-            boss.GetComponent<BossHealth>().TakeDamage(20);
+            boss.GetComponent<BossLife>().TakeDamage(20);
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, bounce);
         }
     }
