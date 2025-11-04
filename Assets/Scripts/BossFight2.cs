@@ -10,7 +10,7 @@ public class BossFight2 : MonoBehaviour
     public GameObject attackPointA;
     public GameObject attackPointB;
     public GameObject attackPointStart;
-    public GameObject attack;
+    
     public float speed;
     public bool attackPhase1 = false;
     public bool charging = false;
