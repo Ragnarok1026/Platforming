@@ -7,6 +7,7 @@ public class BossLife : MonoBehaviour
     public int maxHealth = 120;
     public bool isPhase2 = false;
     public bool releaseArrows = false;
+    public bool phase2Started = false;
     int currentHealth;
     public Animator animator;
     public GameObject attackPointStart;
@@ -25,6 +26,11 @@ public class BossLife : MonoBehaviour
     public GameObject Arrow12;
     public GameObject Arrow13;
     public GameObject Arrow14;
+    public GameObject Arrow15;
+    public GameObject Arrow16;
+    public GameObject Arrow17;
+    public GameObject Arrow18;
+
     public float speed = 3f;
     void Start()
     {
@@ -42,29 +48,30 @@ public class BossLife : MonoBehaviour
 
     void StartPhase2()
     {
+        isPhase2 = true;
         GetComponent<BossFight2>().enabled = false;
         Debug.Log("Boss Angered");
-        isPhase2 = true;
-        speed = 0;
-        StartCoroutine(Phase2());
+        StartCoroutine(ReleaseArrows());
     }
 
-    IEnumerator Phase2()
+    IEnumerator ReleaseArrows()
     {
-        yield return new WaitForSeconds(2f);
-        while (isPhase2 == true)
-        {
-            speed = 4f;
-            transform.Translate((attackPointStart.transform.position - transform.position) * speed * Time.deltaTime);
-            releaseArrows = true;
-            yield return new WaitForSeconds(2f);
-            
-        }
-        yield return new WaitForSeconds(2f);
+        GetComponent<BossFight2>().attackPhase1 = false;
+        yield return new WaitForSeconds(5f);
+        releaseArrows = true;
 
         while(releaseArrows == true)
         {
             Arrows.SetActive(true);
+            phase2Started = true;
+            yield return new WaitForEndOfFrame();
+        }
+        yield return new WaitForSeconds(2f);
+
+        while(phase2Started == true)
+        {
+            Debug.Log("Releasing Arrows");
+            Arrow1.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             yield return new WaitForEndOfFrame();
         }
     }
