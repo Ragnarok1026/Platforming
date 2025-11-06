@@ -22,6 +22,17 @@ public class PlayerDeath : MonoBehaviour
             player.GetComponent<PlayerMovement>().enabled = false;
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Arrow"))
+        {
+            Debug.Log("Player hit by Boss");
+            animator.SetBool("Death", true);
+            Invoke("DisableMovement", 0.33f);
+            player.GetComponent<PlayerMovement>().enabled = false;
+            player.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, 0);
+        }
+    }
     void DisableMovement()
     {
         player.GetComponent<SpriteRenderer>().enabled = false;

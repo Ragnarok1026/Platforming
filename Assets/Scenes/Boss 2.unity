@@ -131,9 +131,10 @@ GameObject:
   - component: {fileID: 20572463}
   - component: {fileID: 20572462}
   - component: {fileID: 20572461}
+  - component: {fileID: 20572464}
   m_Layer: 0
   m_Name: Arrow of Wind (7)
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 20572459}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.5074234, y: 6.11446, z: 0.024610974}
+  m_LocalPosition: {x: 4.5074234, y: 5, z: 0.024610974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -212,7 +213,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -280,6 +281,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.29465294, y: 0.94218826}
   m_EdgeRadius: 0
+--- !u!114 &20572464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20572459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c2354621555aa4e9d5d4e8a1f4264d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetArrow: {fileID: 104448716}
 --- !u!1 &36082776
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,9 +440,10 @@ GameObject:
   - component: {fileID: 62906522}
   - component: {fileID: 62906521}
   - component: {fileID: 62906520}
+  - component: {fileID: 62906523}
   m_Layer: 0
   m_Name: Arrow of Wind (8)
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -442,7 +457,7 @@ Transform:
   m_GameObject: {fileID: 62906518}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.507423, y: 6.11446, z: 0.024610974}
+  m_LocalPosition: {x: 12.507423, y: 5, z: 0.024610974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -507,7 +522,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -575,6 +590,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.29465294, y: 0.94218826}
   m_EdgeRadius: 0
+--- !u!114 &62906523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62906518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c2354621555aa4e9d5d4e8a1f4264d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetArrow: {fileID: 104448716}
 --- !u!1 &68788699
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,6 +871,84 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &104448716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 104448718}
+  - component: {fileID: 104448717}
+  m_Layer: 0
+  m_Name: Reset
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &104448717
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104448716}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 33.854996, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &104448718
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104448716}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -41, y: 22.16, z: -0.05341114}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &108724303
 GameObject:
   m_ObjectHideFlags: 0
@@ -2572,9 +2678,10 @@ GameObject:
   - component: {fileID: 281918812}
   - component: {fileID: 281918811}
   - component: {fileID: 281918810}
+  - component: {fileID: 281918813}
   m_Layer: 0
   m_Name: Arrow of Wind (11)
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2588,7 +2695,7 @@ Transform:
   m_GameObject: {fileID: 281918808}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.147423, y: 6.11446, z: 0.024610974}
+  m_LocalPosition: {x: 14.147423, y: 5, z: 0.024610974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2653,7 +2760,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -2721,6 +2828,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.29465294, y: 0.94218826}
   m_EdgeRadius: 0
+--- !u!114 &281918813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281918808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c2354621555aa4e9d5d4e8a1f4264d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetArrow: {fileID: 104448716}
 --- !u!1 &338414546
 GameObject:
   m_ObjectHideFlags: 0
@@ -3151,9 +3271,10 @@ GameObject:
   - component: {fileID: 373122660}
   - component: {fileID: 373122659}
   - component: {fileID: 373122658}
+  - component: {fileID: 373122661}
   m_Layer: 0
   m_Name: Arrow of Wind (10)
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3167,7 +3288,7 @@ Transform:
   m_GameObject: {fileID: 373122656}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.982578, y: 6.11446, z: 0.024610974}
+  m_LocalPosition: {x: -17.982578, y: 5, z: 0.024610974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3232,7 +3353,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -3300,6 +3421,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.29465294, y: 0.94218826}
   m_EdgeRadius: 0
+--- !u!114 &373122661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373122656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c2354621555aa4e9d5d4e8a1f4264d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetArrow: {fileID: 104448716}
 --- !u!1 &426352114
 GameObject:
   m_ObjectHideFlags: 0
@@ -3983,9 +4117,10 @@ GameObject:
   - component: {fileID: 528333586}
   - component: {fileID: 528333585}
   - component: {fileID: 528333584}
+  - component: {fileID: 528333587}
   m_Layer: 0
   m_Name: Arrow of Wind (17)
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3999,7 +4134,7 @@ Transform:
   m_GameObject: {fileID: 528333582}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.1100006, y: 6.11446, z: 0.024610974}
+  m_LocalPosition: {x: -1.1100006, y: 5, z: 0.024610974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4064,7 +4199,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -4132,6 +4267,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.29465294, y: 0.94218826}
   m_EdgeRadius: 0
+--- !u!114 &528333587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528333582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c2354621555aa4e9d5d4e8a1f4264d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetArrow: {fileID: 104448716}
 --- !u!1 &542900027
 GameObject:
   m_ObjectHideFlags: 0
@@ -4278,9 +4426,10 @@ GameObject:
   - component: {fileID: 546898184}
   - component: {fileID: 546898183}
   - component: {fileID: 546898182}
+  - component: {fileID: 546898185}
   m_Layer: 0
   m_Name: Arrow of Wind (15)
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4294,7 +4443,7 @@ Transform:
   m_GameObject: {fileID: 546898180}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.580002, y: 6.11446, z: 0.024610974}
+  m_LocalPosition: {x: -4.580002, y: 5, z: 0.024610974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4359,7 +4508,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -4427,6 +4576,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.29465294, y: 0.94218826}
   m_EdgeRadius: 0
+--- !u!114 &546898185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546898180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c2354621555aa4e9d5d4e8a1f4264d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetArrow: {fileID: 104448716}
 --- !u!1 &551345135
 GameObject:
   m_ObjectHideFlags: 0
@@ -5056,7 +5218,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -5116,31 +5278,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eba8404340af1ca4688ea6167e8446be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resetArrowsScript: {fileID: 0}
   maxHealth: 0
   isPhase2: 0
   releaseArrows: 0
-  phase2Started: 0
+  resetArrows: 0
   animator: {fileID: 588111718}
   attackPointStart: {fileID: 1212308178}
+  barrier: {fileID: 851955175}
   Arrows: {fileID: 1523188688}
   Arrow1: {fileID: 861411773}
-  Arrow2: {fileID: 1336023570}
-  Arrow3: {fileID: 1184564694}
+  Arrow2: {fileID: 1740372727}
+  Arrow3: {fileID: 1336023570}
   Arrow4: {fileID: 1058935899}
-  Arrow5: {fileID: 935530104}
+  Arrow5: {fileID: 62906518}
   Arrow6: {fileID: 2021777810}
-  Arrow7: {fileID: 773335170}
+  Arrow7: {fileID: 2069130389}
   Arrow8: {fileID: 20572459}
-  Arrow9: {fileID: 62906518}
+  Arrow9: {fileID: 935530104}
   Arrow10: {fileID: 1582332771}
   Arrow11: {fileID: 373122656}
-  Arrow12: {fileID: 281918808}
+  Arrow12: {fileID: 528333582}
   Arrow13: {fileID: 1057025456}
-  Arrow14: {fileID: 1740372727}
-  Arrow15: {fileID: 2069130389}
+  Arrow14: {fileID: 1184564694}
+  Arrow15: {fileID: 773335170}
   Arrow16: {fileID: 546898180}
   Arrow17: {fileID: 745380091}
-  Arrow18: {fileID: 528333582}
+  Arrow18: {fileID: 281918808}
   speed: 3
 --- !u!1 &594429610
 GameObject:
@@ -5993,9 +6157,10 @@ GameObject:
   - component: {fileID: 745380095}
   - component: {fileID: 745380094}
   - component: {fileID: 745380093}
+  - component: {fileID: 745380096}
   m_Layer: 0
   m_Name: Arrow of Wind (16)
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6009,7 +6174,7 @@ Transform:
   m_GameObject: {fileID: 745380091}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.38, y: 6.11446, z: 0.024610974}
+  m_LocalPosition: {x: 0.38, y: 5, z: 0.024610974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6074,7 +6239,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -6142,6 +6307,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.29465294, y: 0.94218826}
   m_EdgeRadius: 0
+--- !u!114 &745380096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745380091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c2354621555aa4e9d5d4e8a1f4264d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetArrow: {fileID: 104448716}
 --- !u!1 &755153069
 GameObject:
   m_ObjectHideFlags: 0
@@ -6335,9 +6513,10 @@ GameObject:
   - component: {fileID: 773335174}
   - component: {fileID: 773335173}
   - component: {fileID: 773335172}
+  - component: {fileID: 773335175}
   m_Layer: 0
   m_Name: Arrow of Wind (6)
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6351,7 +6530,7 @@ Transform:
   m_GameObject: {fileID: 773335170}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.507423, y: 6.11446, z: 0.024610974}
+  m_LocalPosition: {x: 8.507423, y: 5, z: 0.024610974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6416,7 +6595,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -6484,6 +6663,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.29465294, y: 0.94218826}
   m_EdgeRadius: 0
+--- !u!114 &773335175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773335170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c2354621555aa4e9d5d4e8a1f4264d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetArrow: {fileID: 104448716}
 --- !u!1 &817001822
 GameObject:
   m_ObjectHideFlags: 0
@@ -6577,6 +6769,37 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 6.832837}
   m_EdgeRadius: 0
+--- !u!1 &851955175
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 851955176}
+  m_Layer: 0
+  m_Name: Barrier
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &851955176
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851955175}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -41, y: 40, z: -0.03916612}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &861411773
 GameObject:
   m_ObjectHideFlags: 0
@@ -6589,9 +6812,10 @@ GameObject:
   - component: {fileID: 861411777}
   - component: {fileID: 861411776}
   - component: {fileID: 861411775}
+  - component: {fileID: 861411778}
   m_Layer: 0
   m_Name: Arrow of Wind
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6605,7 +6829,7 @@ Transform:
   m_GameObject: {fileID: 861411773}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.507423, y: 6.11446, z: 0.024610974}
+  m_LocalPosition: {x: 10.507423, y: 5, z: 0.024610974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6670,7 +6894,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -6738,6 +6962,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.29465294, y: 0.94218826}
   m_EdgeRadius: 0
+--- !u!114 &861411778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861411773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c2354621555aa4e9d5d4e8a1f4264d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetArrow: {fileID: 104448716}
 --- !u!1 &861915365
 GameObject:
   m_ObjectHideFlags: 0
@@ -6900,9 +7137,10 @@ GameObject:
   - component: {fileID: 935530108}
   - component: {fileID: 935530107}
   - component: {fileID: 935530106}
+  - component: {fileID: 935530109}
   m_Layer: 0
   m_Name: Arrow of Wind (4)
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6916,7 +7154,7 @@ Transform:
   m_GameObject: {fileID: 935530104}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.492577, y: 6.11446, z: 0.024610974}
+  m_LocalPosition: {x: -8.492577, y: 5, z: 0.024610974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6981,7 +7219,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -7049,6 +7287,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.29465294, y: 0.94218826}
   m_EdgeRadius: 0
+--- !u!114 &935530109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935530104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c2354621555aa4e9d5d4e8a1f4264d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetArrow: {fileID: 104448716}
 --- !u!1 &940429919
 GameObject:
   m_ObjectHideFlags: 0
@@ -8193,9 +8444,10 @@ GameObject:
   - component: {fileID: 1057025460}
   - component: {fileID: 1057025459}
   - component: {fileID: 1057025458}
+  - component: {fileID: 1057025461}
   m_Layer: 0
   m_Name: Arrow of Wind (12)
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8209,7 +8461,7 @@ Transform:
   m_GameObject: {fileID: 1057025456}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5074234, y: 6.11446, z: 0.024610974}
+  m_LocalPosition: {x: 2.5074234, y: 5, z: 0.024610974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8274,7 +8526,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -8342,6 +8594,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.29465294, y: 0.94218826}
   m_EdgeRadius: 0
+--- !u!114 &1057025461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057025456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c2354621555aa4e9d5d4e8a1f4264d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetArrow: {fileID: 104448716}
 --- !u!1 &1058935899
 GameObject:
   m_ObjectHideFlags: 0
@@ -8354,9 +8619,10 @@ GameObject:
   - component: {fileID: 1058935903}
   - component: {fileID: 1058935902}
   - component: {fileID: 1058935901}
+  - component: {fileID: 1058935904}
   m_Layer: 0
   m_Name: Arrow of Wind (3)
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8370,7 +8636,7 @@ Transform:
   m_GameObject: {fileID: 1058935899}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.492577, y: 6.11446, z: 0.024610974}
+  m_LocalPosition: {x: -14.492577, y: 5, z: 0.024610974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8435,7 +8701,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -8503,6 +8769,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.29465294, y: 0.94218826}
   m_EdgeRadius: 0
+--- !u!114 &1058935904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058935899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c2354621555aa4e9d5d4e8a1f4264d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetArrow: {fileID: 104448716}
 --- !u!1 &1062888521
 GameObject:
   m_ObjectHideFlags: 0
@@ -9248,9 +9527,10 @@ GameObject:
   - component: {fileID: 1184564698}
   - component: {fileID: 1184564697}
   - component: {fileID: 1184564696}
+  - component: {fileID: 1184564699}
   m_Layer: 0
   m_Name: Arrow of Wind (2)
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9264,7 +9544,7 @@ Transform:
   m_GameObject: {fileID: 1184564694}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.492577, y: 6.11446, z: 0.024610974}
+  m_LocalPosition: {x: -12.492577, y: 5, z: 0.024610974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9329,7 +9609,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -9397,6 +9677,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.29465294, y: 0.94218826}
   m_EdgeRadius: 0
+--- !u!114 &1184564699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184564694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c2354621555aa4e9d5d4e8a1f4264d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetArrow: {fileID: 104448716}
 --- !u!1 &1207632501
 GameObject:
   m_ObjectHideFlags: 0
@@ -10356,9 +10649,10 @@ GameObject:
   - component: {fileID: 1336023574}
   - component: {fileID: 1336023573}
   - component: {fileID: 1336023572}
+  - component: {fileID: 1336023575}
   m_Layer: 0
   m_Name: Arrow of Wind (1)
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10372,7 +10666,7 @@ Transform:
   m_GameObject: {fileID: 1336023570}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.5074234, y: 6.11446, z: 0.024610974}
+  m_LocalPosition: {x: 6.5074234, y: 5, z: 0.024610974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10437,7 +10731,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -10505,6 +10799,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.29465294, y: 0.94218826}
   m_EdgeRadius: 0
+--- !u!114 &1336023575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336023570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c2354621555aa4e9d5d4e8a1f4264d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetArrow: {fileID: 104448716}
 --- !u!1 &1350358260
 GameObject:
   m_ObjectHideFlags: 0
@@ -12111,7 +12418,7 @@ Transform:
   m_GameObject: {fileID: 1523188688}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.507423, y: 34.78, z: -0.108569846}
+  m_LocalPosition: {x: -39.507423, y: 34.88554, z: -0.108569846}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12764,9 +13071,10 @@ GameObject:
   - component: {fileID: 1582332775}
   - component: {fileID: 1582332774}
   - component: {fileID: 1582332773}
+  - component: {fileID: 1582332776}
   m_Layer: 0
   m_Name: Arrow of Wind (9)
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12780,7 +13088,7 @@ Transform:
   m_GameObject: {fileID: 1582332771}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.492577, y: 6.11446, z: 0.024610974}
+  m_LocalPosition: {x: -16.492577, y: 5, z: 0.024610974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12845,7 +13153,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -12913,6 +13221,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.29465294, y: 0.94218826}
   m_EdgeRadius: 0
+--- !u!114 &1582332776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582332771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c2354621555aa4e9d5d4e8a1f4264d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetArrow: {fileID: 104448716}
 --- !u!1 &1589310387
 GameObject:
   m_ObjectHideFlags: 0
@@ -13880,9 +14201,10 @@ GameObject:
   - component: {fileID: 1740372731}
   - component: {fileID: 1740372730}
   - component: {fileID: 1740372729}
+  - component: {fileID: 1740372732}
   m_Layer: 0
   m_Name: Arrow of Wind (13)
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13896,7 +14218,7 @@ Transform:
   m_GameObject: {fileID: 1740372727}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.4925766, y: 6.11446, z: 0.024610974}
+  m_LocalPosition: {x: -6.4925766, y: 5, z: 0.024610974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13961,7 +14283,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -14029,6 +14351,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.29465294, y: 0.94218826}
   m_EdgeRadius: 0
+--- !u!114 &1740372732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740372727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c2354621555aa4e9d5d4e8a1f4264d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetArrow: {fileID: 104448716}
 --- !u!1 &1747605110
 GameObject:
   m_ObjectHideFlags: 0
@@ -17111,9 +17446,10 @@ GameObject:
   - component: {fileID: 2021777814}
   - component: {fileID: 2021777813}
   - component: {fileID: 2021777812}
+  - component: {fileID: 2021777815}
   m_Layer: 0
   m_Name: Arrow of Wind (5)
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17127,7 +17463,7 @@ Transform:
   m_GameObject: {fileID: 2021777810}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.492577, y: 6.11446, z: 0.024610974}
+  m_LocalPosition: {x: -10.492577, y: 5, z: 0.024610974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17192,7 +17528,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -17260,6 +17596,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.29465294, y: 0.94218826}
   m_EdgeRadius: 0
+--- !u!114 &2021777815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021777810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c2354621555aa4e9d5d4e8a1f4264d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetArrow: {fileID: 104448716}
 --- !u!1 &2027284116
 GameObject:
   m_ObjectHideFlags: 0
@@ -17524,9 +17873,10 @@ GameObject:
   - component: {fileID: 2069130393}
   - component: {fileID: 2069130392}
   - component: {fileID: 2069130391}
+  - component: {fileID: 2069130394}
   m_Layer: 0
   m_Name: Arrow of Wind (14)
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17540,7 +17890,7 @@ Transform:
   m_GameObject: {fileID: 2069130389}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.09, y: 6.11446, z: 0.024610974}
+  m_LocalPosition: {x: -3.09, y: 5, z: 0.024610974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17605,7 +17955,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -17673,6 +18023,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.29465294, y: 0.94218826}
   m_EdgeRadius: 0
+--- !u!114 &2069130394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069130389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c2354621555aa4e9d5d4e8a1f4264d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetArrow: {fileID: 104448716}
 --- !u!1 &2088653074
 GameObject:
   m_ObjectHideFlags: 0
@@ -17952,3 +18315,5 @@ SceneRoots:
   - {fileID: 1633575346}
   - {fileID: 1212308180}
   - {fileID: 1523188689}
+  - {fileID: 851955176}
+  - {fileID: 104448718}

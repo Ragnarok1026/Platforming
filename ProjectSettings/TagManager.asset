@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Attack
   - Attack2
+  - Arrow
   layers:
   - Default
   - TransparentFX
