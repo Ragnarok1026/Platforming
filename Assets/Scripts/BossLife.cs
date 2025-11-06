@@ -38,8 +38,8 @@ public class BossLife : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        animator.SetBool("Defeated", false);
     }
-
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -131,5 +131,7 @@ public class BossLife : MonoBehaviour
         yield return new WaitForSeconds(2f);
         Arrows.SetActive(false);
         GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        yield return new WaitForSeconds(1f);
+        animator.SetBool("Defeated", true);
     }
 }
