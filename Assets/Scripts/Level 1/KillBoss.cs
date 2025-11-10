@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class KillBoss : MonoBehaviour
 {
-    public float bounce;
+    public float bounce = 30f;
     public Rigidbody2D rb;
     public GameObject boss;
     void Start()
