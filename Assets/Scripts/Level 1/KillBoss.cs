@@ -19,7 +19,7 @@ public class KillBoss : MonoBehaviour
     {
         if (other.CompareTag("Boss"))
         {
-            boss.GetComponent<BossLife>().TakeDamage(20);
+            boss.GetComponent<BossLife>().TakeDamage(30);
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, bounce);
         }
     }

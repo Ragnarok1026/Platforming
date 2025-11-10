@@ -2,14 +2,17 @@ using Unity.Cinemachine;
 using UnityEngine;
 using System.Collections;
 using Unity.VisualScripting;
+using System;
 
 public class BossLife : MonoBehaviour
 {
+    public GameObject Boss;
     public ResetArrows resetArrowsScript;
     public int maxHealth = 120;
     public bool isPhase2 = false;
     public bool releaseArrows = false;
     public bool resetArrows = false;
+    public bool Defeated = false;
     int currentHealth;
     public Animator animator;
     public GameObject attackPointStart;
@@ -43,7 +46,7 @@ public class BossLife : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        if (currentHealth <= 0)
+        if (currentHealth <= 50)
         {
             StartPhase2();
         }
@@ -52,6 +55,7 @@ public class BossLife : MonoBehaviour
     void StartPhase2()
     {
         isPhase2 = true;
+        GetComponent<SpriteRenderer>().color = Color.cyan;
         BossFight2 bossFight = GetComponent<BossFight2>();
         bossFight.enabled = false;
         bossFight.attackPhase1 = false;
@@ -59,6 +63,7 @@ public class BossLife : MonoBehaviour
         releaseArrows = true;
         StartCoroutine(ShowArrows());
     }
+
     IEnumerator ShowArrows()
     {
         yield return new WaitForSeconds(1f);
@@ -128,10 +133,21 @@ public class BossLife : MonoBehaviour
         Arrow18.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         Debug.Log("All arrows released");
         releaseArrows = false;
+        GetComponent<SpriteRenderer>().color = Color.white;
+
         yield return new WaitForSeconds(2f);
         Arrows.SetActive(false);
         GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+
         yield return new WaitForSeconds(1f);
         animator.SetBool("Defeated", true);
+
+        if(currentHealth == 0)
+        {
+            yield return new WaitForSeconds(3f);
+            GetComponent<SpriteRenderer>().enabled = false;
+            GetComponent<Collider2D>().enabled = false;
+            Boss.SetActive(false);
+        }
     }
 }

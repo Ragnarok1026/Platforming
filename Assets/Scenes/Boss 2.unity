@@ -5278,11 +5278,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eba8404340af1ca4688ea6167e8446be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Boss: {fileID: 588111717}
   resetArrowsScript: {fileID: 0}
-  maxHealth: 0
+  maxHealth: 200
   isPhase2: 0
   releaseArrows: 0
   resetArrows: 0
+  Defeated: 0
   animator: {fileID: 588111718}
   attackPointStart: {fileID: 1212308178}
   barrier: {fileID: 851955175}
