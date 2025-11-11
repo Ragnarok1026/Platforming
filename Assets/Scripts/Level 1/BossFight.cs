@@ -7,7 +7,7 @@ public class BossFight : MonoBehaviour
     public GameObject killTrigger;
     public GameObject leftStop;
     public GameObject rightStop;
-    public Rigidbody2D rigidbody;
+    public new Rigidbody2D rigidbody; // Add 'new' keyword to explicitly hide inherited member
     public int speed = 4;
 
     public void Start()
