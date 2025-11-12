@@ -5746,7 +5746,6 @@ GameObject:
   - component: {fileID: 570764460}
   - component: {fileID: 570764466}
   - component: {fileID: 570764467}
-  - component: {fileID: 570764468}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -5934,7 +5933,7 @@ Transform:
   m_GameObject: {fileID: 570764459}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.1, z: 0}
+  m_LocalPosition: {x: -0.006, y: -3.341, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5976,19 +5975,6 @@ MonoBehaviour:
   animator: {fileID: 570764461}
   speed: 4
   player: {fileID: 570764459}
---- !u!114 &570764468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 570764459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcd1ad17f3cae924193f007320b089a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  door: {fileID: 990429181}
 --- !u!1 &577409093
 GameObject:
   m_ObjectHideFlags: 0
@@ -10345,7 +10331,6 @@ GameObject:
   - component: {fileID: 990429182}
   - component: {fileID: 990429184}
   - component: {fileID: 990429183}
-  - component: {fileID: 990429185}
   m_Layer: 7
   m_Name: Door
   m_TagString: Ground
@@ -10469,20 +10454,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &990429185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 990429181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c5ac1a9578ca1547b89dcf5e79f0f3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  door: {fileID: 990429181}
-  EnemiesRemaining: 0
 --- !u!1 &996784451
 GameObject:
   m_ObjectHideFlags: 0

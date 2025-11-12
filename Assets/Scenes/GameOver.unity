@@ -966,9 +966,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1891517713}
+      - m_Target: {fileID: 1891517715}
         m_TargetAssemblyTypeName: ContinueButton, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: ContinueGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

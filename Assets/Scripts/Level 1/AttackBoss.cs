@@ -10,7 +10,7 @@ public class AttackBoss : MonoBehaviour
     {
         if (other.CompareTag("Boss"))
         {
-            boss.GetComponent<BossHealth>().TakeDamage(30);
+            boss.GetComponent<BossHealth>().TakeDamage(10);
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, bounce);
         }
     }

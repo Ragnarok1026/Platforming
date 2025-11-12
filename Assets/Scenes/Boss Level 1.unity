@@ -765,7 +765,6 @@ GameObject:
   - component: {fileID: 389622189}
   - component: {fileID: 389622191}
   - component: {fileID: 389622190}
-  - component: {fileID: 389622192}
   m_Layer: 0
   m_Name: JumpAttack
   m_TagString: Untagged
@@ -848,21 +847,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.0131993, y: 0.06681228}
   m_EdgeRadius: 0
---- !u!114 &389622192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 389622188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d163760b41f5323449ab38163bfac26e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bounce: 30
-  rb: {fileID: 1765841386}
-  boss: {fileID: 1724822285}
 --- !u!1 &425355356
 GameObject:
   m_ObjectHideFlags: 0
@@ -4060,7 +4044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d163760b41f5323449ab38163bfac26e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounce: 30
+  bounce: 10
   rb: {fileID: 1765841386}
   boss: {fileID: 1724822285}
 --- !u!1 &1843413161
