@@ -5746,6 +5746,7 @@ GameObject:
   - component: {fileID: 570764460}
   - component: {fileID: 570764466}
   - component: {fileID: 570764467}
+  - component: {fileID: 570764468}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -5975,6 +5976,19 @@ MonoBehaviour:
   animator: {fileID: 570764461}
   speed: 4
   player: {fileID: 570764459}
+--- !u!114 &570764468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570764459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ae0e638034e64f46825a5d014f0fd4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Door: {fileID: 990429181}
 --- !u!1 &577409093
 GameObject:
   m_ObjectHideFlags: 0
@@ -10331,6 +10345,7 @@ GameObject:
   - component: {fileID: 990429182}
   - component: {fileID: 990429184}
   - component: {fileID: 990429183}
+  - component: {fileID: 990429185}
   m_Layer: 7
   m_Name: Door
   m_TagString: Ground
@@ -10454,6 +10469,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &990429185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990429181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a29ca877f3c3441a039c54e91175d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxEnemies: 16
+  Door: {fileID: 990429181}
 --- !u!1 &996784451
 GameObject:
   m_ObjectHideFlags: 0

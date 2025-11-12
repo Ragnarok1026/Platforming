@@ -12,11 +12,15 @@ public class EnemiesRemaining : MonoBehaviour
 
     void Update()
     {
-        
+        if(MaxEnemies == 0)
+        {
+            Door.SetActive(false);
+        }
+
     }
 
-    private void Defeated()
+    public void DefeatEnemy(int defeat)
     {
-
+        MaxEnemies -= defeat;
     }
 }

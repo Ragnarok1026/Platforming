@@ -341,11 +341,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 25382973}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87a29ca877f3c3441a039c54e91175d6, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ae0e638034e64f46825a5d014f0fd4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxEnemies: 4
-  Door: {fileID: 0}
+  Door: {fileID: 817309544}
 --- !u!1 &116490889
 GameObject:
   m_ObjectHideFlags: 0
@@ -2580,6 +2579,7 @@ GameObject:
   - component: {fileID: 817309547}
   - component: {fileID: 817309546}
   - component: {fileID: 817309545}
+  - component: {fileID: 817309548}
   m_Layer: 7
   m_Name: Next Level
   m_TagString: Untagged
@@ -2703,6 +2703,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1661391674}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &817309548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817309544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a29ca877f3c3441a039c54e91175d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxEnemies: 4
+  Door: {fileID: 817309544}
 --- !u!1 &836242689
 GameObject:
   m_ObjectHideFlags: 0

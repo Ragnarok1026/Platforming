@@ -1939,6 +1939,7 @@ GameObject:
   - component: {fileID: 923409539}
   - component: {fileID: 923409538}
   - component: {fileID: 923409537}
+  - component: {fileID: 923409543}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -2137,6 +2138,19 @@ Transform:
   - {fileID: 2052376428}
   m_Father: {fileID: 1410910821}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &923409543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923409536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ae0e638034e64f46825a5d014f0fd4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Door: {fileID: 1896119942}
 --- !u!1 &959048224
 GameObject:
   m_ObjectHideFlags: 0
@@ -4969,6 +4983,7 @@ GameObject:
   - component: {fileID: 1896119946}
   - component: {fileID: 1896119945}
   - component: {fileID: 1896119944}
+  - component: {fileID: 1896119947}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -5092,6 +5107,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2093965609}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1896119947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896119942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a29ca877f3c3441a039c54e91175d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxEnemies: 6
+  Door: {fileID: 1896119942}
 --- !u!1 &1946773138
 GameObject:
   m_ObjectHideFlags: 0
