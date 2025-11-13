@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ada5e0892a2f32a4fb8065443f8a7f0f
+guid: b43f96c4c04dd6741921401aa5b1f52a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3539498462560290965
-    second: Cubit_0
+      213: 7484711793419527102
+    second: ____0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,9 +46,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cubit_0
+      name: ____0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 15
-        width: 35
-        height: 34
+        x: 22
+        y: 23
+        width: 19
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b677d00c6ec21eec0800000000000000
-      internalID: -3539498462560290965
+      spriteID: eb3a2fc68b90fd760800000000000000
+      internalID: 7484711793419527102
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Cubit_0: -3539498462560290965
+      ____0: 7484711793419527102
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
