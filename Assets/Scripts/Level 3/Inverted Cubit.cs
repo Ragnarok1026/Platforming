@@ -83,6 +83,7 @@ public class InvertedCubit : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && cutscene4 == false)
             {
                 Invoke("Leaving", 0);
+                cutscene4 = true;
             }
             yield return null;
         }
@@ -132,6 +133,11 @@ public class InvertedCubit : MonoBehaviour
     void Leaving()
     {
         Monolouge5 .SetActive(false);
-        Animator2.SetBool("IsLeaving", false);
+        Animator2.SetBool("IsLeaving", true);
+        Invoke("IntoShadows", 1);
+    }
+    void IntoShadows()
+    {
+        Entity.GetComponent<BoxCollider2D>().isTrigger = true;
     }
 }
