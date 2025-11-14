@@ -7,15 +7,20 @@ public class InvertedCubit : MonoBehaviour
     private ParticleSystem ParticleSystem1;
     public GameObject Player;
     public GameObject Entity;
+    public GameObject Shadow;
     public GameObject Particle;
     public GameObject Monolouge1;
     public GameObject Monolouge2;
     public GameObject Monolouge3;
     public GameObject Monolouge4;
-    public Animator Animator;
+    public GameObject Monolouge5;
+    public Animator Animator1;
+    public Animator Animator2;
     public bool cutscene1 = false;
     public bool cutscene2 = false;
     public bool cutscene3 = false;
+    public bool cutscene4 = false;
+    public bool EndShadow = false;
     void Start()
     {
         
@@ -30,7 +35,7 @@ public class InvertedCubit : MonoBehaviour
         {
             Player.GetComponent<PlayerMovement>().enabled = false;
             Player.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, 0);
-            Animator.SetFloat("Speed", 0);
+            Animator1.SetFloat("Speed", 0);
             Monolouge1.SetActive(true);
             StartCoroutine(EntityMonolouge());
         }
@@ -73,6 +78,14 @@ public class InvertedCubit : MonoBehaviour
             }
             yield return null;
         }
+        while(cutscene4 == false)
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && cutscene4 == false)
+            {
+                Invoke("Leaving", 0);
+            }
+            yield return null;
+        }
 
     }
     void Cutscene1()
@@ -104,5 +117,21 @@ public class InvertedCubit : MonoBehaviour
     void SpawnParticles()
     {
         ParticleSystem1 = Instantiate(ParticleSystem, Particle.transform.position, Quaternion.identity);
+        Invoke("SpawnShadow", 3);
+    }
+    void SpawnShadow()
+    {
+        Shadow.SetActive(true);
+        Invoke("LastDialouge", 2);
+    }
+    void LastDialouge()
+    {
+        Monolouge5.SetActive(true);
+        EndShadow = true;
+    }
+    void Leaving()
+    {
+        Monolouge5 .SetActive(false);
+        Animator2.SetBool("IsLeaving", false);
     }
 }
