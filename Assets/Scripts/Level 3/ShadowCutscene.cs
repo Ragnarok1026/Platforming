@@ -46,13 +46,12 @@ public class ShadowCutscene : MonoBehaviour
                 Invoke("Cutscene2", 0);
                 Scene2 = true;
             }
-            yield return null;
+
         }
         yield return null;
     }
     void Cutscene1()
     {
-        Debug.Log("Hit");
         shadowScene1.SetActive(false);
         shadowScene2.SetActive(true);
     }

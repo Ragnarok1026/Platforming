@@ -78,15 +78,6 @@ public class InvertedCubit : MonoBehaviour
             }
             yield return null;
         }
-        while(cutscene4 == false)
-        {
-            if (Input.GetKeyDown(KeyCode.Space) && cutscene4 == false)
-            {
-                Invoke("Leaving", 0);
-                cutscene4 = true;
-            }
-            yield return null;
-        }
 
     }
     void Cutscene1()
@@ -129,10 +120,11 @@ public class InvertedCubit : MonoBehaviour
     {
         Monolouge5.SetActive(true);
         EndShadow = true;
+        Invoke("Leaving", 2);
     }
     void Leaving()
     {
-        Monolouge5 .SetActive(false);
+        Monolouge5.SetActive(false);
         Animator2.SetBool("IsLeaving", true);
         Invoke("IntoShadows", 1);
     }
