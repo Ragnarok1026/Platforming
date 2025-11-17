@@ -33,6 +33,7 @@ public class FightStart : MonoBehaviour
         if (spearsAppear == true)
         {
             allSpears.SetActive(true);
+            spearsAttack = true;
         }
         StartCoroutine(BloodSpears());
     }
@@ -43,9 +44,10 @@ public class FightStart : MonoBehaviour
     IEnumerator BloodSpears()
     {
         yield return new WaitForSeconds(2f);
-        while(spearsAttack == true)
+        while (spearsAttack == true)
         {
             Debug.Log("Spears Attack");
+            yield return new WaitForEndOfFrame();
         }
         yield return null;
     }

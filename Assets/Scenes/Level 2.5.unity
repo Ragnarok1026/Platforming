@@ -3854,21 +3854,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   startPoint: {fileID: 691470652}
-  allSpears: {fileID: 0}
-  Spear1: {fileID: 0}
-  Spear2: {fileID: 0}
-  Spear3: {fileID: 0}
-  Spear4: {fileID: 0}
-  Spear5: {fileID: 0}
-  Spear6: {fileID: 0}
-  Spear7: {fileID: 0}
-  Spear8: {fileID: 0}
-  Spear9: {fileID: 0}
-  Spear10: {fileID: 0}
-  Spear11: {fileID: 0}
-  Spear12: {fileID: 0}
-  Spear13: {fileID: 0}
-  Spear14: {fileID: 0}
+  allSpears: {fileID: 1191322878}
+  Spear1: {fileID: 915278241}
+  Spear2: {fileID: 50620507}
+  Spear3: {fileID: 1262695323}
+  Spear4: {fileID: 1218462099}
+  Spear5: {fileID: 780850600}
+  Spear6: {fileID: 312203092}
+  Spear7: {fileID: 476864581}
+  Spear8: {fileID: 1764469999}
+  Spear9: {fileID: 171328048}
+  Spear10: {fileID: 1188094549}
+  Spear11: {fileID: 490643988}
+  Spear12: {fileID: 1164354032}
+  Spear13: {fileID: 799565845}
+  Spear14: {fileID: 2128116756}
   spearsAppear: 0
   spearsAttack: 0
 --- !u!1 &703625841
