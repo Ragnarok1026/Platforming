@@ -1,5 +1,7 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
+using TMPro;
 
 public class ShadowCutscene : MonoBehaviour
 {
@@ -9,15 +11,17 @@ public class ShadowCutscene : MonoBehaviour
     public GameObject shadowScene1;
     public GameObject shadowScene2;
     public GameObject shadowScene3;
+    public GameObject shadowScene4;
     public bool cutscene1 = false;
     public bool cutscene2 = false;
+    public bool cutscene3 = false;
     void Start()
     {
-        
+
     }
     void Update()
     {
-        
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -47,7 +51,17 @@ public class ShadowCutscene : MonoBehaviour
             }
             yield return null;
         }
+        while (cutscene3 == false)
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && cutscene3 == false)
+            {
+                Invoke("Cutscene3", 0);
+                cutscene3 = true;
+            }
+            yield return null;
+        }
     }
+
     void Cutscene1()
     {
         shadowScene1.SetActive(false);
@@ -57,5 +71,9 @@ public class ShadowCutscene : MonoBehaviour
     {
         shadowScene2.SetActive(false);
         shadowScene3.SetActive(true);
+    }
+    void Cutscene3()
+    {
+        shadowScene3.SetActive(false);
     }
 }
