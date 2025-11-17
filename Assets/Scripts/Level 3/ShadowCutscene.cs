@@ -23,7 +23,6 @@ public class ShadowCutscene : MonoBehaviour
     {
         if(collision.gameObject == Entity)
         {
-            Debug.Log("Hit");
             shadowScene1.SetActive(true);
             StartCoroutine(ShadowScene());
         }
@@ -43,12 +42,11 @@ public class ShadowCutscene : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Space) && Scene2 == false)
             {
-                Invoke("Cutscene2", 0);
+                Invoke("Cutscene2", 2);
                 Scene2 = true;
             }
-
+            yield return null;
         }
-        yield return null;
     }
     void Cutscene1()
     {
