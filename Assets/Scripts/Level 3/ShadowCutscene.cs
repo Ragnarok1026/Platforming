@@ -9,8 +9,8 @@ public class ShadowCutscene : MonoBehaviour
     public GameObject shadowScene1;
     public GameObject shadowScene2;
     public GameObject shadowScene3;
-    public bool Scene1 = false;
-    public bool Scene2 = false;
+    public bool cutscene1 = false;
+    public bool cutscene2 = false;
     void Start()
     {
         
@@ -29,21 +29,21 @@ public class ShadowCutscene : MonoBehaviour
     }
     IEnumerator ShadowScene()
     {
-        while(Scene1 == false)
+        while (cutscene1 == false)
         {
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 Invoke("Cutscene1", 0);
-                Scene1 = true;
+                cutscene1 = true;
             }
             yield return null;
         }
-        while(Scene2 == false)
+        while (cutscene2 == false)
         {
-            if (Input.GetKey(KeyCode.Space) && Scene2 == false)
+            if (Input.GetKeyDown(KeyCode.Space) && cutscene2 == false)
             {
-                Invoke("Cutscene2", 2);
-                Scene2 = true;
+                Invoke("Cutscene2", 0);
+                cutscene2 = true;
             }
             yield return null;
         }
