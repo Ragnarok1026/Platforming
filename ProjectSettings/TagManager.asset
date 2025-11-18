@@ -10,6 +10,7 @@ TagManager:
   - Attack
   - Attack2
   - Arrow
+  - Spear
   layers:
   - Default
   - TransparentFX
