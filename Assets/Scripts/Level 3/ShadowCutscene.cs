@@ -12,7 +12,6 @@ public class ShadowCutscene : MonoBehaviour
     public GameObject shadowScene2;
     public GameObject shadowScene3;
     public GameObject KillTrigger;
-    public Animator ShadowAnimator;
     public bool cutscene1 = false;
     public bool cutscene2 = false;
     public bool cutscene3 = false;
@@ -76,12 +75,10 @@ public class ShadowCutscene : MonoBehaviour
     void Cutscene3()
     {
         shadowScene3.SetActive(false);
-        ShadowAnimator.SetBool("IsFadingIn", true);
-        Invoke("StartCombat", 3);
+        Invoke("StartCombat", 0);
     }
     void StartCombat()
     {
-        ShadowAnimator.SetBool("IsFadingIn", false);
         Destroy(KillTrigger);
         Shadow.GetComponent<FightStart>().enabled = true;
     }
