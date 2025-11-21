@@ -1,23 +1,21 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class DefeatEnemy : MonoBehaviour
+public class Boss3 : MonoBehaviour
 {
-    public GameObject Door;
     void Start()
     {
         
     }
-
     void Update()
     {
         
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            Door.GetComponent<NextRoom>().DefeatEnemy(1);
+            SceneManager.LoadScene("Boss 3");
         }
     }
 }
