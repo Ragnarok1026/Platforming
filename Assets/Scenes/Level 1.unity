@@ -762,7 +762,7 @@ Transform:
   m_GameObject: {fileID: 280019441}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.514679, y: -1.609707, z: 0.04592195}
+  m_LocalPosition: {x: 16.02, y: -1.87, z: 0.04592195}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2096,7 +2096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftStop: {fileID: 116490889}
   rightStop: {fileID: 1513347003}
-  speed: 2
+  Speed: 4
 --- !u!50 &683232157
 Rigidbody2D:
   serializedVersion: 5
@@ -2424,7 +2424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftStop: {fileID: 1115816237}
   rightStop: {fileID: 280019441}
-  speed: 2
+  Speed: 4
 --- !u!50 &815709487
 Rigidbody2D:
   serializedVersion: 5
@@ -2579,7 +2579,7 @@ GameObject:
   - component: {fileID: 817309547}
   - component: {fileID: 817309546}
   - component: {fileID: 817309545}
-  - component: {fileID: 817309548}
+  - component: {fileID: 817309549}
   m_Layer: 7
   m_Name: Next Level
   m_TagString: Untagged
@@ -2703,7 +2703,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1661391674}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &817309548
+--- !u!114 &817309549
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2712,11 +2712,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 817309544}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87a29ca877f3c3441a039c54e91175d6, type: 3}
+  m_Script: {fileID: 11500000, guid: a323e8e21c6c56e4d92248f18ce373c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MaxEnemies: 4
   Door: {fileID: 817309544}
+  LevelLoad: {fileID: 1054166920}
 --- !u!1 &836242689
 GameObject:
   m_ObjectHideFlags: 0
@@ -3702,7 +3703,7 @@ Transform:
   m_GameObject: {fileID: 1115816237}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.9996805, y: -1.5897065, z: 0.04592195}
+  m_LocalPosition: {x: 11.61, y: -1.92, z: 0.04592195}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3788,7 +3789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftStop: {fileID: 1158625751}
   rightStop: {fileID: 749229213}
-  speed: 2
+  Speed: 4
 --- !u!50 &1201578538
 Rigidbody2D:
   serializedVersion: 5
@@ -5644,7 +5645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftStop: {fileID: 2108165444}
   rightStop: {fileID: 1334608479}
-  speed: 2
+  Speed: 4
 --- !u!1 &2108165444
 GameObject:
   m_ObjectHideFlags: 0

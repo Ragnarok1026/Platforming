@@ -5764,7 +5764,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &992391632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9838,7 +9838,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topStop: {fileID: 1381793652}
   bottomStop: {fileID: 683007172}
-  speed: 4
+  speed: 12
 --- !u!61 &1623825620
 BoxCollider2D:
   m_ObjectHideFlags: 0

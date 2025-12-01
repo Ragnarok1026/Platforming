@@ -11,6 +11,8 @@ TagManager:
   - Attack2
   - Arrow
   - Spear
+  - Boss 1
+  - StartCutscene
   layers:
   - Default
   - TransparentFX

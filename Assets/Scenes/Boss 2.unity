@@ -4038,7 +4038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftStop: {fileID: 779654043}
   rightStop: {fileID: 729376060}
-  speed: 2
+  Speed: 4
 --- !u!50 &398503922
 Rigidbody2D:
   serializedVersion: 5
@@ -4216,7 +4216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftStop: {fileID: 1213424043}
   rightStop: {fileID: 1446204864}
-  speed: 2
+  Speed: 4
 --- !u!50 &415169231
 Rigidbody2D:
   serializedVersion: 5
@@ -7218,7 +7218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftStop: {fileID: 1057581765}
   rightStop: {fileID: 58111919}
-  speed: 2
+  Speed: 4
 --- !u!50 &708607816
 Rigidbody2D:
   serializedVersion: 5
@@ -7510,7 +7510,7 @@ Transform:
   m_GameObject: {fileID: 722619016}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.43, y: -13.97, z: 0.13402534}
+  m_LocalPosition: {x: -2.46, y: -13.95, z: 0.13402534}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7530,7 +7530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftStop: {fileID: 859368096}
   rightStop: {fileID: 228477114}
-  speed: 2
+  Speed: 4
 --- !u!50 &722619019
 Rigidbody2D:
   serializedVersion: 5
@@ -8494,7 +8494,7 @@ Transform:
   m_GameObject: {fileID: 859368096}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.98, y: -15.61, z: 0.11146649}
+  m_LocalPosition: {x: -4.79, y: -15.61, z: 0.11146649}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8874,7 +8874,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftStop: {fileID: 1277714361}
   rightStop: {fileID: 1744978633}
-  speed: 2
+  Speed: 4
 --- !u!50 &867649575
 Rigidbody2D:
   serializedVersion: 5
@@ -9052,7 +9052,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftStop: {fileID: 1295106474}
   rightStop: {fileID: 1583347734}
-  speed: 2
+  Speed: 4
 --- !u!50 &880067296
 Rigidbody2D:
   serializedVersion: 5
@@ -9230,7 +9230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftStop: {fileID: 286537947}
   rightStop: {fileID: 2047111622}
-  speed: 2
+  Speed: 4
 --- !u!50 &886178944
 Rigidbody2D:
   serializedVersion: 5
@@ -9670,7 +9670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftStop: {fileID: 2120529425}
   rightStop: {fileID: 623533520}
-  speed: 2
+  Speed: 4
 --- !u!50 &957064409
 Rigidbody2D:
   serializedVersion: 5
@@ -10478,11 +10478,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 990429181}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87a29ca877f3c3441a039c54e91175d6, type: 3}
+  m_Script: {fileID: 11500000, guid: a323e8e21c6c56e4d92248f18ce373c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MaxEnemies: 16
   Door: {fileID: 990429181}
+  LevelLoad: {fileID: 1313203840}
 --- !u!1 &996784451
 GameObject:
   m_ObjectHideFlags: 0
@@ -10563,7 +10564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftStop: {fileID: 1566365467}
   rightStop: {fileID: 1623962883}
-  speed: 2
+  Speed: 4
 --- !u!50 &1005817593
 Rigidbody2D:
   serializedVersion: 5
@@ -11118,7 +11119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftStop: {fileID: 1309982176}
   rightStop: {fileID: 46495021}
-  speed: 2
+  Speed: 4
 --- !u!50 &1048996422
 Rigidbody2D:
   serializedVersion: 5
@@ -12168,7 +12169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1143440409
 Transform:
   m_ObjectHideFlags: 0
@@ -13161,7 +13162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftStop: {fileID: 996784451}
   rightStop: {fileID: 1625710448}
-  speed: 2
+  Speed: 4
 --- !u!50 &1245164334
 Rigidbody2D:
   serializedVersion: 5
@@ -14925,7 +14926,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftStop: {fileID: 391464087}
   rightStop: {fileID: 666333786}
-  speed: 2
+  Speed: 4
 --- !u!50 &1452036516
 Rigidbody2D:
   serializedVersion: 5
@@ -15818,7 +15819,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftStop: {fileID: 134855971}
   rightStop: {fileID: 2003171767}
-  speed: 2
+  Speed: 4
 --- !u!50 &1522147219
 Rigidbody2D:
   serializedVersion: 5
@@ -17925,7 +17926,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftStop: {fileID: 537085966}
   rightStop: {fileID: 1149902142}
-  speed: 2
+  Speed: 4
 --- !u!50 &1692481504
 Rigidbody2D:
   serializedVersion: 5
@@ -18411,7 +18412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftStop: {fileID: 1396771486}
   rightStop: {fileID: 375676372}
-  speed: 2
+  Speed: 4
 --- !u!50 &1734311687
 Rigidbody2D:
   serializedVersion: 5
@@ -18834,7 +18835,7 @@ Transform:
   m_GameObject: {fileID: 1747605110}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.51, y: -1.3160465, z: -9.930575}
+  m_LocalPosition: {x: 21.85, y: -1.3160465, z: -9.930575}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20416,7 +20417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftStop: {fileID: 438083655}
   rightStop: {fileID: 667957718}
-  speed: 2
+  Speed: 4
 --- !u!50 &1851963391
 Rigidbody2D:
   serializedVersion: 5
