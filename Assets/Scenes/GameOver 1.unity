@@ -955,8 +955,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1891517719}
-        m_TargetAssemblyTypeName: GameOverBoss, Assembly-CSharp
-        m_MethodName: ContinueGame
+        m_TargetAssemblyTypeName: ContinueButton, Assembly-CSharp
+        m_MethodName: ContinueGameBoss1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1013,7 +1013,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1891517713}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9cd62b30f394f94abff7e6e4933ae62, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a4fb5230b222fc43b170211af7b574a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2121161920

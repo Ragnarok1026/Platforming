@@ -386,8 +386,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 615127819}
-        m_TargetAssemblyTypeName: GameOverScreen2, Assembly-CSharp
-        m_MethodName: LoadNextLevel
+        m_TargetAssemblyTypeName: ContinueButton, Assembly-CSharp
+        m_MethodName: ContinueGame2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -444,7 +444,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 615127813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffed8acc3f764d843af04481a466dd96, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a4fb5230b222fc43b170211af7b574a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &802124666
