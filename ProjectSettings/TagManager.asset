@@ -13,6 +13,12 @@ TagManager:
   - Spear
   - Boss 1
   - StartCutscene
+  - Swords1
+  - Swords2
+  - Trigger
+  - Helmet
+  - Vulnerable
+  - Armored
   layers:
   - Default
   - TransparentFX

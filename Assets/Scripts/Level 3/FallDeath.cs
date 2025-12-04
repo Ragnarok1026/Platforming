@@ -35,6 +35,6 @@ public class FallDeath : MonoBehaviour
 
     public void GameOverScreen()
     {
-        SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene("GameOver5");
     }
 }

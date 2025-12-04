@@ -14,7 +14,14 @@ public class SpinSwords : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(Vector3.forward * speed * Time.deltaTime);
+        if(tag == "Swords1")
+        {
+            transform.Rotate(Vector3.forward * speed * Time.deltaTime);
+        }
+        else if(tag == "Swords2")
+        {
+            transform.Rotate(Vector3.back * -speed * Time.deltaTime);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -35,6 +42,6 @@ public class SpinSwords : MonoBehaviour
 
     public void GameOverScreen()
     {
-        SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene("GameOver5");
     }
 }
