@@ -2,22 +2,30 @@ using UnityEngine;
 
 public class JumpAttack2 : MonoBehaviour
 {
+    public GameObject Helmet;
+    public GameObject Vulnerable;
     public float bounce;
     public Rigidbody2D rb;
-    public GameObject Enemy;
     void Start()
     {
-        
+
     }
     void Update()
     {
-        
+
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Helmet"))
         {
-            GetComponent<NextRoom>().DefeatEnemy(1);
+            Destroy(other.gameObject);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, bounce);
+        }
+        if (other.CompareTag("Vulnerable"))
+        {
+            Destroy(other.gameObject);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, bounce);
         }
     }
 }

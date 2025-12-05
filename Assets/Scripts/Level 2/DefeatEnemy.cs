@@ -19,5 +19,9 @@ public class DefeatEnemy : MonoBehaviour
         {
             Door.GetComponent<NextRoom>().DefeatEnemy(1);
         }
+        if (collision.CompareTag("Vulnerable"))
+        {
+            Door.GetComponent<NextRoom>().DefeatEnemy(1);
+        }
     }
 }

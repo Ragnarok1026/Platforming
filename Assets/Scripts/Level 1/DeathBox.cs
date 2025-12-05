@@ -8,22 +8,44 @@ public class DeathBox : MonoBehaviour
     public static bool isDead = false;
     private void OnCollisionEnter2D(Collision2D collision)  
     {
-       if (collision.gameObject.tag == "Enemy" && !isDead)
+       if (collision.gameObject.tag == "Enemy" &&  !isDead)
         {
             animator.SetBool("Death", true);
-            Invoke("DisableMovement", 0.33f);
+            Invoke("DisableMovement1", 0.33f);
             Player.GetComponent<PlayerMovement>().enabled = false;
         }
-
+       if (collision.gameObject.tag == "Vulnerable" && !isDead)
+        {
+            animator.SetBool("Death", true);
+            Invoke("DisableMovement2", 0.33f);
+            Player.GetComponent<PlayerMovement>().enabled = false;
+        }
+       if (collision.gameObject.tag == "Helmet" && !isDead)
+        {
+            animator.SetBool("Death", true);
+            Invoke("DisableMovement2", 0.33f);
+            Player.GetComponent<PlayerMovement>().enabled = false;
+        }
     }
-       void DisableMovement()
+    void DisableMovement1()
        {
             Player.GetComponent<SpriteRenderer>().enabled = false;
-            GameOverScreen();
+            GameOverScreen1();
         }
 
-    public void GameOverScreen()
+    public void GameOverScreen1()
     {
         SceneManager.LoadScene("GameOver");
+    }
+
+    void DisableMovement2()
+    {
+        Player.GetComponent<SpriteRenderer>().enabled = false;
+        GameOverScreen2();
+    }
+
+    public void GameOverScreen2()
+    {
+        SceneManager.LoadScene("GameOver5");
     }
 }
