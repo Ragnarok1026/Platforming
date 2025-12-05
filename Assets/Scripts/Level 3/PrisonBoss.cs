@@ -39,57 +39,58 @@ public class PrisonBoss : MonoBehaviour
                 Invoke("CutScene1", 0f);
                 cutsceneActive1 = true;
             }
-            yield return new WaitForEndOfFrame();
+            yield return null;
         }
+        yield return new WaitForSeconds(0.1f);
         while (cutsceneActive2 == false)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && cutsceneActive2 == false)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 Invoke("CutScene2", 0f);
                 cutsceneActive2 = true;
             }
-            yield return new WaitForEndOfFrame();
+            yield return null;
         }
+        yield return new WaitForSeconds(0.1f);
         while (cutsceneActive3 == false)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && cutsceneActive3 == false)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 Invoke("CutScene3", 0f);
                 cutsceneActive3 = true;
             }
-            yield return new WaitForEndOfFrame();
+            yield return null;
         }
+        yield return new WaitForSeconds(0.1f);
         while (cutsceneActive3 == true)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && cutsceneActive3 == true)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 Invoke("EndCutscene", 0f);
-                cutsceneActive2 = false;
+                cutsceneActive3 = false;
             }
-            yield return new WaitForEndOfFrame();
+            yield return null;
         }
     }
     void CutScene1()
     {
         Text1.SetActive(false);
         Text2.SetActive(true);
-        cutsceneActive1 = false;
     }
     void CutScene2()
     {
         Text2.SetActive(false);
         Text3.SetActive(true);
-        cutsceneActive2 = false;
     }
     void CutScene3()
     {
         Text3.SetActive(false);
         Text4.SetActive(true);
-        player.GetComponent<PlayerMovement>().enabled = true;
     }
     void EndCutscene()
     {
         Text4.SetActive(false);
         Destroy(cutsceneStart);
+        player.GetComponent<PlayerMovement>().enabled = true;
     }
 }
