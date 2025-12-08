@@ -19,6 +19,7 @@ TagManager:
   - Helmet
   - Vulnerable
   - Armored
+  - Shadow
   layers:
   - Default
   - TransparentFX
