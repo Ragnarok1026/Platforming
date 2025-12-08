@@ -19,7 +19,6 @@ public class StartShadow : MonoBehaviour
     {
         if (collision.gameObject.tag == "Shadow")
         {
-            Debug.Log("Start Cutscene");
             Boss.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             Shield.SetActive(true);
         }

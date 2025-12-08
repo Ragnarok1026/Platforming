@@ -8,19 +8,28 @@ public class DeathBox : MonoBehaviour
     public static bool isDead = false;
     private void OnCollisionEnter2D(Collision2D collision)  
     {
-       if (collision.gameObject.tag == "Enemy" &&  !isDead)
+        if (collision.gameObject.tag == "Enemy" &&  !isDead)
         {
             animator.SetBool("Death", true);
             Invoke("DisableMovement1", 0.33f);
             Player.GetComponent<PlayerMovement>().enabled = false;
         }
-       if (collision.gameObject.tag == "Vulnerable" && !isDead)
+        if (collision.gameObject.tag == "Vulnerable" && !isDead)
         {
             animator.SetBool("Death", true);
             Invoke("DisableMovement2", 0.33f);
             Player.GetComponent<PlayerMovement>().enabled = false;
         }
-       if (collision.gameObject.tag == "Helmet" && !isDead)
+        if (collision.gameObject.tag == "Helmet" && !isDead)
+        {
+            animator.SetBool("Death", true);
+            Invoke("DisableMovement2", 0.33f);
+            Player.GetComponent<PlayerMovement>().enabled = false;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Arrow" && !isDead)
         {
             animator.SetBool("Death", true);
             Invoke("DisableMovement2", 0.33f);
