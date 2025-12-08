@@ -11,7 +11,7 @@ public class ShadowFight : MonoBehaviour
     public bool fightStarted = false;
     void Start()
     {
-        
+
     }
     void Update()
     {
