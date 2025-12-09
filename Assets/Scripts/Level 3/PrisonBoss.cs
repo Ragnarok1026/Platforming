@@ -24,11 +24,14 @@ public class PrisonBoss : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        player.GetComponent<PlayerMovement>().enabled = false;
-        player.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, 0);
-        animator.SetFloat("Speed", 0);
-        Text1.SetActive(true);
-        StartCoroutine(Cutscene());
+        if (collision.gameObject.tag == "Player")
+        {
+            player.GetComponent<PlayerMovement>().enabled = false;
+            player.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, 0);
+            animator.SetFloat("Speed", 0);
+            Text1.SetActive(true);
+            StartCoroutine(Cutscene());   
+        }
     }
     IEnumerator Cutscene()
     {

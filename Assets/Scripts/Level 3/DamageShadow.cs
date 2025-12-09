@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class DamageShadow : MonoBehaviour
 {
-    private ShadowHealth shadowHealthScript;
+    public float bounce = 5f;
+    public Rigidbody2D rb;
+    public GameObject shadow;
     void Start()
     {
       
@@ -11,11 +13,12 @@ public class DamageShadow : MonoBehaviour
     {
         
     }
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Shadow")
         {
-            shadowHealthScript.TakeDamage(1);
+            shadow.GetComponent<ShadowHealth>().TakeDamage(1);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, bounce);
         }
     }
 }

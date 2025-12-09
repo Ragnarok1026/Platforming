@@ -14,19 +14,20 @@ public class ReleaseArrows : MonoBehaviour
     public GameObject Arrow6;
     public float speed = 5f;
     private ShadowFight shadowFightScript;
-    private StartShadow startShadowScript;  
+    private ShadowHealth shadowHealthScript;
     void Start()
     {
         shadowFightScript = GameObject.Find("FightController").GetComponent<ShadowFight>();
+        shadowHealthScript = GameObject.Find("Shadow").GetComponent<ShadowHealth>();
     }
     void Update()
     {
         if (shadowFightScript.fightStarted == true)
         {
-            StartCoroutine(ReleaseArrow());
+            StartCoroutine(Arrows());
         }
     }
-    IEnumerator ReleaseArrow()
+    IEnumerator Arrows()
     {
         yield return new WaitForSeconds(1f);
         Arrow1.SetActive(true);
@@ -63,6 +64,11 @@ public class ReleaseArrows : MonoBehaviour
         Boss.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
         Boss.GetComponent<Rigidbody2D>().gravityScale = 1;
 
+        if (shadowHealthScript.currentHealth == 2)
+        {
+            ReleaseArrows.Destroy(this);
+        }
         yield return null;
     }
+
 }

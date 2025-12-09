@@ -8,7 +8,7 @@ public class ShadowHealth : MonoBehaviour
     public Rigidbody2D rb;
     void Start()
     {
-        
+        currentHealth = maxHealth;
     }
     void Update()
     {
@@ -17,7 +17,6 @@ public class ShadowHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, bounce);
         if (currentHealth <= 0)
         {
             Die();
