@@ -12,6 +12,7 @@ public class ReleaseArrows : MonoBehaviour
     public GameObject Arrow4;
     public GameObject Arrow5;
     public GameObject Arrow6;
+    public Animator animator;
     public float speed = 5f;
     private ShadowFight shadowFightScript;
     private ShadowHealth shadowHealthScript;
@@ -19,6 +20,7 @@ public class ReleaseArrows : MonoBehaviour
     {
         shadowFightScript = GameObject.Find("FightController").GetComponent<ShadowFight>();
         shadowHealthScript = GameObject.Find("Shadow").GetComponent<ShadowHealth>();
+        animator.SetBool("Hurt", false);
     }
     void Update()
     {
@@ -66,6 +68,7 @@ public class ReleaseArrows : MonoBehaviour
 
         if (shadowHealthScript.currentHealth == 2)
         {
+            animator.SetTrigger("Hurt");
             ReleaseArrows.Destroy(this);
         }
         yield return null;

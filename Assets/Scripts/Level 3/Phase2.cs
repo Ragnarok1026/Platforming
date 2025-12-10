@@ -7,6 +7,7 @@ public class Phase2 : MonoBehaviour
     private ShadowFight shadowFightScript;
     private StartShadow startShadowScript;
     private ShadowHealth shadowHealthScript;
+    public Animator animator;
     public GameObject WaveOne;
     public GameObject WaveTwo;
     public GameObject WaveThree;
@@ -21,6 +22,7 @@ public class Phase2 : MonoBehaviour
         shadowFightScript = GameObject.Find("FightController").GetComponent<ShadowFight>();
         shadowHealthScript = GameObject.Find("Shadow").GetComponent<ShadowHealth>();
         startShadowScript = GameObject.Find("HoverPoint").GetComponent<StartShadow>();
+        animator.SetBool("Hurt", false);
     }
     void Update()
     {
@@ -64,15 +66,15 @@ public class Phase2 : MonoBehaviour
         WaveSix.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(-speed, 0);
 
         yield return new WaitForSeconds(1f);
-        Destroy(shadowFightScript);
+        shadowFightScript.enabled = false;
         Boss.GetComponent<Rigidbody2D>().constraints &= ~RigidbodyConstraints2D.FreezePositionX;
         Boss.GetComponent<Rigidbody2D>().constraints &= ~RigidbodyConstraints2D.FreezePositionY;
         Boss.GetComponent<Rigidbody2D>().gravityScale = 1;
         Shield.SetActive(false);
-
         if (shadowHealthScript.currentHealth == 1)
         {
-            ReleaseArrows.Destroy(this);
+            animator.SetTrigger("Hurt");
+            Phase2.Destroy(this);
         }
         yield return null;
     }

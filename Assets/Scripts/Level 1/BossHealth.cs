@@ -28,15 +28,6 @@ public class BossHealth : MonoBehaviour
     void Die()
     {
         Debug.Log("Boss defeated!");
-        Destroy(gameObject);
-        StartCoroutine(NextLevel());
-    }
-
-    IEnumerator NextLevel()
-    {
-        arrow.SetActive(true);
-        Wall.SetActive(false);
-        yield return null;
     }
     
 }
