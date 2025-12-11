@@ -3,6 +3,7 @@ using System.Collections;
 
 public class ShadowHealth : MonoBehaviour
 {
+    private StartShadow startShadowScript;
     public int maxHealth = 3;
     public int currentHealth;
     public Animator animator;
@@ -17,11 +18,12 @@ public class ShadowHealth : MonoBehaviour
     public GameObject Text2;
     public GameObject Text3;
     public GameObject Text4;
-    public PlayerMovement playerMovementScript;
+    public GameObject player;
+    public GameObject particle;
     void Start()
     {
         currentHealth = maxHealth;
-        playerMovementScript = GameObject.Find("Player").GetComponent<PlayerMovement>();
+        startShadowScript = GameObject.Find("HoverPoint").GetComponent<StartShadow>();
     }
     void Update()
     {
@@ -32,18 +34,27 @@ public class ShadowHealth : MonoBehaviour
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
+            animator.SetTrigger("Hurt");
+            animator.SetBool("isDead", true);
+            startShadowScript.enabled = true;
+            
             Die();
         }
     }
     void Die()
     {
         Text1.SetActive(true);
-        Player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
+        player.GetComponent<PlayerMovement>().enabled = false;
+        player.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, 0);
+        Shadow.GetComponent<BoxCollider2D>().enabled = false;
+        Shadow.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+        Shadow.GetComponent<Rigidbody2D>().gravityScale = -1;
         StartCoroutine(Death());
     }
 
     IEnumerator Death()
     {
+        particle.SetActive(true);
         while (cutsceneActive1 == false)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -102,5 +113,6 @@ public class ShadowHealth : MonoBehaviour
     void EndCutscene()
     {
         Text4.SetActive(false);
+        particle.SetActive(false);
     }
 }
