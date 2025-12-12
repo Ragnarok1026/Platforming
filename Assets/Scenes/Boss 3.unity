@@ -923,6 +923,9 @@ MonoBehaviour:
   Text4: {fileID: 1228714521}
   player: {fileID: 1439792482}
   particle: {fileID: 889236683}
+  Door: {fileID: 629751763}
+  Hover: {fileID: 844401154}
+  Fight: {fileID: 241826306}
 --- !u!95 &42438873
 Animator:
   serializedVersion: 7
@@ -3023,7 +3026,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -7838,7 +7841,7 @@ GameObject:
   - component: {fileID: 629751766}
   - component: {fileID: 629751765}
   m_Layer: 7
-  m_Name: Ground (29)
+  m_Name: Door
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

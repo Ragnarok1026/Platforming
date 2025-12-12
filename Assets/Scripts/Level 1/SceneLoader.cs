@@ -7,8 +7,6 @@ using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour
 {
-    public Animator transition;
-    public float transitionTime = 1f;
     public void Update()
     {
         

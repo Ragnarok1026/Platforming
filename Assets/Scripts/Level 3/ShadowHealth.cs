@@ -4,6 +4,7 @@ using System.Collections;
 public class ShadowHealth : MonoBehaviour
 {
     private StartShadow startShadowScript;
+
     public int maxHealth = 3;
     public int currentHealth;
     public Animator animator;
@@ -20,6 +21,9 @@ public class ShadowHealth : MonoBehaviour
     public GameObject Text4;
     public GameObject player;
     public GameObject particle;
+    public GameObject Door;
+    public GameObject Hover;
+    public GameObject Fight;
     void Start()
     {
         currentHealth = maxHealth;
@@ -57,41 +61,29 @@ public class ShadowHealth : MonoBehaviour
         particle.SetActive(true);
         while (cutsceneActive1 == false)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Invoke("CutScene1", 0f);
-                cutsceneActive1 = true;
-            }
+            Invoke("CutScene1", 1f);
+            cutsceneActive1 = true;
             yield return null;
         }
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(1.5f);
         while (cutsceneActive2 == false)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Invoke("CutScene2", 0f);
-                cutsceneActive2 = true;
-            }
+            Invoke("CutScene2", 1f);
+            cutsceneActive2 = true;
             yield return null;
         }
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(1.5f);
         while (cutsceneActive3 == false)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Invoke("CutScene3", 0f);
-                cutsceneActive3 = true;
-            }
+            Invoke("CutScene3", 1f);
+            cutsceneActive3 = true;
             yield return null;
         }
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(1.5f);
         while (cutsceneActive3 == true)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Invoke("EndCutscene", 0f);
-                cutsceneActive3 = false;
-            }
+            Invoke("EndCutscene", 1f);
+            cutsceneActive3 = false;
             yield return null;
         }
     }
@@ -114,5 +106,10 @@ public class ShadowHealth : MonoBehaviour
     {
         Text4.SetActive(false);
         particle.SetActive(false);
+        Destroy(gameObject);
+        player.GetComponent<PlayerMovement>().enabled = true;
+        Door.SetActive(false);
+        Destroy(Hover);
+        Destroy(Fight);
     }
 }
