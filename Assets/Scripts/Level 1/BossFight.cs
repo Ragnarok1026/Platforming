@@ -35,13 +35,13 @@ public class BossFight : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-           speed = 0;
             StartCoroutine(Stomp());
         }
     }
 
    IEnumerator Stomp()
     {
+        speed = 0;
         yield return new WaitForSeconds(0.5f);
         rigidbody.gravityScale = 10;
         yield return new WaitForSeconds(1.4f);
@@ -51,7 +51,6 @@ public class BossFight : MonoBehaviour
         {
             transform.Translate(Vector2.up * speed * Time.deltaTime);
             yield return null;
-
         }
     }
 

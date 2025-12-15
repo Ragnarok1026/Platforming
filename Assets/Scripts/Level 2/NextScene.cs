@@ -11,10 +11,10 @@ public class NextScene : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            LoadNextLevel();
+            LoadNextLevel2();
         }
     }
-    public void LoadNextLevel()
+    public void LoadNextLevel2()
     {
         SceneManager.LoadScene("Level 2");
     }

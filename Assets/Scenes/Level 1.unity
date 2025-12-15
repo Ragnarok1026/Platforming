@@ -1337,7 +1337,7 @@ GameObject:
   - component: {fileID: 326190668}
   m_Layer: 0
   m_Name: Virus (5)
-  m_TagString: Enemy
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1551,7 +1551,7 @@ GameObject:
   - component: {fileID: 395004604}
   m_Layer: 0
   m_Name: Virus
-  m_TagString: Enemy
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1760,7 +1760,7 @@ GameObject:
   - component: {fileID: 402817746}
   m_Layer: 0
   m_Name: Virus (3)
-  m_TagString: Enemy
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2927,7 +2927,7 @@ GameObject:
   - component: {fileID: 650887379}
   m_Layer: 0
   m_Name: Virus (4)
-  m_TagString: Enemy
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4344,7 +4344,7 @@ MonoBehaviour:
   m_text: Your job is to go out into the world and find Viruses, a Virus is a rouge
     program that corrupts and destroys the code that keeps this world stable. to
     find these viruses, you will need to travel to other parts of the world. try
-    jumping over this obstacle to continue
+    jumping over this obstacle by pressing the Spacebar to continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4884,7 +4884,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: Some Obstacles will be Imposible to Jump over. so to continue, you will
-    have to Crouch under them. try Crouching under this obstacle to continue
+    have to Crouch under them. try Crouching under this obstacle by pressing Shift
+    to continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6439,7 +6440,7 @@ GameObject:
   - component: {fileID: 1899310326}
   m_Layer: 0
   m_Name: Virus (1)
-  m_TagString: Enemy
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6817,7 +6818,7 @@ GameObject:
   - component: {fileID: 1989704366}
   m_Layer: 0
   m_Name: Virus (2)
-  m_TagString: Enemy
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

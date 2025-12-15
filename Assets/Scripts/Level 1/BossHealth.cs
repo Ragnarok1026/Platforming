@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BossHealth : MonoBehaviour
 {
-    public int maxHealth = 60;
+    public int maxHealth = 30;
     int currentHealth;
     public Animator animator;
     public GameObject arrow;
@@ -27,7 +27,7 @@ public class BossHealth : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Boss defeated!");
+        Destroy(this.gameObject);
     }
     
 }

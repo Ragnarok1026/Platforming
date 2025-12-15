@@ -15,9 +15,9 @@ public class DefeatEnemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag("Enemy1"))
         {
-            Door.GetComponent<NextRoom>().DefeatEnemy(1);
+            Door.GetComponent<IntoBoss1>().DefeatEnemy(1);
         }
         if (collision.CompareTag("Vulnerable"))
         {

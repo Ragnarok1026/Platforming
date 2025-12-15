@@ -20,6 +20,6 @@ public class SceneLoader : MonoBehaviour
     }
     public void LoadNextLevel()
     {
-        SceneManager.LoadScene("Boss Level 1");
+        SceneManager.LoadScene("Boss 1");
     }
 }
