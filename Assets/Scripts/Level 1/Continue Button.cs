@@ -30,7 +30,7 @@ public class ContinueButton : MonoBehaviour
     }
     public void ContinueGameBoss1()
     {
-        SceneManager.LoadScene("Boss Level 1");
+        SceneManager.LoadScene("Boss 1");
     }
     public void ContinueGameBoss2()
     {

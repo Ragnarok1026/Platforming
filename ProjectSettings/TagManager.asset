@@ -20,6 +20,8 @@ TagManager:
   - Armored
   - Shadow
   - Enemy1
+  - Target
+  - Enemy2
   layers:
   - Default
   - TransparentFX
