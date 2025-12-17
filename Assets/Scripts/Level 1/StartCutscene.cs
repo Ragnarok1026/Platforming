@@ -90,7 +90,7 @@ public class StartCutscene : MonoBehaviour
     {
         Text4.SetActive(false);
         Player.GetComponent<PlayerMovement>().enabled = true;
-        Boss.GetComponent<BossBattle1>().enabled = true;
+        Boss.GetComponent<BossGoUp>().enabled = true;
         Destroy(this.gameObject);
     }
 }
