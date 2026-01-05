@@ -4,24 +4,23 @@ public class BossStomp : MonoBehaviour
 {
     public int Speed = 0;
     public GameObject Stop;
+    public GameObject target;
+    public bool fightStarted = false;
     void Start()
     {
-
+        Speed = 8;
     }
     void Update()
     {
         transform.Translate(Vector2.down * Speed * Time.deltaTime);
         Speed = 15;
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject == Stop)
+        if(transform.position.y <= Stop.transform.position.y)
         {
             Speed = 0;
-            Invoke("BossGoUp", 1f);
+            Invoke("BackUp", 2f);
         }
     }
-    void BossGoUp()
+    void BackUp()
     {
         GetComponent<BossGoUp>().enabled = true;
         GetComponent<BossStomp>().enabled = false;

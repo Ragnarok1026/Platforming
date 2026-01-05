@@ -22,6 +22,7 @@ TagManager:
   - Enemy1
   - Target
   - Enemy2
+  - Stop
   layers:
   - Default
   - TransparentFX

@@ -15,7 +15,7 @@ public class StartCutscene : MonoBehaviour
     public bool cutscene3Started = false;
     void Start()
     {
-
+        Boss.GetComponent<BoxCollider2D>().enabled = false;
     }
     void Update()
     {
@@ -91,6 +91,7 @@ public class StartCutscene : MonoBehaviour
         Text4.SetActive(false);
         Player.GetComponent<PlayerMovement>().enabled = true;
         Boss.GetComponent<BossGoUp>().enabled = true;
+        Boss.GetComponent<BoxCollider2D>().enabled = true;
         Destroy(this.gameObject);
     }
 }
