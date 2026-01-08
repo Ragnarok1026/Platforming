@@ -15,7 +15,7 @@ public class ContinueButton : MonoBehaviour
     {
 
     }
-
+    // Methods to continue the game from different levels
     public void ContinueGame1()
     {
         SceneManager.LoadScene("Level 1");

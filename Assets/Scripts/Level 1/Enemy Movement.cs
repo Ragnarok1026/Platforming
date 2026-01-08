@@ -12,12 +12,14 @@ public class EnemyMovement : MonoBehaviour
     }
     void Update()
     {
+        // Move the enemy left or right based on the Speed variable
         transform.Translate(Vector2.left * Speed * Time.deltaTime);
-
+        // Check for direction change at the stop points
         if (transform.position.x <= leftStop.transform.position.x)
         {
             Speed = -4;
         }
+        // Change direction when reaching the right stop point
         else if (transform.position.x >= rightStop.transform.position.x)
         {
             Speed = 4;

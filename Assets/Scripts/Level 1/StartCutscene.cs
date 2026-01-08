@@ -15,6 +15,7 @@ public class StartCutscene : MonoBehaviour
     public bool cutscene3Started = false;
     void Start()
     {
+        // Disable Boss movement and collider at the start
         Boss.GetComponent<BoxCollider2D>().enabled = false;
     }
     void Update()
@@ -23,8 +24,10 @@ public class StartCutscene : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
+        // Detects collision with player to start the cutscene
         if (other.CompareTag("Player"))
         {
+            // Disable player movement
             Player.GetComponent<PlayerMovement>().enabled = false;
             Player.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
             animator.SetFloat("Speed", 0f);
@@ -34,7 +37,8 @@ public class StartCutscene : MonoBehaviour
     }
     IEnumerator Cutscene1()
     {
-        while(cutscene1Started == false)
+        // Wait for player input to progress through cutscenes
+        while (cutscene1Started == false)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -43,7 +47,8 @@ public class StartCutscene : MonoBehaviour
             }
             yield return null;
         }
-        while(cutscene2Started == false)
+        // Wait for player input to progress through cutscenes
+        while (cutscene2Started == false)
         {
             if (Input.GetKeyDown(KeyCode.Space) && cutscene2Started == false)
             {
@@ -52,7 +57,8 @@ public class StartCutscene : MonoBehaviour
             }
             yield return null;
         }
-        while(cutscene3Started == false)
+        // Wait for player input to progress through cutscenes
+        while (cutscene3Started == false)
         {
             if (Input.GetKeyDown(KeyCode.Space) && cutscene3Started == false)
             {
@@ -61,7 +67,8 @@ public class StartCutscene : MonoBehaviour
             }
             yield return null;
         }
-        while(cutscene3Started == true)
+        // Wait for player input to end the cutscene
+        while (cutscene3Started == true)
         {
             if (Input.GetKeyDown(KeyCode.Space) && cutscene3Started == true)
             {
@@ -71,6 +78,7 @@ public class StartCutscene : MonoBehaviour
             yield return null;
         }
     }
+    // Methods to handle each cutscene step
     void CutScene1()
     {
         Text1.SetActive(false);

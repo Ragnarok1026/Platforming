@@ -16,6 +16,7 @@ public class DamageKing : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
+        // Detects collision with Boss to apply damage
         if (collision.gameObject.tag == "Boss")
         {
             Boss.GetComponent<BossHealth>().TakeDamage(1);

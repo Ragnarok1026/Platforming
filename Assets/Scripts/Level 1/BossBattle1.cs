@@ -14,11 +14,13 @@ public class BossBattle1 : MonoBehaviour
     }
     void Update()
     {
+        // Boss moves left and right between patrol points
         transform.Translate(Vector2.left * Speed * Time.deltaTime);
         Invoke("BossMove", 0f);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Detects collision with player to start Boss Stomp Attack
         if (collision.CompareTag("Player"))
         {
             Speed = 0;
@@ -28,6 +30,7 @@ public class BossBattle1 : MonoBehaviour
     }
     void BossMove()
     {
+        // Changes direction when reaching patrol points
         if (transform.position.x <= patrolLeft.transform.position.x)
         {
             Speed = -8;
@@ -39,11 +42,13 @@ public class BossBattle1 : MonoBehaviour
     }
     void BossStompAttack()
     {
+        // Switches to Boss Stomp attack behavior
         boss.GetComponent<BossStomp>().enabled = true;
         GetComponent<BossBattle1>().enabled = false;
     }
     void BossStomp()
     {
+        // Resets speed after stomp attack
         Speed = 8;
     }
 }
