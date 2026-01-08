@@ -23,6 +23,8 @@ TagManager:
   - Target
   - Enemy2
   - Stop
+  - NextLevel
+  - Cutscene
   layers:
   - Default
   - TransparentFX

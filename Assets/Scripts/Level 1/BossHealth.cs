@@ -117,12 +117,12 @@ public class BossHealth : MonoBehaviour
     {
         Text4.SetActive(false);
         Exit.SetActive(false);
-        Destroy(gameObject);
+        GetComponent<SpriteRenderer>().enabled = false;
+        Narrator1.SetActive(true);
         StartCoroutine(EndOfTutorial());
     }
     IEnumerator EndOfTutorial()
     {
-        yield return new WaitForSeconds(1f);
         while (cutscene1Started == false)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -145,31 +145,18 @@ public class BossHealth : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) && cutscene3Started == false)
             {
-                Invoke("Part3", 0f);
-                cutscene3Started = true;
-            }
-            yield return null;
-        }
-        while (cutscene3Started == true)
-        {
-            if (Input.GetKeyDown(KeyCode.Space) && cutscene3Started == true)
-            {
                 Invoke("End", 0f);
-                cutscene3Started = false;
+                cutscene3Started = true;
             }
             yield return null;
         }
     }
     void Part1()
     {
-        Narrator1.SetActive(true);
-    }
-    void Part2()
-    {
         Narrator1.SetActive(false);
         Narrator2.SetActive(true);
     }
-    void Part3()
+    void Part2()
     {
         Narrator2.SetActive(false);
         Narrator3.SetActive(true);
