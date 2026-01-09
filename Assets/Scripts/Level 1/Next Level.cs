@@ -12,11 +12,11 @@ public class NextLevel : MonoBehaviour
     public bool CutsceneActive2 = false;
     void Start()
     {
-        
+
     }
     void Update()
     {
-        
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -34,7 +34,7 @@ public class NextLevel : MonoBehaviour
     {
         while (CutsceneActive1 == false)
         {
-            if(Input.GetKeyDown(KeyCode.Space) && CutsceneActive1 == false)
+            if (Input.GetKeyDown(KeyCode.Space) && CutsceneActive1 == false)
             {
                 Text1.SetActive(false);
                 Text2.SetActive(true);
@@ -42,6 +42,15 @@ public class NextLevel : MonoBehaviour
             }
             yield return null;
         }
-        yield return null;
+        while (CutsceneActive2 == false)
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && CutsceneActive2 == false)
+            {
+                Text2.SetActive(false);
+                player.GetComponent<PlayerMovement>().enabled = true;
+                CutsceneActive2 = true;
+            }
+            yield return null;
+        }
     }
 }
