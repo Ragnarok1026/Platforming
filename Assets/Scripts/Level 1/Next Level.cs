@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class NextLevel : MonoBehaviour
 {
     public GameObject cutScene;
-    public GameObject nextLevel;
+    public GameObject player;
     public GameObject Text1;
     public GameObject Text2;
     public bool cutscene1Started = false;
@@ -20,17 +20,10 @@ public class NextLevel : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Cutscene"))
-        {
-            GetComponent<PlayerMovement>().enabled = false;
-            GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
-            Text1.SetActive(true);
-            StartCoroutine(NextWorld());
-        }
-        if (other.CompareTag("NextLevel"))
-        {
-            SceneManager.LoadScene("Overworld");
-        }
+        player.GetComponent<PlayerMovement>().enabled = false;
+        player.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
+        Text1.SetActive(true);
+        StartCoroutine(NextWorld());
     }
     IEnumerator NextWorld()
     {
@@ -45,12 +38,20 @@ public class NextLevel : MonoBehaviour
         }
         while (cutscene2Started == false)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && cutscene2Started == false)
+            if(Input.GetKeyDown(KeyCode.Space) && cutscene2Started == false)
             {
-                Invoke("End", 0f);
+                Invoke("CutScene2", 0f);
                 cutscene2Started = true;
             }
             yield return null;
+        }
+        while (cutscene2Started == true)
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && cutscene2Started == true)
+            {
+                Invoke("End", 0f);
+                yield return null;
+            }
         }
     }
     void CutScene1()
@@ -58,9 +59,13 @@ public class NextLevel : MonoBehaviour
         Text1.SetActive(false);
         Text2.SetActive(true);
     }
-    void End()
+    void CutScene2()
     {
         Text2.SetActive(false);
-        GetComponent<PlayerMovement>().enabled = true;
+        player.GetComponent<PlayerMovement>().enabled = true;
+    }
+    void End()
+    {
+        cutScene.SetActive(false);
     }
 }
