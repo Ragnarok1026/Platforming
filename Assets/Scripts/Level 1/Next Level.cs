@@ -4,12 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour
 {
-    public GameObject cutScene;
     public GameObject player;
+    public Animator animator;
     public GameObject Text1;
     public GameObject Text2;
-    public bool cutscene1Started = false;
-    public bool cutscene2Started = false;
+    public bool CutsceneActive1 = false;
+    public bool CutsceneActive2 = false;
     void Start()
     {
         
@@ -18,54 +18,30 @@ public class NextLevel : MonoBehaviour
     {
         
     }
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        player.GetComponent<PlayerMovement>().enabled = false;
-        player.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
-        Text1.SetActive(true);
-        StartCoroutine(NextWorld());
-    }
-    IEnumerator NextWorld()
-    {
-        while (cutscene1Started == false)
+        if (collision.CompareTag("Player"))
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            player.GetComponent<PlayerMovement>().enabled = false;
+            player.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
+            animator.SetFloat("Speed", 0f);
+            Text1.SetActive(true);
+            StartCoroutine(Level2());
+        }
+    }
+
+    IEnumerator Level2()
+    {
+        while (CutsceneActive1 == false)
+        {
+            if(Input.GetKeyDown(KeyCode.Space) && CutsceneActive1 == false)
             {
-                Invoke("CutScene1", 0f);
-                cutscene1Started = true;
+                Text1.SetActive(false);
+                Text2.SetActive(true);
+                CutsceneActive1 = true;
             }
             yield return null;
         }
-        while (cutscene2Started == false)
-        {
-            if(Input.GetKeyDown(KeyCode.Space) && cutscene2Started == false)
-            {
-                Invoke("CutScene2", 0f);
-                cutscene2Started = true;
-            }
-            yield return null;
-        }
-        while (cutscene2Started == true)
-        {
-            if (Input.GetKeyDown(KeyCode.Space) && cutscene2Started == true)
-            {
-                Invoke("End", 0f);
-                yield return null;
-            }
-        }
-    }
-    void CutScene1()
-    {
-        Text1.SetActive(false);
-        Text2.SetActive(true);
-    }
-    void CutScene2()
-    {
-        Text2.SetActive(false);
-        player.GetComponent<PlayerMovement>().enabled = true;
-    }
-    void End()
-    {
-        cutScene.SetActive(false);
+        yield return null;
     }
 }

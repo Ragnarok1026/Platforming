@@ -4014,7 +4014,7 @@ Transform:
   m_GameObject: {fileID: 696569722}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.23, y: 15.45, z: -13.263546}
+  m_LocalPosition: {x: 35.229996, y: 15.45, z: -13.263546}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6713,6 +6713,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1238505451}
   - component: {fileID: 1238505452}
+  - component: {fileID: 1238505453}
   m_Layer: 0
   m_Name: Cutscene Trigger (1)
   m_TagString: Cutscene
@@ -6781,6 +6782,24 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.7237601, y: 12.364684}
   m_EdgeRadius: 0
+--- !u!114 &1238505453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238505450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c2a08a2cc05a8941afd41a08d491dba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1378680613}
+  animator: {fileID: 1378680616}
+  Text1: {fileID: 1553902565}
+  Text2: {fileID: 267608344}
+  CutsceneActive1: 0
+  CutsceneActive2: 0
 --- !u!1 &1307096271
 GameObject:
   m_ObjectHideFlags: 0
@@ -7181,7 +7200,6 @@ GameObject:
   - component: {fileID: 1378680616}
   - component: {fileID: 1378680615}
   - component: {fileID: 1378680614}
-  - component: {fileID: 1378680621}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -7382,7 +7400,7 @@ Transform:
   m_GameObject: {fileID: 1378680613}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.77, y: 11.48, z: 0.02167024}
+  m_LocalPosition: {x: 25.31, y: 11.72, z: 0.02167024}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7393,24 +7411,6 @@ Transform:
   - {fileID: 215245146}
   m_Father: {fileID: 609018496}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1378680621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1378680613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c2a08a2cc05a8941afd41a08d491dba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cutScene: {fileID: 1238505450}
-  nextLevel: {fileID: 310256583}
-  Text1: {fileID: 1553902565}
-  Text2: {fileID: 267608344}
-  cutscene1Started: 0
-  cutscene2Started: 0
 --- !u!1 &1387398998
 GameObject:
   m_ObjectHideFlags: 0
@@ -8620,7 +8620,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: This is the enterence to the next world. all you need to do is jump in
+  m_text: This is the enterence to the next level. all you need to do is jump in
     and start your journey.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9632,7 +9632,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1758724886
 Transform:
   m_ObjectHideFlags: 0
@@ -11537,7 +11537,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2031441255
 Transform:
   m_ObjectHideFlags: 0

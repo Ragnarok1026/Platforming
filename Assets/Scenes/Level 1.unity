@@ -4342,9 +4342,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: Your job is to go out into the world and find Viruses, a Virus is a rouge
-    program that corrupts and destroys the code that keeps this world stable. to
-    find these viruses, you will need to travel to other parts of the world. try
-    jumping over this obstacle by pressing the Spacebar to continue
+    program that corrupts and destroys the code that keeps this game stable. to find
+    these viruses, you will need to travel to other parts of the game. try jumping
+    over this obstacle by pressing the Spacebar to continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
