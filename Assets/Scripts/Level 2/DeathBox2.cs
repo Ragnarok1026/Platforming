@@ -14,7 +14,12 @@ public class DeathBox2 : MonoBehaviour
             Invoke("DisableMovement", 0.33f);
             Player.GetComponent<PlayerMovement>().enabled = false;
         }
-
+        if (collision.gameObject.tag == "Enemy3" && !isDead)
+        {
+            animator.SetBool("Death", true);
+            Invoke("DisableMovement", 0.33f);
+            Player.GetComponent<PlayerMovement>().enabled = false;
+        }
     }
     void DisableMovement()
     {

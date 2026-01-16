@@ -5,7 +5,7 @@ public class EnemyMovement : MonoBehaviour
 {
     public GameObject leftStop;
     public GameObject rightStop;
-    public int Speed = 4;
+    public int Speed = 5;
     void Start()
     {
         
@@ -17,12 +17,12 @@ public class EnemyMovement : MonoBehaviour
         // Check for direction change at the stop points
         if (transform.position.x <= leftStop.transform.position.x)
         {
-            Speed = -4;
+            Speed = -5;
         }
         // Change direction when reaching the right stop point
         else if (transform.position.x >= rightStop.transform.position.x)
         {
-            Speed = 4;
+            Speed = 5;
         }
     }
 }
