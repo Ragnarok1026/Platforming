@@ -1,6 +1,7 @@
 using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     public float runSpeed = 8f;
     public float JumpForce = 16f;
     private bool m_Grounded;
+    private bool hasJumped = false;
+    private bool isCrouching = false;
     public Animator animator;
 
     [SerializeField] private Rigidbody2D rb;
@@ -21,10 +24,8 @@ public class PlayerMovement : MonoBehaviour
     {
         // Update animator speed parameter based on horizontal movement
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
-        // Get horizontal input
-        horizontal = Input.GetAxisRaw("Horizontal");
         // Handle jumping
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (hasJumped && IsGrounded())
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, JumpForce);
         }
@@ -34,12 +35,12 @@ public class PlayerMovement : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
         }
         // Handle crouching
-        if (Input.GetButtonDown("Crouch") && IsGrounded())
+        if (isCrouching && IsGrounded())
         {
             transform.localScale = new Vector3(transform.localScale.x, 1.5f, transform.localScale.z);
         }
         // Handle standing up from crouch
-        else if (Input.GetButtonUp("Crouch"))
+        else if (!isCrouching)
         {
             transform.localScale = new Vector3(transform.localScale.x, 3f, transform.localScale.z);
         }
@@ -71,4 +72,22 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    // Input System methods
+    public void Move(InputAction.CallbackContext context)
+    {
+        // Read horizontal movement input
+        horizontal = context.ReadValue<Vector2>().x;
+    }
+
+    public void Jump(InputAction.CallbackContext context)
+    {
+        // Read jump input
+        hasJumped = context.ReadValueAsButton();
+    }
+
+    public void Crouch(InputAction.CallbackContext context)
+    {
+        // Read crouch input
+        isCrouching = context.ReadValueAsButton();
+    }
 }
