@@ -15,6 +15,7 @@ public class Buttons : MonoBehaviour
     public void Play()
     {
         SceneManager.LoadScene("Level 1");
+        Time.timeScale = 1f;
     }
     public void Restart()
     {
@@ -31,5 +32,9 @@ public class Buttons : MonoBehaviour
     public void Settings()
     {
         SceneManager.LoadScene("Settings");
+    }
+    public void LevelSelect()
+    {
+        SceneManager.LoadScene("LevelSelect");
     }
 }
