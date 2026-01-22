@@ -21,7 +21,7 @@ public class PlayerDeath : MonoBehaviour
             Invoke("DisableMovement", 0.33f);
             player.GetComponent<PlayerMovement>().enabled = false;
         }
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy2"))
         {
             Debug.Log("Player hit by Enemy");
             animator.SetBool("Death", true);

@@ -17,14 +17,17 @@ public class LevelSelect : MonoBehaviour
     }
     public void Level1()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Level 1");
     }
     public void Level2()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Level 2");
     }
     public void Level3()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Level 3");
     }
 }
