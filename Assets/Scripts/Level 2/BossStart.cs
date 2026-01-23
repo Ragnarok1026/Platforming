@@ -39,21 +39,40 @@ public class BossStart : MonoBehaviour
                 cutsceneActive1 = true;
             }
             yield return null;
-            while (cutsceneActive1 == false)
-            {
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    Invoke("CutScene1", 0f);
-                    cutsceneActive1 = true;
-                }
-                yield return null;
-                yield return null;
-            }
         }
-        void CutScene1()
+        while (cutsceneActive2 == false)
         {
-            text1.SetActive(false);
-            text2.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Invoke("CutScene2", 0f);
+                cutsceneActive2 = true;
+            }
+            yield return null;
         }
+        while (cutsceneActive2 == true)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Invoke("CutScene3", 0f);
+                cutsceneActive2 = false;
+            }
+            yield return null;
+        }
+    }
+    void CutScene1()
+    {
+        text1.SetActive(false);
+        text2.SetActive(true);
+    }
+    void CutScene2()
+    {
+        text2.SetActive(false);
+        text3.SetActive(true);
+    }
+    void CutScene3()
+    {
+        text3.SetActive(false);
+        player.GetComponent<PlayerMovement>().enabled = true;
+        Destroy(this.gameObject);
     }
 }
