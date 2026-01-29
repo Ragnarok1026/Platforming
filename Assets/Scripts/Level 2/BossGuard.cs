@@ -14,6 +14,7 @@ public class BossGuard : MonoBehaviour
     public GameObject stop2;
     public GameObject startBoss;
     public GameObject Stage1;
+    public GameObject startFight;
     public float speed = 150f;
     void Start()
     {
@@ -45,6 +46,8 @@ public class BossGuard : MonoBehaviour
         yield return new WaitForSeconds(2f);
         Destroy(startBoss);
         Stage1.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        Destroy(startFight);
         yield return null;
     }
 }

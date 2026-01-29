@@ -26,6 +26,7 @@ TagManager:
   - NextLevel
   - Cutscene
   - Enemy3
+  - Boss2
   layers:
   - Default
   - TransparentFX
