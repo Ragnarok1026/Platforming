@@ -169,6 +169,28 @@
                 },
                 {
                     "name": "",
+                    "id": "444ada2e-4baf-485d-9024-dd0f699e9d85",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "396cd710-25ae-4e09-9131-b1e88701f3c0",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "96df2792-8ac4-4bd8-ac18-22be31f4a748",
                     "path": "<Keyboard>/space",
                     "interactions": "",
