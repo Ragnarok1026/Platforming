@@ -15,9 +15,15 @@ public class VinesRise : MonoBehaviour
     void Update()
     {
 
-        if (rise = null)
+        if (rise == null)
         {
-            vine1.transform.Translate(Vector3.up * speed * Time.deltaTime);
+            vine1.transform.Translate(Vector3.right * speed * Time.deltaTime);
+            vine2.transform.Translate(Vector3.right * speed * Time.deltaTime);
+            Invoke("Stop", 2f);
         }
+    }
+    void Stop()
+    {
+        speed = 0f;
     }
 }
