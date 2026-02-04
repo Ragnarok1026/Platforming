@@ -27,6 +27,9 @@ TagManager:
   - Cutscene
   - Enemy3
   - Boss2
+  - Enemy
+  - Enemy4
+  - Enemy5
   layers:
   - Default
   - TransparentFX
