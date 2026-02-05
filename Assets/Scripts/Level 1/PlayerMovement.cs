@@ -73,21 +73,34 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Input System methods
-    public void Move(InputAction.CallbackContext context)
+    public void Move(InputValue value)
     {
-        // Read horizontal movement input
-        horizontal = context.ReadValue<Vector2>().x;
+        MoveInput(value.Get<Vector2>());
     }
 
-    public void Jump(InputAction.CallbackContext context)
+    public void Jump(InputValue value)
     {
         // Read jump input
-        hasJumped = context.ReadValueAsButton();
+        JumpInput(value.isPressed);
     }
 
-    public void Crouch(InputAction.CallbackContext context)
+    public void Crouch(InputValue value)
     {
         // Read crouch input
-        isCrouching = context.ReadValueAsButton();
+        CrouchInput(value.isPressed);
+    }
+
+    public void MoveInput(Vector2 moveDirection)
+    {
+        horizontal = moveDirection.x;
+    }
+    public void JumpInput(bool jumpState)
+    {
+        hasJumped = jumpState;
+    }
+
+    public void CrouchInput(bool crouchState)
+    {
+        isCrouching = crouchState;
     }
 }

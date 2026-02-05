@@ -16,7 +16,7 @@ public class CameraManager : MonoBehaviour
         
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         // Switch cameras when the player exits the trigger area
         if (other.GetType() == typeof(BoxCollider2D) && other.gameObject.CompareTag("Player"))
