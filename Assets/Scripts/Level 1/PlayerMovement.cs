@@ -1,6 +1,8 @@
+using Unity.VisualScripting;
 using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
@@ -12,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private bool m_Grounded;
     private bool hasJumped = false;
     private bool isCrouching = false;
+    public bool hasSkipped = false;    
     public Animator animator;
 
     [SerializeField] private Rigidbody2D rb;
@@ -51,6 +54,8 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         // Apply horizontal movement
+        horizontal = Mathf.Clamp(horizontal, -1f, 1f);
+
         rb.linearVelocity = new Vector2(horizontal * runSpeed, rb.linearVelocity.y);
     }
 
@@ -73,18 +78,22 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Input System methods
-    public void Move(InputValue value)
+    public void OnSkip(InputValue value)
+    {
+        hasSkipped = value.isPressed;
+    }
+    public void OnMove(InputValue value)
     {
         MoveInput(value.Get<Vector2>());
     }
 
-    public void Jump(InputValue value)
+    public void OnJump(InputValue value)
     {
         // Read jump input
         JumpInput(value.isPressed);
     }
 
-    public void Crouch(InputValue value)
+    public void OnCrouch(InputValue value)
     {
         // Read crouch input
         CrouchInput(value.isPressed);

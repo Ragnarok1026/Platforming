@@ -14,8 +14,8 @@ using UnityEngine.InputSystem;
 
 public class MobileDisableAutoSwitchControls : MonoBehaviour
 {
-    
-#if ENABLE_INPUT_SYSTEM && (UNITY_IOS || UNITY_ANDROID)
+
+#if (UNITY_IOS || UNITY_ANDROID)
 
     [Header("Target")]
     public PlayerInput playerInput;
@@ -29,7 +29,12 @@ public class MobileDisableAutoSwitchControls : MonoBehaviour
     {
         playerInput.neverAutoSwitchControlSchemes = true;
     }
+#else
+    private void Awake()
+    {
+        Destroy(this.gameObject);
+    }
 
 #endif
-    
+
 }

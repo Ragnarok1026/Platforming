@@ -13,6 +13,7 @@ public class StartCutscene : MonoBehaviour
     public bool cutscene1Started = false;
     public bool cutscene2Started = false;
     public bool cutscene3Started = false;
+    public PlayerMovement playerMovement;
     void Start()
     {
         // Disable Boss movement and collider at the start
@@ -40,40 +41,44 @@ public class StartCutscene : MonoBehaviour
         // Wait for player input to progress through cutscenes
         while (cutscene1Started == false)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (playerMovement.hasSkipped)
             {
                 Invoke("CutScene1", 0f);
                 cutscene1Started = true;
+                playerMovement.hasSkipped = false;
             }
             yield return null;
         }
         // Wait for player input to progress through cutscenes
         while (cutscene2Started == false)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && cutscene2Started == false)
+            if (playerMovement.hasSkipped && cutscene2Started == false)
             {
                 Invoke("CutScene2", 0f);
                 cutscene2Started = true;
+                playerMovement.hasSkipped = false;
             }
             yield return null;
         }
         // Wait for player input to progress through cutscenes
         while (cutscene3Started == false)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && cutscene3Started == false)
+            if (playerMovement.hasSkipped && cutscene3Started == false)
             {
                 Invoke("CutScene3", 0f);
                 cutscene3Started = true;
+                playerMovement.hasSkipped = false;
             }
             yield return null;
         }
         // Wait for player input to end the cutscene
         while (cutscene3Started == true)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && cutscene3Started == true)
+            if (playerMovement.hasSkipped && cutscene3Started == true)
             {
                 Invoke("EndCutscene", 0f);
                 cutscene3Started = false;
+                playerMovement.hasSkipped = false;
             }
             yield return null;
         }

@@ -21,7 +21,7 @@
                     "id": "68cb011e-af94-412e-ba40-3be5a2d76006",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "initialStateCheck": false
                 },
                 {
@@ -31,6 +31,15 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Skip",
+                    "type": "Button",
+                    "id": "9f6a9b66-b914-4b70-a8f7-3a6ec0df8c2f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)",
                     "initialStateCheck": false
                 }
             ],
@@ -171,7 +180,7 @@
                     "name": "",
                     "id": "96df2792-8ac4-4bd8-ac18-22be31f4a748",
                     "path": "<Keyboard>/space",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "Jump",
@@ -204,7 +213,7 @@
                     "name": "",
                     "id": "fbbc4913-7e5c-4bf6-94d0-d86515ccf7f0",
                     "path": "<Keyboard>/shift",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "Crouch",
@@ -219,6 +228,39 @@
                     "processors": "",
                     "groups": ";Gamepad",
                     "action": "Crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5063f7a6-4a32-4db5-a08b-d0a3998307ec",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "19625634-1306-4260-b790-4a6883f403a4",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1ae48224-a6f6-408b-a9a0-ab173af0f69b",
+                    "path": "<Touchscreen>/primaryTouch/tap",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Touch",
+                    "action": "Skip",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
