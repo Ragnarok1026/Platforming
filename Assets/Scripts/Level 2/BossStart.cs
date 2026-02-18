@@ -10,6 +10,7 @@ public class BossStart : MonoBehaviour
     public GameObject text1;
     public GameObject text2;
     public GameObject text3;
+    public GameObject startFight;
     void Start()
     {
 
@@ -73,6 +74,7 @@ public class BossStart : MonoBehaviour
     {
         text3.SetActive(false);
         player.GetComponent<PlayerMovement>().enabled = true;
-        Destroy(this.gameObject);
+        Destroy(startFight);
+        this.gameObject.SetActive(false);
     }
 }

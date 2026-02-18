@@ -3,6 +3,7 @@ using System.Collections;
 
 public class StartCutscene : MonoBehaviour
 {
+    public GameObject Door;
     public GameObject Player;
     public GameObject Boss;
     public GameObject Text1;
@@ -28,6 +29,8 @@ public class StartCutscene : MonoBehaviour
         // Detects collision with player to start the cutscene
         if (other.CompareTag("Player"))
         {
+            Door.GetComponent<BossDoor>().enabled = false;
+            Door.SetActive(true);
             // Disable player movement
             Player.GetComponent<PlayerMovement>().enabled = false;
             Player.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;

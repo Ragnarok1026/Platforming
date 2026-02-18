@@ -1878,7 +1878,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 27.4831, y: 17.592087}
+  m_AnchoredPosition: {x: 22.34, y: 17.592087}
   m_SizeDelta: {x: 10.3468, y: 1.4977}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &267608346
@@ -4003,7 +4003,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4028,7 +4028,7 @@ Transform:
   m_GameObject: {fileID: 696569722}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.37, y: 15.45, z: -13.263546}
+  m_LocalPosition: {x: -0.6768224, y: -0.55, z: -13.263546}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4201,6 +4201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 924c1925db888b942b8544b68669f24f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Door: {fileID: 1500655607}
   Player: {fileID: 1378680613}
   Boss: {fileID: 240914800}
   Text1: {fileID: 1387490599}
@@ -7551,7 +7552,7 @@ Transform:
   m_GameObject: {fileID: 1378680613}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.35, y: 11.52, z: 0.02167024}
+  m_LocalPosition: {x: 8.16, y: -1.52, z: 0.02167024}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8866,7 +8867,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 27.95, y: 19.1384}
+  m_AnchoredPosition: {x: 23.29, y: 17.76}
   m_SizeDelta: {x: 21.2807, y: 2.4051}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1553902567
@@ -9901,7 +9902,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1758724886
 Transform:
   m_ObjectHideFlags: 0
@@ -11731,7 +11732,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2028439567
 Transform:
   m_ObjectHideFlags: 0
@@ -11806,7 +11807,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2031441255
 Transform:
   m_ObjectHideFlags: 0

@@ -2588,7 +2588,7 @@ Transform:
   m_GameObject: {fileID: 326848561}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.25, y: 34.5, z: -0.01427675}
+  m_LocalPosition: {x: -0.4, y: 34.5, z: -0.01427675}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3744,7 +3744,7 @@ Transform:
   m_GameObject: {fileID: 464816520}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 68.91, y: 34.55, z: -0.01427675}
+  m_LocalPosition: {x: 75.38, y: 34.55, z: -0.01427675}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4643,7 +4643,7 @@ Transform:
   m_GameObject: {fileID: 552532660}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 82.5, y: 34.55, z: -0.01427675}
+  m_LocalPosition: {x: 89.71, y: 34.55, z: -0.01427675}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4973,7 +4973,7 @@ Transform:
   m_GameObject: {fileID: 612409180}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44.3769, y: 3.5537, z: 0.0684808}
+  m_LocalPosition: {x: 44.3769, y: 4.51, z: 0.0684808}
   m_LocalScale: {x: -5.5167646, y: 0.58749986, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5717,7 +5717,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &762853756
 Transform:
   m_ObjectHideFlags: 0
@@ -5966,7 +5966,7 @@ Transform:
   m_GameObject: {fileID: 831525766}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.82, y: 34.55, z: -0.01427675}
+  m_LocalPosition: {x: 2.32, y: 34.55, z: -0.01427675}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6130,7 +6130,7 @@ Transform:
   m_GameObject: {fileID: 908267911}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.99, y: 34.5, z: -0.01427675}
+  m_LocalPosition: {x: 15.75, y: 34.5, z: -0.01427675}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6173,6 +6173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 8
   JumpForce: 14
+  hasSkipped: 0
   animator: {fileID: 923409538}
   rb: {fileID: 923409539}
   groundCheck: {fileID: 386289288}
@@ -6376,7 +6377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: dd9169c88cad62b4ba8f0c4a5a8b9b30, type: 3}
-  m_NotificationBehavior: 2
+  m_NotificationBehavior: 1
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -6389,37 +6390,21 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 923409537}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: Move
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 1582b50e-5ce4-4465-b37e-40ee5c399623
     m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 923409537}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: Jump
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 68cb011e-af94-412e-ba40-3be5a2d76006
     m_ActionName: 'Player/Jump[/Keyboard/space]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 982b4142-4986-4fd7-bcf0-5107b807e54b
+    m_ActionName: 'Player/Crouch[/Keyboard/shift]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9f6a9b66-b914-4b70-a8f7-3a6ec0df8c2f
+    m_ActionName: 'Player/Skip[/Keyboard/space]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: fa0eefbf-c35c-4ac1-a796-a90ecde1b54d
@@ -6460,22 +6445,6 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 6ca04929-f486-41a3-a31f-6c45e4c9e987
     m_ActionName: UI/TrackedDeviceOrientation
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 923409537}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: Crouch
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 982b4142-4986-4fd7-bcf0-5107b807e54b
-    m_ActionName: 'Player/Crouch[/Keyboard/shift]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -7706,7 +7675,7 @@ Transform:
   m_GameObject: {fileID: 1084550932}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 99.24, y: 34.5, z: -0.01427675}
+  m_LocalPosition: {x: 100.26, y: 34.5, z: -0.01427675}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10002,7 +9971,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1491283200
 Transform:
   m_ObjectHideFlags: 0
@@ -10253,7 +10222,7 @@ Transform:
   m_GameObject: {fileID: 1499710304}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44.28, y: 8.26, z: -0.10080927}
+  m_LocalPosition: {x: 44.28, y: 7.48, z: -0.10080927}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12435,7 +12404,7 @@ Transform:
   m_GameObject: {fileID: 1751525574}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44.224888, y: 2.2902908, z: -0.10080927}
+  m_LocalPosition: {x: 44.224888, y: 3.58, z: -0.10080927}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14470,7 +14439,7 @@ Transform:
   m_GameObject: {fileID: 2042495995}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 72.48999, y: 36.3, z: 0.0684808}
+  m_LocalPosition: {x: 77.38, y: 36.3, z: 0.0684808}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15392,7 +15361,7 @@ Transform:
   m_GameObject: {fileID: 2119534590}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 81.68, y: 34.5, z: -0.01427675}
+  m_LocalPosition: {x: 85.43, y: 34.5, z: -0.01427675}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
