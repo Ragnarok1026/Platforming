@@ -31,6 +31,7 @@ public class BossFloat : MonoBehaviour
             energy.SetActive(true);
             GetComponent<BoxCollider2D>().isTrigger = true;
             shield.transform.Rotate(0f, 0f, rotationSpeed * Time.deltaTime);
+            energy.transform.Rotate(0f, 0f, -rotationSpeed * Time.deltaTime);
             Destroy(phase1);
         }
     }
