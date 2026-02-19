@@ -1,9 +1,14 @@
 using UnityEngine;
+using System.Collections;
 
 public class Phase1 : MonoBehaviour
 {
     public GameObject energy;
     public GameObject startFight;
+    public bool Right = false;
+    public bool Bottom = false;
+    public bool Left = false;
+    public bool Top = false;
     void Start()
     {
         
@@ -13,7 +18,20 @@ public class Phase1 : MonoBehaviour
         if (startFight == null)
         {
             energy.SetActive(true);
-            energy.transform.Translate(-5f * Time.deltaTime, -5f * Time.deltaTime, 0f);
+
         }
+    }
+   
+    IEnumerator PhaseOne()
+    {
+        yield return new WaitForSeconds(1f);
+        energy.transform.Translate(Vector3.right * 10f * Time.deltaTime);
+        yield return new WaitForSeconds(1f);
+        energy.transform.Translate(Vector3.down * 10f * Time.deltaTime);
+        yield return new WaitForSeconds(1f);
+        energy.transform.Translate(Vector3.left * 10f * Time.deltaTime);
+        yield return new WaitForSeconds(1f);
+        energy.transform.Translate(Vector3.up * 10f * Time.deltaTime);
+        yield return new WaitForSeconds(1f);
     }
 }

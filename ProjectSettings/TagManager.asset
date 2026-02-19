@@ -30,6 +30,10 @@ TagManager:
   - Enemy
   - Enemy4
   - Enemy5
+  - LeftWall
+  - RightWall
+  - TopWall
+  - BottomWall
   layers:
   - Default
   - TransparentFX
