@@ -4,6 +4,7 @@ public class BossFloat : MonoBehaviour
 {
     private float speed = 10f;
     private float rotationSpeed = 200f;
+    public GameObject energy;
     public GameObject FightStart;
     public GameObject phase1;
     public GameObject floatPoint;
@@ -27,6 +28,8 @@ public class BossFloat : MonoBehaviour
         if (transform.position == floatPoint.transform.position)
         {
             shield.SetActive(true);
+            energy.SetActive(true);
+            GetComponent<BoxCollider2D>().isTrigger = true;
             shield.transform.Rotate(0f, 0f, rotationSpeed * Time.deltaTime);
             Destroy(phase1);
         }
