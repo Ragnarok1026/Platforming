@@ -34,6 +34,7 @@ TagManager:
   - RightWall
   - TopWall
   - BottomWall
+  - BossEnemies
   layers:
   - Default
   - TransparentFX

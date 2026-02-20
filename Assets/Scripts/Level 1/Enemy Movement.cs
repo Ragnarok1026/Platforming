@@ -18,13 +18,13 @@ public class EnemyMovement : MonoBehaviour
         if (transform.position.x <= leftStop.transform.position.x)
         {
             Speed = -5;
-            transform.localScale = new Vector3(7, 7, 7); // Flip the enemy sprite to face right
+            transform.localScale = new Vector3(-7, 7, 7); // Flip the enemy sprite to face right
         }
         // Change direction when reaching the right stop point
         else if (transform.position.x >= rightStop.transform.position.x)
         {
             Speed = 5;
-            transform.localScale = new Vector3(-7, 7, 7); // Flip the enemy sprite to face left
+            transform.localScale = new Vector3(7, 7, 7); // Flip the enemy sprite to face left
         }
     }
 }
