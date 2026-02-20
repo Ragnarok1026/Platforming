@@ -671,6 +671,74 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &117764189
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1994588417221018969, guid: 9a12233b23fb5104e9dbd8707a0e6595, type: 3}
+      propertyPath: m_Name
+      value: Nature Husk (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888139861918936391, guid: 9a12233b23fb5104e9dbd8707a0e6595, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 40.26669
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888139861918936391, guid: 9a12233b23fb5104e9dbd8707a0e6595, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -46.434517
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888139861918936391, guid: 9a12233b23fb5104e9dbd8707a0e6595, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888139861918936391, guid: 9a12233b23fb5104e9dbd8707a0e6595, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888139861918936391, guid: 9a12233b23fb5104e9dbd8707a0e6595, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888139861918936391, guid: 9a12233b23fb5104e9dbd8707a0e6595, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888139861918936391, guid: 9a12233b23fb5104e9dbd8707a0e6595, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888139861918936391, guid: 9a12233b23fb5104e9dbd8707a0e6595, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888139861918936391, guid: 9a12233b23fb5104e9dbd8707a0e6595, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888139861918936391, guid: 9a12233b23fb5104e9dbd8707a0e6595, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104154604406330034, guid: 9a12233b23fb5104e9dbd8707a0e6595, type: 3}
+      propertyPath: leftStop
+      value: 
+      objectReference: {fileID: 944613382}
+    - target: {fileID: 9104154604406330034, guid: 9a12233b23fb5104e9dbd8707a0e6595, type: 3}
+      propertyPath: rightStop
+      value: 
+      objectReference: {fileID: 503894656}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1994588417221018969, guid: 9a12233b23fb5104e9dbd8707a0e6595, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1797471112}
+  m_SourcePrefab: {fileID: 100100000, guid: 9a12233b23fb5104e9dbd8707a0e6595, type: 3}
 --- !u!1 &142630354
 GameObject:
   m_ObjectHideFlags: 0
@@ -2865,6 +2933,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &503894656
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 503894657}
+  m_Layer: 0
+  m_Name: Right Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &503894657
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503894656}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 44.58, y: -49.17, z: -3.1041653}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &532252232
 GameObject:
   m_ObjectHideFlags: 0
@@ -6191,6 +6290,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &944613382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 944613383}
+  m_Layer: 0
+  m_Name: Left Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &944613383
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944613382}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.42, y: -48.56, z: -3.1041653}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &951991951
 GameObject:
   m_ObjectHideFlags: 0
@@ -12457,6 +12587,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1797471106 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1994588417221018969, guid: 9a12233b23fb5104e9dbd8707a0e6595, type: 3}
+  m_PrefabInstance: {fileID: 117764189}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1797471112
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797471106}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2ad2d8105d416474daaa9ce0a729b108, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1804516815
 GameObject:
   m_ObjectHideFlags: 0
@@ -15391,3 +15548,6 @@ SceneRoots:
   - {fileID: 1808129864}
   - {fileID: 3904412}
   - {fileID: 1537965864}
+  - {fileID: 944613383}
+  - {fileID: 503894657}
+  - {fileID: 117764189}
