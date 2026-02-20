@@ -165,7 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floatPoint: {fileID: 1831205029}
   boss: {fileID: 905425733}
-  Attack1: {fileID: 0}
+  Attack1: {fileID: 1168339281}
 --- !u!1 &4299845
 GameObject:
   m_ObjectHideFlags: 0
