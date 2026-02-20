@@ -34,7 +34,6 @@ public class PlayerDeath : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Arrow"))
         {
-            Debug.Log("Player hit by Boss");
             animator.SetBool("Death", true);
             Invoke("DisableMovement", 0.33f);
             player.GetComponent<PlayerMovement>().enabled = false;

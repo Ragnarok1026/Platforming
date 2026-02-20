@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 298249101604110006}
   - component: {fileID: 9027158099025212517}
   - component: {fileID: 871098917593504186}
+  - component: {fileID: 2836263673696223124}
   m_Layer: 0
   m_Name: Arrow (1)
   m_TagString: Untagged
@@ -218,6 +219,20 @@ PolygonCollider2D:
       - {x: -0.005080402, y: 0.5653454}
       - {x: -0.49623626, y: -0.2902565}
   m_UseDelaunayMesh: 0
+--- !u!114 &2836263673696223124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2327718314308142083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93644d3ffc3637c43b4f54a2bdc78854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 5649018900813450152, guid: 5e88dc54fb92a594a9d9d4a11f255fa6, type: 3}
+  arrow: {fileID: 2327718314308142083}
 --- !u!1 &8999377959672262777
 GameObject:
   m_ObjectHideFlags: 0
