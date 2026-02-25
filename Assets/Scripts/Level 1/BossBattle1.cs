@@ -7,7 +7,7 @@ public class BossBattle1 : MonoBehaviour
     public GameObject player;
     public GameObject patrolRight;
     public GameObject patrolLeft;
-    public int Speed = 8;
+    public int Speed;
     void Start()
     {
         
@@ -33,11 +33,11 @@ public class BossBattle1 : MonoBehaviour
         // Changes direction when reaching patrol points
         if (transform.position.x <= patrolLeft.transform.position.x)
         {
-            Speed = -8;
+            Speed = -5;
         }
         else if (transform.position.x >= patrolRight.transform.position.x)
         {
-            Speed = 8;
+            Speed = 5;
         }
     }
     void BossStompAttack()

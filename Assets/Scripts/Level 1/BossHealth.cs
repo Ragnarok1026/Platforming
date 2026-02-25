@@ -12,6 +12,7 @@ public class BossHealth : MonoBehaviour
     public Collider2D bossCollider1;
     public Collider2D bossCollider2;
     public Animator animator;
+    public GameObject Cam;
     public GameObject Player;
     public GameObject oldLeft;
     public GameObject oldRight;
@@ -45,6 +46,7 @@ public class BossHealth : MonoBehaviour
         // Check if health has dropped to zero or below
         if (currentHealth <= 0)
         {
+            Cam.GetComponent<AudioSource>().Stop();
             animator.SetBool("isDead", true);
             Die();
         }

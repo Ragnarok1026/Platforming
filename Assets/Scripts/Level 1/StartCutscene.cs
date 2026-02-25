@@ -3,6 +3,7 @@ using System.Collections;
 
 public class StartCutscene : MonoBehaviour
 {
+    public GameObject Cam;
     public GameObject Door;
     public GameObject Player;
     public GameObject Boss;
@@ -36,6 +37,8 @@ public class StartCutscene : MonoBehaviour
             Player.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
             animator.SetFloat("Speed", 0f);
             Text1.SetActive(true);
+            Player.GetComponent<AudioSource>().Stop();
+            Cam.GetComponent<AudioSource>().Play();
             StartCoroutine(Cutscene1());
         }
     }

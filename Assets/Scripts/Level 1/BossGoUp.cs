@@ -4,7 +4,7 @@ public class BossGoUp : MonoBehaviour
 {
     public GameObject boss;
     public GameObject target;
-    public int Speed = 8;
+    public int Speed;
     void Start()
     {
 
