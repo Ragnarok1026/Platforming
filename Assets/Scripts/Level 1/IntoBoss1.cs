@@ -4,6 +4,8 @@ public class IntoBoss1 : MonoBehaviour
 {
     private int EnemyCount;
     public int MaxEnemies;
+    public GameObject Cam;
+    public GameObject Player;
     public GameObject Door;
     public GameObject LevelLoad;
     public GameObject Text1;
@@ -24,6 +26,8 @@ public class IntoBoss1 : MonoBehaviour
             LevelLoad.SetActive(true);
             Text1.SetActive(false);
             Text2.SetActive(true);
+            Cam.GetComponent<AudioSource>().Play();
+            Player.GetComponent<AudioSource>().Stop();
         }
 
     }
