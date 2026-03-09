@@ -6,10 +6,14 @@ public class ArmiesRise : MonoBehaviour
     public GameObject boss;
     public GameObject Attack1;
     public GameObject Attack2;
+    public GameObject Attack3;
+    public GameObject Attack4;
     public float speed = 10f;
 
     private Rigidbody2D attack1Rb;
     private Rigidbody2D attack2Rb;
+    private Rigidbody2D attack3Rb;
+    private Rigidbody2D attack4Rb;
 
     void Start()
     {
@@ -17,6 +21,8 @@ public class ArmiesRise : MonoBehaviour
         {
             attack1Rb = Attack1.GetComponent<Rigidbody2D>();
             attack2Rb = Attack2.GetComponent<Rigidbody2D>();
+            attack3Rb = Attack3.GetComponent<Rigidbody2D>(); 
+            attack4Rb = Attack4.GetComponent<Rigidbody2D>();
         }
     }
 
@@ -42,11 +48,33 @@ public class ArmiesRise : MonoBehaviour
         Attack2.SetActive(true);
         Invoke("AttackTwo", 1f);
     }
-        void AttackTwo()
+    void AttackTwo()
     {
         if (attack2Rb != null)
         {
             attack2Rb.linearVelocity = new Vector2(-speed, 0);
+        }
+        Invoke("ShowAttackThree", 1f);
+    }
+    void ShowAttackThree()
+    {
+        Attack3.SetActive(true);
+        Attack4.SetActive(true);
+        Invoke("AttackThree", 1f);
+    }
+    void AttackThree()
+    {
+        if (attack3Rb != null)
+        {
+            attack3Rb.linearVelocity = new Vector2(-speed, 0);
+            Invoke("AttackFour", 0.6f);
+        }
+    }
+    void AttackFour()
+    {
+        if (attack4Rb != null)
+        {
+            attack4Rb.linearVelocity = new Vector2(speed, 0);
         }
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class ArrowDamage : MonoBehaviour
 {
-    private Animator animator;
+    public Animator animator;
     public GameObject player;
     public GameObject arrow;
     void Start()

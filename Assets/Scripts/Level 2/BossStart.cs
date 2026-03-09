@@ -7,6 +7,7 @@ public class BossStart : MonoBehaviour
     public bool cutsceneActive2 = false;
     bool bossTrigger = false;
     public GameObject player;
+    public GameObject Cam;
     public GameObject text1;
     public GameObject text2;
     public GameObject text3;
@@ -27,6 +28,8 @@ public class BossStart : MonoBehaviour
             player.GetComponent<PlayerMovement>().enabled = false;
             player.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, 0);
             text1.SetActive(true);
+            Cam.GetComponent<AudioSource>().Play();
+            player.GetComponent<AudioSource>().Stop();
             StartCoroutine(BossText());
         }
     }
