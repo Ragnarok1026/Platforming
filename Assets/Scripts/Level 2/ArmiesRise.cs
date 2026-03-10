@@ -2,18 +2,20 @@ using UnityEngine;
 
 public class ArmiesRise : MonoBehaviour
 {
+    public float speed = 10f;
     public GameObject floatPoint;
     public GameObject boss;
+
     public GameObject Attack1;
     public GameObject Attack2;
     public GameObject Attack3;
     public GameObject Attack4;
-    public float speed = 10f;
 
     private Rigidbody2D attack1Rb;
     private Rigidbody2D attack2Rb;
     private Rigidbody2D attack3Rb;
     private Rigidbody2D attack4Rb;
+
 
     void Start()
     {
@@ -23,6 +25,7 @@ public class ArmiesRise : MonoBehaviour
             attack2Rb = Attack2.GetComponent<Rigidbody2D>();
             attack3Rb = Attack3.GetComponent<Rigidbody2D>(); 
             attack4Rb = Attack4.GetComponent<Rigidbody2D>();
+
         }
     }
 
@@ -53,6 +56,7 @@ public class ArmiesRise : MonoBehaviour
         if (attack2Rb != null)
         {
             attack2Rb.linearVelocity = new Vector2(-speed, 0);
+            Attack1.SetActive(false);
         }
         Invoke("ShowAttackThree", 1f);
     }
@@ -67,6 +71,7 @@ public class ArmiesRise : MonoBehaviour
         if (attack3Rb != null)
         {
             attack3Rb.linearVelocity = new Vector2(-speed, 0);
+            Attack2.SetActive(false);
             Invoke("AttackFour", 0.6f);
         }
     }
@@ -75,6 +80,15 @@ public class ArmiesRise : MonoBehaviour
         if (attack4Rb != null)
         {
             attack4Rb.linearVelocity = new Vector2(speed, 0);
+            Invoke("DisableAttacks", 3f);
         }
+    }
+    void DisableAttacks()
+    {
+        Destroy(Attack1);
+        Destroy(Attack2);
+        Destroy(Attack3);
+        Destroy(Attack4);
+        Destroy(this);
     }
 }

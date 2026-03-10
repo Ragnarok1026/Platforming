@@ -31,6 +31,7 @@ TagManager:
   - Enemy4
   - Enemy5
   - Arrow2
+  - Shield
   layers:
   - Default
   - TransparentFX
