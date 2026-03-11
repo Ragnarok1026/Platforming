@@ -10,6 +10,7 @@ public class Boss2Health : MonoBehaviour
     public GameObject Cam;
     public bool phaseTwo = false;
     public bool phaseThree = false;
+    public bool finalPhase = false;
     void Start()
     {
         currentHealth = maxHealth;
@@ -37,6 +38,11 @@ public class Boss2Health : MonoBehaviour
             animator.SetBool("isDead", false);
             Invoke("Rise2", 0.5f);
         }
+        if (currentHealth == 5)
+        {
+            animator.SetBool("isDead", false);
+            Invoke("FinalPhase", 0.5f);
+        }
     }
     void Rise1()
     {
@@ -60,5 +66,10 @@ public class Boss2Health : MonoBehaviour
     {
         phaseTwo = false;
         phaseThree = true;
+    }
+        public void FinalPhase()
+        {
+            phaseThree = false;
+            finalPhase = true;
     }
 }

@@ -20,7 +20,6 @@ public class BossFloat : MonoBehaviour
     {
         if (FightStart == null)
         {
-            Debug.Log("FightStart object not found!");
             transform.position = Vector3.MoveTowards(transform.position, floatPoint.transform.position, speed * Time.deltaTime);
             vineOne.transform.position = Vector3.MoveTowards(vineOne.transform.position, vineStopOne.transform.position, speed * Time.deltaTime);
             vineTwo.transform.position = Vector3.MoveTowards(vineTwo.transform.position, vineStopTwo.transform.position, speed * Time.deltaTime);
