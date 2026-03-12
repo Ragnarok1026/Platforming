@@ -3,12 +3,9 @@ using UnityEngine;
 public class LastPhase : MonoBehaviour
 {
     public GameObject boss;
-    public GameObject movePoint1;
-    public GameObject movePoint2;
-    public GameObject movePoint3;
-    public GameObject Pillar1;
-    public GameObject Pillar2;
-    public GameObject Pillar3;
+    public GameObject ragePoint;
+    public GameObject shield;
+    public float rotationSpeed;
     void Start()
     {
 
@@ -24,9 +21,18 @@ public class LastPhase : MonoBehaviour
     {
         boss.GetComponent<Rigidbody2D>().gravityScale = 0;
         boss.GetComponent<BossFloat>().enabled = true;
-        boss.GetComponent<Boss2Health>().Shield.SetActive(true);
-        Pillar1.transform.position = Vector3.MoveTowards(Pillar1.transform.position, movePoint1.transform.position, 5f * Time.deltaTime);
-        Pillar2.transform.position = Vector3.MoveTowards(Pillar2.transform.position, movePoint2.transform.position, 5f * Time.deltaTime);
-        Pillar3.transform.position = Vector3.MoveTowards(Pillar3.transform.position, movePoint3.transform.position, 5f * Time.deltaTime);
+        Invoke("Rage", 2f);
+    }
+    void Rage()
+    {
+        boss.GetComponent<BossFloat>().enabled = false;
+        boss.GetComponent<Rigidbody2D>().gravityScale = 0;
+        boss.transform.position = Vector2.MoveTowards(boss.transform.position, ragePoint.transform.position, 50f * Time.deltaTime);
+        shield.transform.Rotate(0f, 0f, rotationSpeed * Time.deltaTime);
+        Invoke("Terminate", 1f);
+    }
+    void Terminate()
+    {
+        Destroy(this.gameObject);
     }
 }

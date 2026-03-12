@@ -16,7 +16,7 @@ public class DamageBoss : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         // Detects collision with Boss to apply damage
-        if (collision.gameObject.tag == "Boss2")
+        if (this.enabled == true && collision.gameObject.tag == "Boss2")
         {
             Boss.GetComponent<Boss2Health>().TakeDamage(5);
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, bounce);

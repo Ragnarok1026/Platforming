@@ -32,6 +32,7 @@ TagManager:
   - Enemy5
   - Arrow2
   - Shield
+  - Debuff
   layers:
   - Default
   - TransparentFX
