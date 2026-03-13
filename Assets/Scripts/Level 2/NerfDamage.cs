@@ -3,10 +3,12 @@ using UnityEngine;
 public class NerfDamage : MonoBehaviour
 {
     public GameObject attack;
+    public GameObject player;
     public GameObject boss;
     public Rigidbody2D rb;
     public float bounce = 5f;
     public bool isNerfed;
+    private SpriteRenderer spr;
     void Start()
     {
         
@@ -20,9 +22,10 @@ public class NerfDamage : MonoBehaviour
         if (collision.gameObject.CompareTag("Debuff"))
         {
             Debug.Log("Nerf hit");
-            attack.GetComponent<DamageBoss>().enabled = false;
+            player.GetComponent<PlayerMovement>().runSpeed = 6;
             isNerfed = true;
-
+            spr = GetComponent<SpriteRenderer>();
+            spr.color = Color.green;
         }
             if (collision.gameObject.tag == "Boss2" && isNerfed)
             {
