@@ -10,6 +10,7 @@ public class LastPhase : MonoBehaviour
     public GameObject charge2Point;
     public GameObject finalStandingPoint;
     public GameObject slamPoint;
+    public GameObject Warning;
 
     public GameObject debuffArrows;
     public GameObject attackOne;
@@ -193,19 +194,21 @@ public class LastPhase : MonoBehaviour
     void DownArrow4()
     {
         attack10Rb.linearVelocity = new Vector2(0, -speed);
-        Invoke("BossSlam", 1f);
+        Warning.SetActive(true);
+        Invoke("BossSlam", 0.8f);
     }
     void BossSlam()
     {
         finalStandingPoint = slamPoint;
         bossSpeed = 20f;
-        Invoke("AfterShock", 0.6f);
+        Warning.SetActive(false);
+        Invoke("AfterShock", 0.8f);
     }
     void AfterShock()
     {
         attackEleven.SetActive(true);
         attackTwelve.SetActive(true);
-        Invoke("Release", 0.6f);
+        Invoke("Release", 0.8f);
     }
 
     void Release()
