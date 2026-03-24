@@ -79,7 +79,6 @@ public class LastPhase : MonoBehaviour
         boss.GetComponent<Rigidbody2D>().gravityScale = 0;
         boss.transform.position = Vector2.MoveTowards(boss.transform.position, ragePoint.transform.position, bossSpeed * Time.deltaTime);
         shield.transform.Rotate(0f, 0f, rotationSpeed * Time.deltaTime);
-        Invoke("Terminate", 1f);
     }
     void RapidFire()
     {

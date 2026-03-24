@@ -7,7 +7,6 @@ public class NerfDamage : MonoBehaviour
     public GameObject boss;
     public Rigidbody2D rb;
     public float bounce = 5f;
-    public bool isNerfed;
     private SpriteRenderer spr;
     void Start()
     {
@@ -23,15 +22,8 @@ public class NerfDamage : MonoBehaviour
         {
             Debug.Log("Nerf hit");
             player.GetComponent<PlayerMovement>().runSpeed = 6;
-            isNerfed = true;
             spr = GetComponent<SpriteRenderer>();
             spr.color = Color.green;
         }
-            if (collision.gameObject.tag == "Boss2" && isNerfed)
-            {
-                Debug.Log("Boss hit");
-                boss.GetComponent<Boss2Health>().TakeDamage(1);
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, bounce);
-            }
     }
 }

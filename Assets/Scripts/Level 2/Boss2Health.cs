@@ -67,9 +67,9 @@ public class Boss2Health : MonoBehaviour
         phaseTwo = false;
         phaseThree = true;
     }
-        public void FinalPhase()
-        {
-            phaseThree = false;
-            finalPhase = true;
+    public void FinalPhase()
+    {
+        phaseThree = false;
+        finalPhase = true;
     }
 }
