@@ -8,6 +8,8 @@ public class Boss2Health : MonoBehaviour
     public Animator animator;
     public GameObject Shield;
     public GameObject Cam;
+    public GameObject deathPoint;
+    public GameObject player;
     public bool phaseTwo = false;
     public bool phaseThree = false;
     public bool finalPhase = false;
@@ -27,6 +29,7 @@ public class Boss2Health : MonoBehaviour
         {
             Cam.GetComponent<AudioSource>().Stop();
             animator.SetBool("isDead", true);
+
         }
         if (currentHealth == 15)
         {

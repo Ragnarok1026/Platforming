@@ -11,8 +11,6 @@ public class LastPhase : MonoBehaviour
     public GameObject finalStandingPoint;
     public GameObject slamPoint;
     public GameObject Warning;
-
-    public GameObject debuffArrows;
     public GameObject attackOne;
     public GameObject attackTwo;
     public GameObject attackThree;
@@ -30,7 +28,6 @@ public class LastPhase : MonoBehaviour
     public float speed;
     public float bossSpeed;
 
-    public Rigidbody2D debuffRb;
     public Rigidbody2D bossRb;
     public Rigidbody2D attack1Rb;
     public Rigidbody2D attack2Rb;
@@ -82,12 +79,6 @@ public class LastPhase : MonoBehaviour
     }
     void RapidFire()
     {
-        debuffArrows.SetActive(true);
-        Invoke("FireDebuff", 0.5f);
-    }
-    void FireDebuff()
-    {
-        debuffRb.linearVelocity = new Vector2(-speed, 0);
         Invoke("ShowAttack1", 0.5f);
     }
     void ShowAttack1()
