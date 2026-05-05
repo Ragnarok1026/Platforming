@@ -1,48 +1,31 @@
-using UnityEngine;
+using System;
 using System.Collections;
+using TMPro;
+using UnityEngine;
 
 public class BossText : MonoBehaviour
 {
     public GameObject boss;
-    public GameObject text1;
-    public GameObject text2;
-    public GameObject text3;
-    public bool cutscene1Started = false;
-    public bool cutscene2Started = false;
+    public TextMeshProUGUI textDisplay;
+    public string[] cutscene1Lines;
+    private int index = 0;
     void Start()
     {
 
     }
     void Update()
     {
-        if (boss.activeInHierarchy == true && cutscene1Started == false)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            Invoke("StartOpening", 1f);
+            SwitchText();
         }
     }
-    void StartOpening()
+    void SwitchText()
     {
-        text1.SetActive(true);
-        StartCoroutine(ShowText());
-    }
-    void ShowText2()
-    {
-        text1.SetActive(false);
-        text2.SetActive(true);
-        
-    }
-    IEnumerator ShowText()
-    {
-        while (cutscene1Started == false)
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                Invoke("ShowText2", 0);
-                cutscene1Started = true;
-                yield return null;
-            }
-            yield return null;
-        }
-    }
+        if (cutscene1Lines.Length == 0) return;
 
+        // Cycle through the array of strings
+        index = (index + 1) % cutscene1Lines.Length;
+        textDisplay.text = cutscene1Lines[index];
+    }
 }

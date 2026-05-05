@@ -8,8 +8,6 @@ public class IntoBoss1 : MonoBehaviour
     public GameObject Player;
     public GameObject Door;
     public GameObject LevelLoad;
-    public GameObject Text1;
-    public GameObject Text2;
     void Start()
     {
         // Initialize the current enemy count to the maximum number of enemies
@@ -24,8 +22,6 @@ public class IntoBoss1 : MonoBehaviour
             // Deactivate the door and activate the level load point
             Door.SetActive(false);
             LevelLoad.SetActive(true);
-            Text1.SetActive(false);
-            Text2.SetActive(true);
             Cam.GetComponent<AudioSource>().Play();
             Player.GetComponent<AudioSource>().Stop();
         }
