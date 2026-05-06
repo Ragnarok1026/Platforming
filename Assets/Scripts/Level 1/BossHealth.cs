@@ -20,14 +20,11 @@ public class BossHealth : MonoBehaviour
     public GameObject newRight;
     public GameObject target;
     public GameObject newTarget;
-    public GameObject Text1;
-    public GameObject Text2;
-    public GameObject Text3;
-    public GameObject Text4;
-    public GameObject Narrator1;
-    public GameObject Narrator2;
-    public GameObject Narrator3;
+    public GameObject newDeath;
     public GameObject Exit;
+    public GameObject bossTextBox;
+    public BossText bossText;
+
     void Start()
     {
         // Initialize current health to maximum health
@@ -77,95 +74,17 @@ public class BossHealth : MonoBehaviour
         // Move boundaries to new positions
         oldRight.transform.position = newRight.transform.position;
         // Start boss ascent after death
-        GetComponent<BossGoUp>().Speed = 2;
-        // Move target to new position
-        Invoke("BossDeath", 2);
-    }
-    void BossDeath()
-    {
-        // Start boss ascent after death
-        GetComponent<BossGoUp>().Speed = 8;
-        target.transform.position = newTarget.transform.position;
-        Invoke("purify1", 1.5f);
-    }
-    void purify1()
-    {
-        animator.SetInteger("Purify", 1);
-        Text1.SetActive(true);
-        Invoke("purify2", 4f);
-    }
-    void purify2()
-    {
-        animator.SetInteger("Purify", 2);
-        Text1.SetActive(false);
-        Text2.SetActive(true);
-        Invoke("purify3", 4f);
-    }
-    void purify3()
-    {
-        animator.SetInteger("Purify", 3);
-        Text2.SetActive(false);
-        Text3.SetActive(true);
-        Invoke("purify4", 4f);
-    }
-    void purify4()
-    {
-        animator.SetInteger("Purify", 4);
-        Text3.SetActive(false);
-        Text4.SetActive(true);
-        Invoke("Final", 5);
-    }
-    void Final()
-    {
-        Text4.SetActive(false);
-        Exit.SetActive(false);
-        GetComponent<SpriteRenderer>().enabled = false;
-        Narrator1.SetActive(true);
-        StartCoroutine(EndOfTutorial());
-    }
-    IEnumerator EndOfTutorial()
-    {
-        while (cutscene1Started == false)
+        transform.Translate(Vector2.up * speed * Time.deltaTime);
+        if (transform.position.y >= newDeath.transform.position.y)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Invoke("Part1", 0f);
-                cutscene1Started = true;
-            }
-            yield return null;
+            transform.position = newTarget.transform.position;
+            speed = 0;
         }
-        while (cutscene2Started == false)
-        {
-            if (Input.GetKeyDown(KeyCode.Space) && cutscene2Started == false)
-            {
-                Invoke("Part2", 0f);
-                cutscene2Started = true;
-            }
-            yield return null;
-        }
-        while (cutscene3Started == false)
-        {
-            if (Input.GetKeyDown(KeyCode.Space) && cutscene3Started == false)
-            {
-                Invoke("End", 0f);
-                cutscene3Started = true;
-            }
-            yield return null;
-        }
+        Invoke("DeathCutscene", 1f);
     }
-    void Part1()
+    void DeathCutscene()
     {
-        Narrator1.SetActive(false);
-        Narrator2.SetActive(true);
-    }
-    void Part2()
-    {
-        Narrator2.SetActive(false);
-        Narrator3.SetActive(true);
-    }
-    void End()
-    {
-        Narrator3.SetActive(false);
-        Player.GetComponent<PlayerMovement>().enabled = true;
+        bossTextBox.SetActive(true);
+        bossText.ShowText();
     }
 }

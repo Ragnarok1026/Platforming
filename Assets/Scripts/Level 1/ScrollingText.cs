@@ -12,10 +12,11 @@ public class ScrollingText : MonoBehaviour
     [SerializeField] private TextMeshProUGUI itemInfoText;
     public int currentDisplayingText = 0;
     public GameObject textBox;
+    public GameObject trigger1;
+    public GameObject trigger2;
+    public GameObject trigger3;
+    public GameObject trigger4;
     public GameObject player;
-    public GameObject textTrigger1;
-
-    private bool text1Finished = false;
 
     void Start()
     {
@@ -24,53 +25,67 @@ public class ScrollingText : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
-            NextText1();
-            text1Finished = true;
+            if (currentDisplayingText == 0 && itemInfoText.text == itemInfo[0])
+            {
+                NextText1();
+            }
+            if (currentDisplayingText == 1 && itemInfoText.text == itemInfo[1])
+            {
+                textBox.SetActive(false);
+                player.GetComponent<PlayerMovement>().enabled = true;
+            }
+            if (currentDisplayingText == 2 && itemInfoText.text == itemInfo[2])
+            {
+                textBox.SetActive(false);
+                trigger1.SetActive(false);
+                player.GetComponent<PlayerMovement>().enabled = true;
+            }
+            if (currentDisplayingText == 3 && itemInfoText.text == itemInfo[3])
+            {
+                textBox.SetActive(false);
+                trigger2.SetActive(false);
+                player.GetComponent<PlayerMovement>().enabled = true;
+            }
+            if (currentDisplayingText == 4 && itemInfoText.text == itemInfo[4])
+            {
+                textBox.SetActive(false);
+                trigger3.SetActive(false);
+                player.GetComponent<PlayerMovement>().enabled = true;
+            }
+            if (currentDisplayingText == 5 && itemInfoText.text == itemInfo[5])
+            {
+                textBox.SetActive(false);
+                trigger4.SetActive(false);
+                player.GetComponent<PlayerMovement>().enabled = true;
+            }
         }
-    }
-    public void NextText1()
-    {
-        currentDisplayingText = (currentDisplayingText + 1) % itemInfo.Length;
-        Animate();
-        if (Input.GetKeyDown(KeyCode.Space) && currentDisplayingText == 1)
-        {
-            EndText1();
-            player.GetComponent<PlayerMovement>().enabled = true;
-        }
-    }
-    public void EndText1()
-    {
-        textBox.SetActive(false);
-        this.enabled = false;
-    }
-    public void NextText2()
-    {
-        currentDisplayingText = (currentDisplayingText + 1) % itemInfo.Length;
-        player.GetComponent<PlayerMovement>().enabled = false;
-        player.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
-        if(Input.GetKeyDown(KeyCode.Space))
-            Animate();
-    }
-    public void EndText2()
-    {
-        textBox.SetActive(false);
-        player.GetComponent<PlayerMovement>().enabled = true;
-        textTrigger1.SetActive(false);
-        this.enabled = false;
     }
     public void Animate()
     {
         StartCoroutine(AnimateText());
     }
 
+    public void NextText1()
+    {
+        currentDisplayingText = (currentDisplayingText + 1) % itemInfo.Length;
+        Animate();
+    }
+
+    public void NextText2()
+    {
+        currentDisplayingText = (currentDisplayingText + 1) % itemInfo.Length;
+        player.GetComponent<PlayerMovement>().enabled = false;
+        player.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
+        Animate();
+    }
     IEnumerator AnimateText()
     {
        for (int i = 0; i < itemInfo[currentDisplayingText].Length + 1; i++)
-        {
-            itemInfoText.text = itemInfo[currentDisplayingText].Substring(0, i);
-            yield return new WaitForSeconds(textSpeed);
-        }
+       {
+           itemInfoText.text = itemInfo[currentDisplayingText].Substring(0, i);
+           yield return new WaitForSeconds(textSpeed);
+       }
     }
 }

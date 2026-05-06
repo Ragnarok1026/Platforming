@@ -2,9 +2,8 @@ using UnityEngine;
 
 public class ReActivateText : MonoBehaviour
 {
-    public GameObject textObject;
-    public GameObject image;
-    private ScrollingText scrollingTextScript;
+    public GameObject textBox;
+    public ScrollingText scrollingText;
     void Start()
     {
         
@@ -15,11 +14,10 @@ public class ReActivateText : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if(other.gameObject.CompareTag("Player"))
         {
-            image.SetActive(true);
-            textObject.GetComponent<ScrollingText>().enabled = true;
-            textObject.GetComponent<ScrollingText>().NextText2();
+           textBox.SetActive(true);
+           scrollingText.NextText2();
         }
     }
 }

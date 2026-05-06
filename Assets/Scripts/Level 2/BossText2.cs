@@ -3,7 +3,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-public class BossText : MonoBehaviour
+public class BossText2 : MonoBehaviour
 {
     public GameObject boss;
     public TextMeshProUGUI textDisplay;
