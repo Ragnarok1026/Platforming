@@ -15,6 +15,7 @@ public class BossText : MonoBehaviour
     public GameObject trigger;
     public GameObject player;
     public GameObject boss;
+    public GameObject door;
 
     void Start()
     {
@@ -38,9 +39,27 @@ public class BossText : MonoBehaviour
             if (currentDisplayingText == 2 && itemInfoText.text == itemInfo[2])
             {
                 textBox.SetActive(false);
-                trigger.SetActive(false);
                 player.GetComponent<PlayerMovement>().enabled = true;
                 boss.GetComponent<BossGoUp>().enabled = true;
+            }
+            if (currentDisplayingText == 3 && itemInfoText.text == itemInfo[3])
+            {
+                currentDisplayingText = (currentDisplayingText + 1) % itemInfo.Length;
+                player.GetComponent<PlayerMovement>().enabled = false;
+                Animate();
+            }
+            if (currentDisplayingText == 4 && itemInfoText.text == itemInfo[4])
+            {
+                currentDisplayingText = (currentDisplayingText + 1) % itemInfo.Length;
+                Animate();
+            }
+            if (currentDisplayingText == 5 && itemInfoText.text == itemInfo[5])
+            {
+                textBox.SetActive(false);
+                player.GetComponent<PlayerMovement>().enabled = true;
+                boss.GetComponent<BossGoUp>().enabled = true;
+                Destroy(boss);
+                Destroy(door);
             }
         }
     }
