@@ -4567,6 +4567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cutscene1
   player: {fileID: 1378680613}
+  trigger: {fileID: 0}
   bossCam: {fileID: 1758724885}
   bossText: {fileID: 1462398004}
   bossTextBox: {fileID: 1947537774}
@@ -8035,7 +8036,7 @@ Transform:
   m_GameObject: {fileID: 1378680613}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.46, y: -1.58, z: 0.02167024}
+  m_LocalPosition: {x: -7.25, y: 11.82, z: 0.02167024}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -4,6 +4,7 @@ using UnityEngine;
 public class Cutscene1 : MonoBehaviour
 {
     public GameObject player;
+    public GameObject trigger;
     public GameObject bossCam;
     public BossText bossText;
     public GameObject bossTextBox;
@@ -21,6 +22,7 @@ public class Cutscene1 : MonoBehaviour
             bossCam.GetComponent<AudioSource>().Play();
             player.GetComponent<PlayerMovement>().enabled = false;
             player.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
+            trigger.SetActive(false);
         }
     }
 }
