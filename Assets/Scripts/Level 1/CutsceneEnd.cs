@@ -3,6 +3,7 @@ using UnityEngine;
 public class CutsceneEnd : MonoBehaviour
 {
     public LevelOneEndText levelOneEndText;
+    public GameObject bossTextBox;
     void Start()
     {
         
@@ -15,9 +16,10 @@ public class CutsceneEnd : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Player"))
             {
+                bossTextBox.SetActive(true);
+                levelOneEndText.Animate();
                 other.gameObject.GetComponent<PlayerMovement>().enabled = false;
                 other.gameObject.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
-                levelOneEndText.textBox.SetActive(true);
 
         }
     }

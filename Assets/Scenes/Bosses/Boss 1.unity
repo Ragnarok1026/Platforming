@@ -4368,7 +4368,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4393,7 +4393,7 @@ Transform:
   m_GameObject: {fileID: 696569722}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.37, y: 15.45, z: -13.263546}
+  m_LocalPosition: {x: -0.6768224, y: -0.55, z: -13.263546}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4567,6 +4567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cutscene1
   player: {fileID: 1378680613}
+  bossCam: {fileID: 1758724885}
   bossText: {fileID: 1462398004}
   bossTextBox: {fileID: 1947537774}
 --- !u!1 &715165278
@@ -7517,6 +7518,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1238505451}
   - component: {fileID: 1238505452}
+  - component: {fileID: 1238505453}
   m_Layer: 0
   m_Name: Cutscene Trigger (1)
   m_TagString: Cutscene
@@ -7585,6 +7587,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.7237601, y: 12.364684}
   m_EdgeRadius: 0
+--- !u!114 &1238505453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238505450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adedb435f93c739419384415b453544c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CutsceneEnd
+  levelOneEndText: {fileID: 1462398005}
+  bossTextBox: {fileID: 467007222}
 --- !u!1 &1307096271
 GameObject:
   m_ObjectHideFlags: 0
@@ -8019,7 +8035,7 @@ Transform:
   m_GameObject: {fileID: 1378680613}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.49, y: 11.53, z: 0.02167024}
+  m_LocalPosition: {x: 5.46, y: -1.58, z: 0.02167024}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9154,12 +9170,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f31d7e35d979e4f479cf46095544e32a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelOneEndText
-  itemInfo: []
-  textSpeed: 0.01
-  itemInfoText: {fileID: 0}
+  itemInfo:
+  - You have done well to get this far, but you have a larger journey ahead of you
+  - This hole will lead you to the next world. Good luck, and be careful.
+  textSpeed: 0.02
+  itemInfoText: {fileID: 1752375079}
   currentDisplayingText: 0
-  textBox: {fileID: 0}
-  player: {fileID: 0}
+  textBox: {fileID: 467007222}
+  player: {fileID: 1378680613}
 --- !u!1 &1496953219
 GameObject:
   m_ObjectHideFlags: 0
@@ -10676,7 +10694,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -10694,8 +10712,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 43
+  m_fontSizeBase: 43
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12836,7 +12854,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2028439567
 Transform:
   m_ObjectHideFlags: 0
@@ -12911,7 +12929,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2031441255
 Transform:
   m_ObjectHideFlags: 0

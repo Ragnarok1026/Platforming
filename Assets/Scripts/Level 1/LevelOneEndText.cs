@@ -21,12 +21,17 @@ public class LevelOneEndText : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftAlt))
+        if (Input.GetKeyDown(KeyCode.LeftAlt) && textBox.activeSelf)
         {
             if (currentDisplayingText == 0 && itemInfoText.text == itemInfo[0])
             {
                 currentDisplayingText = (currentDisplayingText + 1) % itemInfo.Length;
                 Animate();
+            }
+            if (currentDisplayingText == 1 && itemInfoText.text == itemInfo[1])
+            {
+                textBox.SetActive(false);
+                player.GetComponent<PlayerMovement>().enabled = true;
             }
         }
     }
