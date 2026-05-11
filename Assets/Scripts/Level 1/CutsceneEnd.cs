@@ -4,6 +4,7 @@ public class CutsceneEnd : MonoBehaviour
 {
     public LevelOneEndText levelOneEndText;
     public GameObject bossTextBox;
+    public GameObject trigger;
     void Start()
     {
         
@@ -20,7 +21,7 @@ public class CutsceneEnd : MonoBehaviour
                 levelOneEndText.Animate();
                 other.gameObject.GetComponent<PlayerMovement>().enabled = false;
                 other.gameObject.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
-
+                trigger.SetActive(false);
         }
     }
 }
