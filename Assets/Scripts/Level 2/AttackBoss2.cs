@@ -20,7 +20,7 @@ public class AttackBoss2 : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, bounce);
             if (bossHealth.currentHealth >= 0)
             {
-                bossHealth.TakeDamage(5);
+                bossHealth.TakeDamage(10);
             }
         }
     }

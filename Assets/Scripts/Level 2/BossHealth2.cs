@@ -9,15 +9,21 @@ public class BossHealth2 : MonoBehaviour
     public GameObject teleportPoint2;
     public GameObject teleportPoint3;
     public GameObject teleportPoint4;
+    public GameObject shield;
+    public float shieldSpeed = 180;
     public bool isDead = false;
     public GameObject boss;
     void Start()
     {
         currentHealth = maxHealth;
+        
     }
     void Update()
     {
-        
+        if (currentHealth <= maxHealth)
+        {
+            shield.transform.Rotate(Vector3.forward * shieldSpeed * Time.deltaTime);
+        }
     }
     public void TakeDamage(int damage)
     {
@@ -29,14 +35,14 @@ public class BossHealth2 : MonoBehaviour
         if(isDead == true)
         {
             teleportEffect.SetActive(true);
-            Die();
+            Invoke("Die", 0.1f);
         }
-        if (currentHealth <= 20)
+        if (currentHealth == 20)
         {
             teleportEffect.SetActive(true);
             Invoke("BossPhase2Starts", 0.1f);
         }
-        if (currentHealth <= 10)
+        if (currentHealth == 10)
         {
             teleportEffect.SetActive(true);
             Invoke("BossPhase3Starts", 0.1f);

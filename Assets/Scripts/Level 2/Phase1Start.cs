@@ -6,6 +6,8 @@ public class Phase1Start : MonoBehaviour
     public GameObject boss;
     public GameObject teleportEffect;
     public GameObject teleportPoint;
+    public GameObject shield;
+    public bool phase1Started = false;
     void Start()
     {
         
@@ -22,6 +24,8 @@ public class Phase1Start : MonoBehaviour
     void BossPhase1Starts()
     {
         teleportEffect.SetActive(false);
+        shield.SetActive(true);
+        phase1Started = true;
         Destroy(this.gameObject);
     }
 }
