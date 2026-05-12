@@ -33,6 +33,7 @@ TagManager:
   - Arrow2
   - Shield
   - Debuff
+  - Energy
   layers:
   - Default
   - TransparentFX

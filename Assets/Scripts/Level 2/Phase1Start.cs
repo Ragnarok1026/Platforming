@@ -26,6 +26,6 @@ public class Phase1Start : MonoBehaviour
         teleportEffect.SetActive(false);
         shield.SetActive(true);
         phase1Started = true;
-        Destroy(this.gameObject);
+        this.gameObject.SetActive(false);
     }
 }

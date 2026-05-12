@@ -5,6 +5,7 @@ public class AttackBoss2 : MonoBehaviour
     public float bounce;
     public Rigidbody2D rb;
     public BossHealth2 bossHealth;
+    public BossHealth2 health;
     void Start()
     {
         
@@ -21,6 +22,8 @@ public class AttackBoss2 : MonoBehaviour
             if (bossHealth.currentHealth >= 0)
             {
                 bossHealth.TakeDamage(10);
+                health.speed = 0;
+
             }
         }
     }

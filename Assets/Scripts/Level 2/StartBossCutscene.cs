@@ -15,6 +15,7 @@ public class StartBossCutscene : MonoBehaviour
     public GameObject player;
     public GameObject boss;
     public GameObject bossTeleport;
+    public BossHealth2 health;
     public bool endCutscene = false;
     void Start()
     {
@@ -40,6 +41,12 @@ public class StartBossCutscene : MonoBehaviour
                 bossTeleport.SetActive(true);
                 Invoke("TeleportBossOut", 0.1f);
                 player.GetComponent<PlayerMovement>().enabled = true;
+            }
+            if(currentDisplayingText == 3 && health.isDead == true)
+            {
+                player.GetComponent<PlayerMovement>().enabled = false;
+                player.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
+                Animate();
             }
         }
     }

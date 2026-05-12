@@ -54,6 +54,12 @@ public class DeathBox : MonoBehaviour
             Invoke("DisableMovement6", 0.33f);
             Player.GetComponent<PlayerMovement>().enabled = false;
         }
+        if (collision.gameObject.tag == "Shield" && !isDead)
+        {
+            animator.SetBool("Death", true);
+            Invoke("DisableMovement4", 0.33f);
+            Player.GetComponent<PlayerMovement>().enabled = false;
+        }
     }
     // Detects collision with arrows to trigger player death
     private void OnTriggerEnter2D(Collider2D collision)
