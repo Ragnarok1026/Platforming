@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.InputSystem.Processors;
 
 public class StartBossCutscene : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class StartBossCutscene : MonoBehaviour
     public GameObject player;
     public GameObject boss;
     public GameObject bossTeleport;
+    public GameObject bossDoor;
     public BossHealth2 health;
     public bool endCutscene = false;
     void Start()
@@ -37,16 +39,31 @@ public class StartBossCutscene : MonoBehaviour
             }
             if (currentDisplayingText == 2 && itemInfoText.text == itemInfo[2])
             {
+
                 textBox.SetActive(false);
                 bossTeleport.SetActive(true);
                 Invoke("TeleportBossOut", 0.1f);
                 player.GetComponent<PlayerMovement>().enabled = true;
             }
-            if(currentDisplayingText == 3 && health.isDead == true)
+            if (currentDisplayingText == 3 && itemInfoText.text == itemInfo[3] && endCutscene == true)
             {
+                currentDisplayingText = (currentDisplayingText + 1) % itemInfo.Length;
                 player.GetComponent<PlayerMovement>().enabled = false;
                 player.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
                 Animate();
+            }
+            if (currentDisplayingText == 4 && itemInfoText.text == itemInfo[4])
+            {
+                currentDisplayingText = (currentDisplayingText + 1) % itemInfo.Length;
+                Animate();
+            }
+            if(currentDisplayingText == 5 && itemInfoText.text == itemInfo[5])
+            {
+                textBox.SetActive(false);
+                bossTeleport.SetActive(true);
+                bossDoor.SetActive(false);
+                player.GetComponent<PlayerMovement>().enabled = true;
+                Invoke("TeleportBossOut", 0.1f);
             }
         }
     }
@@ -79,6 +96,11 @@ public class StartBossCutscene : MonoBehaviour
     {
         boss.SetActive(false);
         endCutscene = true;
+    }
+    public void ShowText()
+    {
+        currentDisplayingText = (currentDisplayingText + 1) % itemInfo.Length;
+        Animate();
     }
     IEnumerator AnimateText()
     {

@@ -1,9 +1,18 @@
 using UnityEngine;
+using System.Collections;
 
 public class BossHealth2 : MonoBehaviour
 {
     public int maxHealth = 30;
     public int currentHealth;
+    public float shieldSpeed = 180;
+    public float speed = 5.0f;
+    public float duration = 100f;
+    public float magnitude = 0.1f;
+    public bool isDead = false;
+    public Transform player;
+    public EnergyLeft energyLeft;
+    public StartBossCutscene cutscene;
     public GameObject teleportEffect;
     public GameObject teleportPoint1;
     public GameObject teleportPoint2;
@@ -13,16 +22,12 @@ public class BossHealth2 : MonoBehaviour
     public GameObject energyPoint2;
     public GameObject energyPoint3;
     public GameObject energyPoint4;
+    public GameObject deathPoint1;
+    public GameObject deathPoint2;
     public GameObject shield;
     public GameObject energy1;
     public GameObject energy2;
-    public float shieldSpeed = 180;
-    public bool isDead = false;
     public GameObject boss;
-    public EnergyLeft energyLeft;
-    public Transform player;
-    public StartBossCutscene cutscene;
-    public float speed = 5.0f;
     void Start()
     {
         currentHealth = maxHealth;
@@ -98,5 +103,36 @@ public class BossHealth2 : MonoBehaviour
         boss.SetActive(true);
         boss.GetComponent<Collider2D>().enabled = false;
         speed = 0;
+        StartCoroutine("Shake");
+        Invoke("EndDialouge", 0.5f);
+    }
+    void EndDialouge()
+    {
+        cutscene.endCutscene = true;
+        cutscene.textBox.SetActive(true);
+        cutscene.ShowText();
+    }
+    private IEnumerator Shake()
+    {
+        Vector3 originalPos = transform.localPosition;
+        float elapsed = 0.0f;
+
+        while (elapsed < duration)
+        {
+            // Get random offsets for X and Y
+            float x = Random.Range(-1f, 1f) * magnitude;
+            float y = Random.Range(-1f, 1f) * magnitude;
+
+            // Apply the new position
+            transform.localPosition = new Vector3(originalPos.x + x, originalPos.y + y, originalPos.z);
+
+            elapsed += Time.deltaTime;
+
+            // Wait until the next frame
+            yield return null;
+        }
+
+        // Return to the original position once finished
+        transform.localPosition = originalPos;
     }
 }
