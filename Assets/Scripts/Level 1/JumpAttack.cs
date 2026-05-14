@@ -43,5 +43,10 @@ public class JumpAttack : MonoBehaviour
             Destroy(other.gameObject);
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, bounce);
         }
+        if (other.CompareTag("Enemy5"))
+        {
+            Destroy(other.gameObject);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, bounce);
+        }
     }
 }

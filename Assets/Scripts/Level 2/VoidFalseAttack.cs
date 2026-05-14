@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class VoidFalseAttack : MonoBehaviour
 {
@@ -90,7 +91,11 @@ public class VoidFalseAttack : MonoBehaviour
     public void FadeToBlack()
     {
         animator.SetBool("fadeToBlack", true);
-        Invoke("NextScene", 1.50f);
+        Invoke("NextScene", 2f);
+    }
+    public void NextScene()
+    {
+        SceneManager.LoadScene("Level 3");
     }
     public void Animate()
     {
