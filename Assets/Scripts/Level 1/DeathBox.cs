@@ -15,6 +15,12 @@ public class DeathBox : MonoBehaviour
             Invoke("DisableMovement1", 0.33f);
             Player.GetComponent<PlayerMovement>().enabled = false;
         }
+        if (collision.gameObject.tag == "Enemy1Boss" && !isDead)
+        {
+            animator.SetBool("Death", true);
+            Invoke("DisableMovement1Boss", 0.33f);
+            Player.GetComponent<PlayerMovement>().enabled = false;
+        }
         // Detects collision with different enemy types to trigger player death
         if (collision.gameObject.tag == "Enemy2" && !isDead)
         {
@@ -77,6 +83,11 @@ public class DeathBox : MonoBehaviour
         Player.GetComponent<SpriteRenderer>().enabled = false;
         GameOverScreen1();
     }
+    void DisableMovement1Boss()
+    {
+        Player.GetComponent<SpriteRenderer>().enabled = false;
+        GameOverScreen1Boss();
+    }
     // Disables player movement and shows game over screen for Enemy2 collision
     void DisableMovement2()
     {
@@ -112,24 +123,28 @@ public class DeathBox : MonoBehaviour
         SceneManager.LoadScene("GameOver");
     }
     // Loads the Game Over scene for Enemy2 collision
-    public void GameOverScreen2()
+    public void GameOverScreen1Boss()
     {
         SceneManager.LoadScene("GameOver 1");
+    }
+    public void GameOverScreen2()
+    {
+        SceneManager.LoadScene("GameOver2");
     }
     // Loads the Game Over scene for Vulnerable and Helmet collision
     public void GameOverScreen3()
     {
-        SceneManager.LoadScene("GameOver2");
+        SceneManager.LoadScene("GameOver3");
     }
     // Loads the Game Over scene for Enemy4 collision
     public void GameOverScreen4()
     {
-        SceneManager.LoadScene("GameOver3");
+        SceneManager.LoadScene("GameOver4");
     }
     // Loads the Game Over scene for Enemy5 collision
     public void GameOverScreen5()
     {
-        SceneManager.LoadScene("GameOver4");
+        SceneManager.LoadScene("GameOver5");
     }
     public void GameOverScreen6()
     {

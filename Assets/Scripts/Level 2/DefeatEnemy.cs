@@ -21,7 +21,7 @@ public class DefeatEnemy : MonoBehaviour
         }
         if (collision.CompareTag("Enemy2"))
         {
-            Door.GetComponent<BossDoor>().DefeatEnemy(1);
+            Door.GetComponent<EnemiesRemaining>().DefeatEnemy(1);
         }
         if (collision.CompareTag("Vulnerable"))
         {

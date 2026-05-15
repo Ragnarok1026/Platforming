@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
@@ -10,19 +11,7 @@ public class MenuButtons : MonoBehaviour
     }
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (pauseMenu.activeSelf)
-            {
-                Time.timeScale = 1f;
-                pauseMenu.SetActive(false);
-            }
-            else
-            {
-                Time.timeScale = 0f;
-                pauseMenu.SetActive(true);
-            }
-        }
+
     }
     public void Restart()
     {
@@ -36,5 +25,18 @@ public class MenuButtons : MonoBehaviour
     public void Settings()
     {
         SceneManager.LoadScene("Settings");
+    }
+    public void OnPause(InputValue value)
+    {
+        if (pauseMenu.activeSelf)
+        {
+            Time.timeScale = 1f;
+            pauseMenu.SetActive(false);
+        }
+        else
+        {
+            Time.timeScale = 0f;
+            pauseMenu.SetActive(true);
+        }
     }
 }

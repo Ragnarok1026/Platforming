@@ -5,11 +5,11 @@ using System.Collections;
 public class ScrollingText : MonoBehaviour
 {
     [Header("Text Settings")]
-    [SerializeField][TextArea] private string[] itemInfo;
-    [SerializeField] private float textSpeed = 0.01f;
+    [SerializeField][TextArea] public string[] itemInfo;
+    [SerializeField] public float textSpeed = 0.01f;
 
     [Header("UI Elements")]
-    [SerializeField] private TextMeshProUGUI itemInfoText;
+    [SerializeField] public TextMeshProUGUI itemInfoText;
     public int currentDisplayingText = 0;
     public GameObject textBox;
     public GameObject trigger1;

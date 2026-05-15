@@ -14,7 +14,8 @@ public class PlayerMovement : MonoBehaviour
     private bool m_Grounded;
     private bool hasJumped = false;
     private bool isCrouching = false;
-    public bool hasSkipped = false;    
+    public bool hasSkipped = false;   
+    public bool hasReleasedJump = false;
     public Animator animator;
 
     [SerializeField] private Rigidbody2D rb;
@@ -33,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, JumpForce);
         }
         // Handle variable jump height
-        if (Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0f)
+        if (hasReleasedJump == true && rb.linearVelocity.y > 0f)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
         }
@@ -106,6 +107,14 @@ public class PlayerMovement : MonoBehaviour
     public void JumpInput(bool jumpState)
     {
         hasJumped = jumpState;
+        if (hasJumped)
+        {
+            hasReleasedJump = false;
+        }
+        else
+        {
+            hasReleasedJump = true;
+        }
     }
 
     public void CrouchInput(bool crouchState)

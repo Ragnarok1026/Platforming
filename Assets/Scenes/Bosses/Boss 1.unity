@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 79990289}
   m_Layer: 0
   m_Name: Virus (5)
-  m_TagString: Enemy2
+  m_TagString: Enemy1Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1324,7 +1324,7 @@ GameObject:
   - component: {fileID: 204509056}
   m_Layer: 0
   m_Name: Virus (7)
-  m_TagString: Enemy2
+  m_TagString: Enemy1Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1583,7 +1583,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.0290977, y: 0.18848825}
+  m_Size: {x: 0.7848982, y: 0.18848825}
   m_EdgeRadius: 0
 --- !u!114 &215245149
 MonoBehaviour:
@@ -4045,7 +4045,7 @@ GameObject:
   - component: {fileID: 674616217}
   m_Layer: 0
   m_Name: Virus (4)
-  m_TagString: Enemy2
+  m_TagString: Enemy1Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5441,7 +5441,7 @@ GameObject:
   - component: {fileID: 951069516}
   m_Layer: 0
   m_Name: Virus (2)
-  m_TagString: Enemy2
+  m_TagString: Enemy1Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6775,6 +6775,54 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.29821014, y: 4.5096207}
   m_EdgeRadius: 0
+--- !u!1 &1125333763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1125333764}
+  - component: {fileID: 1125333765}
+  m_Layer: 6
+  m_Name: Skip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1125333764
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125333763}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1378680620}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1125333765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125333763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4916b50a877ab574e938473afd7891cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkipText
+  narratorText: {fileID: 1462398003}
+  bossText: {fileID: 1462398004}
+  levelOneEndText: {fileID: 1462398005}
+  bossDefeated: 0
 --- !u!1 &1152596378
 GameObject:
   m_ObjectHideFlags: 0
@@ -7867,6 +7915,7 @@ MonoBehaviour:
   runSpeed: 8
   JumpForce: 14
   hasSkipped: 0
+  hasReleasedJump: 0
   animator: {fileID: 1378680616}
   rb: {fileID: 1378680617}
   groundCheck: {fileID: 911145259}
@@ -8037,7 +8086,7 @@ Transform:
   m_GameObject: {fileID: 1378680613}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.68, y: 11.57, z: 0.02167024}
+  m_LocalPosition: {x: -7.26, y: 11.69, z: 0.02167024}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8046,6 +8095,7 @@ Transform:
   - {fileID: 960298726}
   - {fileID: 959734322}
   - {fileID: 215245146}
+  - {fileID: 1125333764}
   m_Father: {fileID: 609018496}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1378680621
@@ -10113,7 +10163,7 @@ GameObject:
   - component: {fileID: 1616341661}
   m_Layer: 0
   m_Name: Virus
-  m_TagString: Enemy2
+  m_TagString: Enemy1Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11363,7 +11413,7 @@ GameObject:
   - component: {fileID: 1895632309}
   m_Layer: 0
   m_Name: Virus (6)
-  m_TagString: Enemy2
+  m_TagString: Enemy1Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11821,7 +11871,7 @@ GameObject:
   - component: {fileID: 1917698914}
   m_Layer: 0
   m_Name: Virus (3)
-  m_TagString: Enemy2
+  m_TagString: Enemy1Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13005,7 +13055,7 @@ GameObject:
   - component: {fileID: 2039805123}
   m_Layer: 0
   m_Name: Virus (1)
-  m_TagString: Enemy2
+  m_TagString: Enemy1Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

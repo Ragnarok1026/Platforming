@@ -21,7 +21,7 @@
                     "id": "68cb011e-af94-412e-ba40-3be5a2d76006",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "Press(behavior=2)",
+                    "interactions": "Press(pressPoint=0.1,behavior=2)",
                     "initialStateCheck": false
                 },
                 {
@@ -30,7 +30,7 @@
                     "id": "982b4142-4986-4fd7-bcf0-5107b807e54b",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "initialStateCheck": false
                 },
                 {
@@ -40,6 +40,15 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "Press(behavior=2)",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "6f23eac5-10cd-47bd-acb0-3a6d35996920",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
                     "initialStateCheck": false
                 }
             ],
@@ -190,7 +199,7 @@
                 {
                     "name": "",
                     "id": "45cce7ed-f977-4364-b51e-fcf592e91d6a",
-                    "path": "<Gamepad>/buttonSouth",
+                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
@@ -234,7 +243,7 @@
                 {
                     "name": "",
                     "id": "5063f7a6-4a32-4db5-a08b-d0a3998307ec",
-                    "path": "<Keyboard>/space",
+                    "path": "<Keyboard>/leftAlt",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -261,6 +270,28 @@
                     "processors": "",
                     "groups": ";Touch",
                     "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "104ed45e-1346-4de4-8009-694cca6fc546",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8923df7b-61f6-4e95-8576-ce1178a73c56",
+                    "path": "<Gamepad>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 5794716}
   m_Layer: 0
   m_Name: Guard (3)
-  m_TagString: Enemy5
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -457,7 +457,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 21.6
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -482,7 +482,7 @@ Transform:
   m_GameObject: {fileID: 16197362}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.8, y: 50.5, z: -24.081964}
+  m_LocalPosition: {x: -4.1678123, y: 1.9617293, z: -24.081964}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -579,7 +579,7 @@ GameObject:
   - component: {fileID: 54278977}
   m_Layer: 0
   m_Name: Guard (4)
-  m_TagString: Enemy5
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1622,7 +1622,7 @@ GameObject:
   - component: {fileID: 246249266}
   m_Layer: 0
   m_Name: Guard
-  m_TagString: Enemy5
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2453,7 +2453,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &408683424
 Transform:
   m_ObjectHideFlags: 0
@@ -2851,7 +2851,7 @@ GameObject:
   - component: {fileID: 442888869}
   m_Layer: 0
   m_Name: Guard (15)
-  m_TagString: Enemy5
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3339,7 +3339,7 @@ GameObject:
   - component: {fileID: 550613194}
   m_Layer: 0
   m_Name: Guard (11)
-  m_TagString: Enemy5
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4258,7 +4258,7 @@ GameObject:
   - component: {fileID: 768536301}
   m_Layer: 0
   m_Name: Guard (8)
-  m_TagString: Enemy5
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4716,7 +4716,7 @@ GameObject:
   - component: {fileID: 819197086}
   m_Layer: 0
   m_Name: Guard (1)
-  m_TagString: Enemy5
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5434,7 +5434,7 @@ GameObject:
   - component: {fileID: 944600523}
   m_Layer: 0
   m_Name: Guard (7)
-  m_TagString: Enemy5
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5616,7 +5616,7 @@ GameObject:
   - component: {fileID: 951283073}
   m_Layer: 0
   m_Name: Guard (16)
-  m_TagString: Enemy5
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5798,7 +5798,7 @@ GameObject:
   - component: {fileID: 959096837}
   m_Layer: 0
   m_Name: Guard (2)
-  m_TagString: Enemy5
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7255,7 +7255,7 @@ GameObject:
   - component: {fileID: 1215369293}
   m_Layer: 0
   m_Name: Guard (12)
-  m_TagString: Enemy5
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8194,7 +8194,7 @@ GameObject:
   - component: {fileID: 1351320716}
   m_Layer: 0
   m_Name: Guard (5)
-  m_TagString: Enemy5
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8592,7 +8592,7 @@ GameObject:
   - component: {fileID: 1382163581}
   m_Layer: 0
   m_Name: Guard (10)
-  m_TagString: Enemy5
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8846,7 +8846,7 @@ GameObject:
   - component: {fileID: 1396768463}
   m_Layer: 0
   m_Name: Guard (13)
-  m_TagString: Enemy5
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9805,7 +9805,7 @@ GameObject:
   - component: {fileID: 1580587383}
   m_Layer: 0
   m_Name: Guard (6)
-  m_TagString: Enemy5
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10311,7 +10311,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1659806955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10892,7 +10892,7 @@ GameObject:
   - component: {fileID: 1797643333}
   m_Layer: 0
   m_Name: Guard (14)
-  m_TagString: Enemy5
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11489,7 +11489,7 @@ GameObject:
   - component: {fileID: 1920173252}
   m_Layer: 0
   m_Name: Guard (9)
-  m_TagString: Enemy5
+  m_TagString: Enemy4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12846,7 +12846,7 @@ Transform:
   m_GameObject: {fileID: 2065323495}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6, y: 28.7, z: 18.78458}
+  m_LocalPosition: {x: -21.05, y: -3.2, z: 18.78458}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

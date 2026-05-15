@@ -1390,6 +1390,51 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &192662542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 192662543}
+  - component: {fileID: 192662544}
+  m_Layer: 6
+  m_Name: Skip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &192662543
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192662542}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1325808420}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &192662544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192662542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27a384d912a73614d8516ed7ce5927af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkipBoss2
+  cutscene: {fileID: 159487362}
 --- !u!1 &212263784
 GameObject:
   m_ObjectHideFlags: 0
@@ -2723,7 +2768,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2748,7 +2793,7 @@ Transform:
   m_GameObject: {fileID: 385776819}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.549231, y: -39.49271, z: -30.351685}
+  m_LocalPosition: {x: -10.549231, y: -4.492709, z: -30.351685}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8346,7 +8391,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: f8be5a4e226020e4cb07fbc31ee48db4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -8367,7 +8412,7 @@ Transform:
   m_GameObject: {fileID: 469793250}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.96, z: 0}
+  m_LocalPosition: {x: 0.01, y: -1.96, z: 0}
   m_LocalScale: {x: 15, y: 15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10786,7 +10831,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &976764761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12724,7 +12769,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1293692036
 Transform:
   m_ObjectHideFlags: 0
@@ -13552,6 +13597,7 @@ MonoBehaviour:
   runSpeed: 8
   JumpForce: 14
   hasSkipped: 0
+  hasReleasedJump: 0
   animator: {fileID: 1325808416}
   rb: {fileID: 1325808417}
   groundCheck: {fileID: 969114665}
@@ -13722,7 +13768,7 @@ Transform:
   m_GameObject: {fileID: 1325808411}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.09, y: -14.37, z: 0}
+  m_LocalPosition: {x: -13.79, y: 13.56, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13731,6 +13777,7 @@ Transform:
   - {fileID: 276607231}
   - {fileID: 67805932}
   - {fileID: 2057994311}
+  - {fileID: 192662543}
   m_Father: {fileID: 573558944}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1325808421
@@ -21100,8 +21147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee54034bad1eaf44faa58a0f2f841f67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossHealth2
-  maxHealth: 0
-  currentHealth: 0
+  maxHealth: 30
+  currentHealth: 30
   shieldSpeed: 180
   speed: 5
   duration: 100
