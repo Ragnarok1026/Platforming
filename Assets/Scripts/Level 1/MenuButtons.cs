@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public GameObject continueButton;
     void Start()
     {
         pauseMenu.SetActive(false);
@@ -20,6 +22,7 @@ public class MenuButtons : MonoBehaviour
     }
     public void Quit()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
     public void Settings()
@@ -37,6 +40,7 @@ public class MenuButtons : MonoBehaviour
         {
             Time.timeScale = 0f;
             pauseMenu.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(continueButton);
         }
     }
 }
