@@ -1,0 +1,936 @@
+fileFormatVersion: 2
+guid: 70412eec1e9b8dd4998d9094ef01a8cd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7736615761913951759
+    second: GCTCLOGO_0
+  - first:
+      213: 606911568147933303
+    second: GCTCLOGO_1
+  - first:
+      213: -7302506315755616825
+    second: GCTCLOGO_2
+  - first:
+      213: 277171819912295569
+    second: GCTCLOGO_3
+  - first:
+      213: 4370152189346029275
+    second: GCTCLOGO_4
+  - first:
+      213: -4951280098047066064
+    second: GCTCLOGO_5
+  - first:
+      213: 8426186628765851101
+    second: GCTCLOGO_6
+  - first:
+      213: -7680983133735938091
+    second: GCTCLOGO_7
+  - first:
+      213: -4096554102524542236
+    second: GCTCLOGO_8
+  - first:
+      213: 4910128085280259173
+    second: GCTCLOGO_9
+  - first:
+      213: -2077046751025093714
+    second: GCTCLOGO_10
+  - first:
+      213: 3004817038666542498
+    second: GCTCLOGO_11
+  - first:
+      213: 3776726231401477577
+    second: GCTCLOGO_12
+  - first:
+      213: 7120510560992713771
+    second: GCTCLOGO_13
+  - first:
+      213: 4194352272849543371
+    second: GCTCLOGO_14
+  - first:
+      213: -5575222874855798806
+    second: GCTCLOGO_15
+  - first:
+      213: -1844927454965589037
+    second: GCTCLOGO_16
+  - first:
+      213: 7130710191140607216
+    second: GCTCLOGO_17
+  - first:
+      213: -8382036107774342902
+    second: GCTCLOGO_18
+  - first:
+      213: -9149580590814142316
+    second: GCTCLOGO_19
+  - first:
+      213: -644805681255942881
+    second: GCTCLOGO_20
+  - first:
+      213: -2823987215009414772
+    second: GCTCLOGO_21
+  - first:
+      213: 1490952452113008315
+    second: GCTCLOGO_22
+  - first:
+      213: -7875383243616233248
+    second: GCTCLOGO_23
+  - first:
+      213: 8583844492921305527
+    second: GCTCLOGO_24
+  - first:
+      213: -7597313313002683225
+    second: GCTCLOGO_25
+  - first:
+      213: -1344680976822754819
+    second: GCTCLOGO_26
+  - first:
+      213: 5505223078652922817
+    second: GCTCLOGO_27
+  - first:
+      213: 2667838935590114260
+    second: GCTCLOGO_28
+  - first:
+      213: -918440200676394765
+    second: GCTCLOGO_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GCTCLOGO_0
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 271
+        width: 347
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f94e6374f402a490800000000000000
+      internalID: -7736615761913951759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_1
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 162
+        width: 97
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 778688d0bde2c6800800000000000000
+      internalID: 606911568147933303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_2
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 162
+        width: 98
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c50757323948aa90800000000000000
+      internalID: -7302506315755616825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_3
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 162
+        width: 96
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 194fe9b3d46b8d300800000000000000
+      internalID: 277171819912295569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_4
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 162
+        width: 96
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bde9d5c1346e5ac30800000000000000
+      internalID: 4370152189346029275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_5
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 162
+        width: 108
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 030817cdbf4894bb0800000000000000
+      internalID: -4951280098047066064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_6
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 162
+        width: 92
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddd1cb25814dfe470800000000000000
+      internalID: 8426186628765851101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_7
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 162
+        width: 97
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d717e3198aa76590800000000000000
+      internalID: -7680983133735938091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_8
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 162
+        width: 100
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e20bdb8fbd1627c0800000000000000
+      internalID: -4096554102524542236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_9
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 162
+        width: 108
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56c7cc48a77442440800000000000000
+      internalID: 4910128085280259173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_10
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 162
+        width: 72
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea3254f0cf8dc23e0800000000000000
+      internalID: -2077046751025093714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_11
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 162
+        width: 98
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ada2cc2d2143b920800000000000000
+      internalID: 3004817038666542498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_12
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 162
+        width: 93
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c5b59c5f70a96430800000000000000
+      internalID: 3776726231401477577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_13
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 136
+        width: 1013
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2c536f01a221d260800000000000000
+      internalID: 7120510560992713771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_14
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 79
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc0ac066b25553a30800000000000000
+      internalID: 4194352272849543371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_15
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 79
+        width: 45
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae786988554d0a2b0800000000000000
+      internalID: -5575222874855798806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_16
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 79
+        width: 43
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3db196a21408566e0800000000000000
+      internalID: -1844927454965589037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_17
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 79
+        width: 48
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f49133832f55f260800000000000000
+      internalID: 7130710191140607216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_18
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 79
+        width: 51
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a09cc95e1960dab80800000000000000
+      internalID: -8382036107774342902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_19
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 79
+        width: 46
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 490e6b0ede8260180800000000000000
+      internalID: -9149580590814142316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_20
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 79
+        width: 34
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f15f59336a03d07f0800000000000000
+      internalID: -644805681255942881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_21
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 79
+        width: 46
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c818e1f079e2fc8d0800000000000000
+      internalID: -2823987215009414772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_22
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 79
+        width: 46
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb681351b5de0b410800000000000000
+      internalID: 1490952452113008315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_23
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 79
+        width: 44
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e8d03e5aa405b290800000000000000
+      internalID: -7875383243616233248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_24
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 79
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b974cf4611ff1770800000000000000
+      internalID: 8583844492921305527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_25
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 79
+        width: 46
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a4012b4bcbe09690800000000000000
+      internalID: -7597313313002683225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_26
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 79
+        width: 52
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df12148a6cbb65de0800000000000000
+      internalID: -1344680976822754819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_27
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 79
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cbc36cd83b766c40800000000000000
+      internalID: 5505223078652922817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_28
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 79
+        width: 46
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d31ec98061160520800000000000000
+      internalID: 2667838935590114260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GCTCLOGO_29
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 79
+        width: 47
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f8be3be08b0143f0800000000000000
+      internalID: -918440200676394765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      GCTCLOGO_0: -7736615761913951759
+      GCTCLOGO_1: 606911568147933303
+      GCTCLOGO_10: -2077046751025093714
+      GCTCLOGO_11: 3004817038666542498
+      GCTCLOGO_12: 3776726231401477577
+      GCTCLOGO_13: 7120510560992713771
+      GCTCLOGO_14: 4194352272849543371
+      GCTCLOGO_15: -5575222874855798806
+      GCTCLOGO_16: -1844927454965589037
+      GCTCLOGO_17: 7130710191140607216
+      GCTCLOGO_18: -8382036107774342902
+      GCTCLOGO_19: -9149580590814142316
+      GCTCLOGO_2: -7302506315755616825
+      GCTCLOGO_20: -644805681255942881
+      GCTCLOGO_21: -2823987215009414772
+      GCTCLOGO_22: 1490952452113008315
+      GCTCLOGO_23: -7875383243616233248
+      GCTCLOGO_24: 8583844492921305527
+      GCTCLOGO_25: -7597313313002683225
+      GCTCLOGO_26: -1344680976822754819
+      GCTCLOGO_27: 5505223078652922817
+      GCTCLOGO_28: 2667838935590114260
+      GCTCLOGO_29: -918440200676394765
+      GCTCLOGO_3: 277171819912295569
+      GCTCLOGO_4: 4370152189346029275
+      GCTCLOGO_5: -4951280098047066064
+      GCTCLOGO_6: 8426186628765851101
+      GCTCLOGO_7: -7680983133735938091
+      GCTCLOGO_8: -4096554102524542236
+      GCTCLOGO_9: 4910128085280259173
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

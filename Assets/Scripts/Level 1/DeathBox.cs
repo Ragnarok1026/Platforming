@@ -6,10 +6,10 @@ public class DeathBox : MonoBehaviour
     public GameObject Player;
     public Animator animator;
     public static bool isDead = false;
-    private void OnCollisionEnter2D(Collision2D collision)  
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         // Detects collision with different enemy types to trigger player death
-        if (collision.gameObject.tag == "Enemy1" &&  !isDead)
+        if (collision.gameObject.tag == "Enemy1" && !isDead)
         {
             animator.SetBool("Death", true);
             Invoke("DisableMovement1", 0.33f);
@@ -63,7 +63,7 @@ public class DeathBox : MonoBehaviour
         if (collision.gameObject.tag == "Shield" && !isDead)
         {
             animator.SetBool("Death", true);
-            Invoke("DisableMovement4", 0.33f);
+            Invoke("DisableMovement3", 0.33f);
             Player.GetComponent<PlayerMovement>().enabled = false;
         }
     }

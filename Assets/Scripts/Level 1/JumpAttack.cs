@@ -1,3 +1,4 @@
+using System.Diagnostics.Contracts;
 using UnityEngine;
 
 public class JumpAttack : MonoBehaviour
@@ -39,6 +40,11 @@ public class JumpAttack : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, bounce);
         }
         if (other.CompareTag("Enemy3"))
+        {
+            Destroy(other.gameObject);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, bounce);
+        }
+        if (other.CompareTag("Enemy4"))
         {
             Destroy(other.gameObject);
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, bounce);

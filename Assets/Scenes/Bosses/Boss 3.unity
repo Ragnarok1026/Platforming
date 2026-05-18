@@ -19617,6 +19617,56 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a05a30b1c7476840bddce2c969a5a8a, type: 3}
+--- !u!1 &1190943843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1190943844}
+  - component: {fileID: 1190943845}
+  m_Layer: 6
+  m_Name: Skip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1190943844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190943843}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1439792489}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1190943845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190943843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50fd391ceb8decf4d9105c21e5db3ea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkipBoss3
+  health: {fileID: 42438872}
+  Shadow: {fileID: 42438867}
+  Door: {fileID: 629751763}
+  Hover: {fileID: 844401154}
+  Fight: {fileID: 241826306}
+  cutsceneTrigger: {fileID: 595807590}
 --- !u!1001 &1193124772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22233,6 +22283,7 @@ MonoBehaviour:
   runSpeed: 8
   JumpForce: 14
   hasSkipped: 0
+  hasReleasedJump: 0
   animator: {fileID: 1439792485}
   rb: {fileID: 1439792486}
   groundCheck: {fileID: 561896268}
@@ -22403,7 +22454,7 @@ Transform:
   m_GameObject: {fileID: 1439792482}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -38.45, y: -18.65, z: -2.9511127}
+  m_LocalPosition: {x: -38.35, y: -18.61, z: -2.9511127}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22412,6 +22463,7 @@ Transform:
   - {fileID: 1058432060}
   - {fileID: 1113768597}
   - {fileID: 478578188}
+  - {fileID: 1190943844}
   m_Father: {fileID: 1424048734}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1439792490

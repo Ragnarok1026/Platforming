@@ -31,6 +31,10 @@ public class DefeatEnemy : MonoBehaviour
         {
             Door.GetComponent<EnemiesRemaining>().DefeatEnemy(1);
         }
+        if (collision.CompareTag("Enemy4"))
+        {
+            Door.GetComponent<EnemiesRemaining>().DefeatEnemy(1);
+        }
         if (collision.CompareTag("Enemy5"))
         {
             Door.GetComponent<EnemiesRemaining>().DefeatEnemy(1);
